@@ -106,8 +106,8 @@ class Solution{
         int left = height(node->left);
         int right = height(node->right);
         
-        int maxHeight = max(left,right) +1;
-        return maxHeight;
+        int maxi = max(left,right)+1;
+        return maxi;
     }
 };
 
