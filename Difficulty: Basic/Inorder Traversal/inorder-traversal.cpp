@@ -31,23 +31,32 @@ struct Node {
 
 class Solution {
   public:
-    void solve(Node* root,vector<int>& ans){
-        if(root==NULL){
-            return;
-        }
-        solve(root->left,ans);
-        ans.push_back(root->data);
-        solve(root->right,ans);
-    }
+   
     vector<int> inOrder(Node* root) {
-        vector<int>ans;
-        if(root==NULL){
-            return ans;
-        }
-        solve(root,ans);
-        return ans;
-        
-        
+       vector<int>ans;
+       if(root==NULL){
+           return ans;
+       }
+       
+       Node* curr = root;
+       stack<Node*>st;
+       
+       while(true){
+           if(curr!=NULL){
+               st.push(curr);
+               curr= curr->left;
+           }
+           else{
+               if(st.empty()){
+                   break;
+               }
+               curr = st.top();
+               st.pop();
+               ans.push_back(curr->data);
+               curr= curr->right;
+           }
+       }
+       return ans;
     }
 };
 
