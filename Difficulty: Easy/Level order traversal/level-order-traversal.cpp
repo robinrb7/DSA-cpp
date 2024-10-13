@@ -44,27 +44,30 @@ class Solution
     //Function to return the level order traversal of a tree.
     vector<int> levelOrder(Node* root)
     {
-     vector<int> ans;
-     if(root==NULL){
-         return ans;
-     }
-     
-     queue<Node*>q;
-     q.push(root);
-     
-     while(!q.empty()){
-         Node* front = q.front();
-         ans.push_back(front->data);
-         q.pop();
-         
-         if(front->left){
-             q.push(front->left);
-         }
-         if(front->right){
-             q.push(front->right);
-         }
-     }
-     return ans;
+      vector<int> ans;
+      if(root==NULL){
+          return ans;
+      }
+      
+      queue<Node*>q;
+      q.push(root);
+      
+      while(!q.empty()){
+          Node* frontNode= q.front();
+          q.pop();
+          
+          ans.push_back(frontNode->data);
+          
+          if(frontNode->left){
+              q.push(frontNode->left);
+          }
+          if(frontNode->right){
+              q.push(frontNode->right);
+          }
+      }
+      
+      return ans;
+      
     }
 };
 
