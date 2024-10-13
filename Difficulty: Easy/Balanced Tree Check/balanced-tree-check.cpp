@@ -102,37 +102,32 @@ struct Node
  */
 
 class Solution{
-    private:
-    pair<bool,int> balancedFast(Node* root){
-        if(root == NULL){
-            pair<int,int>p= make_pair(true,0);
+    private: 
+    pair<bool,int> balanced(Node* root){
+        if(root==NULL){
+            pair<bool,int> p= make_pair(true,0);
             return p;
         }
         
-        pair<bool,int> leftSubtree = balancedFast(root->left);
-        pair<bool,int> rightSubtree = balancedFast(root->right);
+         pair<bool,int> leftAns = balanced(root->left);
+         pair<bool,int> rightAns = balanced(root->right);
+         
+         bool opt1 = leftAns.first;
+         bool opt2 = rightAns.first;
+         bool opt3 = abs(leftAns.second - rightAns.second) <=1;
+         
+        pair<bool,int> ans = make_pair(false,max(leftAns.second,rightAns.second)+1);
         
-        bool left = leftSubtree.first;
-        bool right = rightSubtree.first;
-        bool cond = abs(leftSubtree.second - rightSubtree.second) <=1;
-        
-        pair<bool,int> ans;
-        
-        if(left && right && cond){
+        if(opt1==true && opt2 ==true && opt3==true){
             ans.first = true;
         }
-        else{
-            ans.second;
-        }
-        ans.second = max(leftSubtree.second,rightSubtree.second)+1;
-        return ans;
-        
+        return ans;                                
     }
     public:
     //Function to check whether a binary tree is balanced or not.
     bool isBalanced(Node *root)
     {
-        return balancedFast(root).first;
+        return balanced(root).first;
     }
 };
 
