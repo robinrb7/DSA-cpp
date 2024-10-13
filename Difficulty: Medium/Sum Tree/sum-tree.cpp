@@ -92,39 +92,37 @@ struct Node
 
 // Should return true if tree is Sum Tree, else false
 class Solution {
-    private:
-    pair<bool,int> sum(Node* root){
-        if(root== NULL){
-            pair<int,int>p= make_pair(true,0);
-            return p;
-        }
-        if(root->left ==NULL && root->right== NULL){
-            pair<int,int>p= make_pair(true,root->data);
+    pair<bool,int> sumTree(Node *root){
+        if(root==NULL){
+            pair<bool,int> p = make_pair(true,0);
             return p;
         }
         
-        pair<bool,int> left = sum(root->left);
-        pair<bool,int> right = sum(root->right);
+        pair<bool,int> leftAns = sumTree(root->left);
+        pair<bool,int> rightAns = sumTree(root->right);
         
-        bool isLeft = left.first;
-        bool isRight = right.first;
-        bool cond = root->data == left.second + right.second;
+        bool opt1 = leftAns.first;
+        bool opt2 = rightAns.first;
+        bool opt3 = root->data == leftAns.second + rightAns.second;
         
-        pair<bool,int> ans;
-        
-        if(isLeft && isRight && cond){
-            ans.first =true;
-            ans.second = 2*root->data;
+        if(root->left == NULL && root->right == NULL){
+            opt3 = true;
         }
-        else{
-            ans.first= false;
-            ans.second = left.second + right.second;
+        
+        pair<bool,int>ans;
+        if(opt1 && opt2 && opt3){
+            ans.first = true;
         }
+        ans.second = leftAns.second + rightAns.second + root->data;
+        
         return ans;
+        
     }
   public:
     bool isSumTree(Node* root) {
-        return sum(root).first;
+     
+     return sumTree(root).first;
+      
     }
 };
 
