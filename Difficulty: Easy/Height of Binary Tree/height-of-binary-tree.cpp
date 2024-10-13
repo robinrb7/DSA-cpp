@@ -97,16 +97,29 @@ struct Node
 };
 */
 class Solution{
+    private:
+    int heightFast(Node* node){
+        if(node==NULL){
+            return 0;
+        }
+        int leftAns=0,rightAns=0;
+        if(node->left){
+            leftAns = heightFast(node->left);
+        }
+        if(node->right){
+            rightAns = heightFast(node->right);
+        }
+        
+        return max(leftAns,rightAns)+1;
+    }
     public:
     //Function to find the height of a binary tree.
     int height(struct Node* node){
         if(node==NULL){
             return 0;
         }
-        int left = height(node->left);
-        int right = height(node->right);
         
-        int maxi = max(left,right)+1;
+        int maxi = heightFast(node);
         return maxi;
     }
 };
