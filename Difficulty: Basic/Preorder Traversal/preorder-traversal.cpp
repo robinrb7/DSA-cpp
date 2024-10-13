@@ -135,21 +135,22 @@ vector <int> preorder(Node* root)
   if(root==NULL){
       return ans;
   }
-  
   stack<Node*>st;
-  Node* node = root;
-  st.push(node);
+  Node* temp =root;
   
-  while(!st.empty()){
-      node = st.top();
-      st.pop();
-      ans.push_back(node->data);
-      
-      if(node->right!=NULL){
-          st.push(node->right);
+  while(1){
+      if(temp!=NULL){
+          st.push(temp);
+          ans.push_back(temp->data);
+          temp=temp->left;
       }
-      if(node->left!=NULL){
-          st.push(node->left);
+      else{
+          if(st.empty()){
+              break;
+          }
+          temp=st.top();
+          st.pop();
+          temp=temp->right;
       }
   }
   return ans;
