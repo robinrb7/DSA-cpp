@@ -99,18 +99,17 @@ void printInorder(Node* root)
 // } Driver Code Ends
 class Solution
 {
-   
-    
     public:
+    //Function to find the vertical order traversal of Binary Tree.
     vector<int> verticalOrder(Node *root)
     {
-        vector<int> ans;
+        vector<int>ans;
         if(root==NULL){
             return ans;
         }
         
-        map<int,map<int,vector<int> > >nodes;
         queue<pair<Node*,pair<int,int> > >q;
+        map<int , map<int,vector<int> > > nodes;
         
         q.push(make_pair(root,make_pair(0,0)));
         
@@ -118,9 +117,10 @@ class Solution
             pair<Node*,pair<int,int> > temp = q.front();
             q.pop();
             
-            Node* frontNode=temp.first;
+            Node* frontNode = temp.first;
             int hd = temp.second.first;
             int level = temp.second.second;
+            
             nodes[hd][level].push_back(frontNode->data);
             
             if(frontNode->left){
@@ -129,9 +129,10 @@ class Solution
             if(frontNode->right){
                 q.push(make_pair(frontNode->right,make_pair(hd+1,level+1)));
             }
+            
         }
         
-        for(auto i: nodes){
+        for(auto i : nodes){
             for(auto j: i.second){
                 for(auto k: j.second){
                     ans.push_back(k);
@@ -139,8 +140,7 @@ class Solution
             }
         }
         
-       return ans;
-       
+        return ans;
     }
 };
 
