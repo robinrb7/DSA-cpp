@@ -43,40 +43,39 @@ class Solution
     //Function to return list containing elements of right view of binary tree.
     vector<int> rightView(Node *root)
     {
-        vector<int>ans;
-        if(root==NULL){
-            return ans;
-        }
-        
-        map<int,int>nodes;
-        queue<pair<Node*,int> >q;
-        q.push(make_pair(root,0));
-        
-        while(!q.empty()){
-            pair<Node*,int> temp = q.front();
-            q.pop();
-            
-            Node* frontNode = temp.first;
-            int level = temp.second;
-            if(nodes.find(level)==nodes.end()){
-                nodes[level] = frontNode->data;
-            }
-            
-            if(frontNode->right){
-                q.push(make_pair(frontNode->right,level+1));
-            }
-            if(frontNode->left){
-                q.push(make_pair(frontNode->left,level+1));
-            }
-            
-            
-        }
-        
-        for(auto i :nodes){
-            ans.push_back(i.second);
-        }
-        
-        return ans;
+       vector<int>ans;
+       if(root==NULL){
+           return ans;
+       }
+       
+       map<int,int>nodes;
+       queue<pair<Node*,int> > q;
+       
+       q.push(make_pair(root,0));
+       
+       while(!q.empty()){
+           pair<Node*,int> temp = q.front();
+           q.pop();
+           
+           Node* frontNode = temp.first;
+           int level = temp.second;
+           
+           if(nodes.find(level)==nodes.end()){
+               nodes[level]=frontNode->data;
+           }
+           
+           if(frontNode->right){
+               q.push(make_pair(frontNode->right,level+1));
+           }
+           if(frontNode->left){
+               q.push(make_pair(frontNode->left,level+1));
+           }
+       }
+       for(auto i :nodes){
+           ans.push_back(i.second);
+       }
+       
+       return ans;
     }
 };
 
