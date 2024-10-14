@@ -104,46 +104,40 @@ class Solution
     //from left to right in Binary Tree.
     vector<int> topView(Node *root)
     {
-        vector<int> ans;
+        vector<int>ans;
         if(root==NULL){
             return ans;
         }
         
-        map<int,map<int,vector<int> > >nodes;
-        queue<pair<Node*,pair<int,int> > >q;
-        
-        q.push(make_pair(root,make_pair(0,0)));
+        map<int,int> nodes;
+        queue<pair<Node*,int> >q;
+        q.push(make_pair(root,0));
         
         while(!q.empty()){
-            pair<Node*,pair<int,int> > temp = q.front();
+            pair<Node*,int> temp = q.front();
             q.pop();
             
-            Node* frontNode=temp.first;
-            int hd = temp.second.first;
-            int level = temp.second.second;
+            Node* frontNode = temp.first;
+            int hd = temp.second;
             
-            if(nodes.find(hd) == nodes.end()){
-                nodes[hd][level].push_back(frontNode->data);
+            if(nodes.find(hd)== nodes.end()){
+                nodes[hd] = frontNode->data;
             }
             
             if(frontNode->left){
-                q.push(make_pair(frontNode->left,make_pair(hd-1,level+1)));
+                q.push(make_pair(frontNode->left,hd-1));
             }
             if(frontNode->right){
-                q.push(make_pair(frontNode->right,make_pair(hd+1,level+1)));
+                q.push(make_pair(frontNode->right,hd+1));
             }
+            
         }
         
         for(auto i: nodes){
-            for(auto j: i.second){
-                for(auto k: j.second){
-                    ans.push_back(k);
-                }
-            }
+            ans.push_back(i.second);
         }
         
-       return ans;
-       
+        return ans;
     }
 
 };
