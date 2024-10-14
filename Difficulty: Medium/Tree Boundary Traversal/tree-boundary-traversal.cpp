@@ -105,47 +105,46 @@ struct Node
 
 class Solution {
     private:
-    void solveLeft(Node* root, vector<int> &ans){
-        if((root==NULL) || (root->left ==NULL && root->right==NULL)){
+    
+    void traverseLeft(Node* root,vector<int> &ans){
+        if(root==NULL || (root->left==NULL && root->right==NULL)){
             return;
         }
         ans.push_back(root->data);
         if(root->left){
-           solveLeft(root->left,ans); 
+            traverseLeft(root->left,ans);
         }
         else{
-           solveLeft(root->right,ans);
+            traverseLeft(root->right,ans);   
         }
-        
-        
     }
     
-    void solveLeaf(Node* root,vector<int> &ans){
+    void traverseLeaf(Node* root,vector<int> &ans){
         if(root==NULL){
             return;
         }
-        if(root->left ==NULL && root->right==NULL){
+        if(root->left==NULL && root->right==NULL){
             ans.push_back(root->data);
         }
         
-        solveLeaf(root->left,ans);
-        solveLeaf(root->right,ans);
+        traverseLeaf(root->left,ans);
+        traverseLeaf(root->right,ans);
     }
     
-    void solveRight(Node* root,vector<int> &ans){
-        if((root==NULL) || (root->left ==NULL && root->right==NULL)){
+    void traverseRight(Node* root,vector<int> &ans){
+        if(root==NULL || (root->left==NULL && root->right==NULL)){
             return;
         }
         
         if(root->right){
-            solveRight(root->right,ans);
+            traverseRight(root->right,ans);
         }
         else{
-            solveRight(root->left,ans);
+            traverseRight(root->left,ans);
         }
+        
         ans.push_back(root->data);
     }
-    
 public:
     vector <int> boundary(Node *root)
     {
@@ -153,14 +152,15 @@ public:
         if(root==NULL){
             return ans;
         }
+        
         ans.push_back(root->data);
         
-        solveLeft(root->left,ans);
+        traverseLeft(root->left,ans);
         
-        solveLeaf(root->left,ans);
-        solveLeaf(root->right,ans);
+        traverseLeaf(root->left,ans);
+        traverseLeaf(root->right,ans);
         
-        solveRight(root->right,ans);
+        traverseRight(root->right,ans);
         
         return ans;
     }
