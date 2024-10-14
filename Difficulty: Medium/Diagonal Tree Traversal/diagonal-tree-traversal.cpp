@@ -124,27 +124,28 @@ struct Node
 
 vector<int> diagonal(Node *root)
 {
-   vector<int>result;
-   if(root==NULL){
-       return result;
-   }
-   
-   queue<Node*>q;
-   q.push(root);
-   
-   while(!q.empty()){
-        Node* temp = q.front();
-         q.pop();
+    vector<int>ans;
+    if(root==NULL){
+        return ans;
+    }
+    
+    queue<Node*>q;
+    q.push(root);
+    
+    while(!q.empty()){
+        Node* frontNode = q.front();
+        q.pop();
+        
+        while(frontNode != NULL){
+            ans.push_back(frontNode->data);
             
-            while(temp){
-               result.push_back(temp->data);
-               if(temp->left){
-                   q.push(temp->left);
-               }
+            if(frontNode->left){
+                q.push(frontNode->left);
+            }
             
-               temp = temp->right;
-           }
-   }
-   
-   return result;
+            frontNode = frontNode->right;
+        }
+    }
+    
+    return ans;
 }
