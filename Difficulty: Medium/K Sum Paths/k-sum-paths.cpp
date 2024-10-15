@@ -96,34 +96,38 @@ struct Node
 };
 */
 class Solution {
+    private:
+    void solve(Node* root,int k, int &count, vector<int>&path){
+        if(root==NULL){
+            return;
+        }
+        
+        path.push_back(root->data);
+        
+        solve(root->left,k,count,path);
+        
+        solve(root->right,k,count,path);
+        
+        int sum =0;
+        for(int i = path.size()-1;i>=0;i--){
+            sum = sum + path[i];
+            if(sum==k){
+                count++;
+            }
+        }
+        
+        path.pop_back();
+    }
+    
   public:
-  
-  
-  void solve(Node* root,int &count,int k,vector<int>&temp){
-      if(root==NULL){
-          return;
-      }
-
-      temp.push_back(root->data);
-      
-      solve(root->left,count,k,temp);
-      solve(root->right,count,k,temp);
-      
-      int size = temp.size();
-      int sum=0;
-      for(int i = size-1;i>=0;i--){
-          sum= sum +temp[i];
-          if(sum==k){
-              count++;
-          }
-      }
-      temp.pop_back();
-  }
-  
     int sumK(Node *root, int k) {
-        int count=0;
-        vector<int>temp;
-        solve(root,count,k,temp);
+        if(root==NULL){
+            return 0;
+        }
+        vector<int>path;
+        int count =0;
+        
+        solve(root,k,count,path);
         return count;
     }
 };
