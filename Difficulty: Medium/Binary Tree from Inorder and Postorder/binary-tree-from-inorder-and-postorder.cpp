@@ -1,5 +1,4 @@
 //{ Driver Code Starts
-/* program to construct tree using inorder and postorder traversals */
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -48,38 +47,47 @@ struct Node
 };*/
 
 class Solution {
-  public:
-  
-  void mapping(map<int,int> &nodeToIndx,int in[],int n){
-      for(int i=0;i<n;i++){
-          nodeToIndx[in[i]]=i;
-      }
-  }
-  
-  Node* solve(int in[],int post[],int &index, int startIndx,int endIndx,int n,map<int,int> &nodeToIndx){
-      if(index < 0 || startIndx > endIndx){
-          return NULL;
-      }
-      int element = post[index--];
-      Node* root = new Node(element);
-      int pos = nodeToIndx[element];
-      
-      root->right = solve(in,post,index,pos+1,endIndx,n,nodeToIndx);
-      root->left = solve(in,post,index,startIndx,pos-1,n,nodeToIndx);
-      return root;
-  }
-    Node *buildTree(int n, int in[], int post[]) {
-        if(n==0){
+     private:
+    
+    Node* solve(vector<int> inorder, vector<int> postorder,int n,int &postIndex, int inStartIndex,int inEndIndex,map<int,int>&findIndex){
+        if(postIndex<0 || inStartIndex>inEndIndex){
             return NULL;
         }
         
-        map<int,int> nodeToIndx;
-        mapping(nodeToIndx,in,n);
-        int index = n-1;
-        int startIndx =0, endIndx =n-1;
+        int element = postorder[postIndex--];
+        int index = findIndex[element];
         
-        Node* ans = solve(in,post,index,startIndx,endIndx,n,nodeToIndx);
-        return ans;
+        if(index==-1){
+            return NULL;
+        }
+        
+        Node* root = new Node(element);
+        
+        root->right = solve(inorder,postorder,n,postIndex,index+1,inEndIndex,findIndex);
+        root->left = solve(inorder,postorder,n,postIndex,inStartIndex,index-1,findIndex);
+        
+        return root;
+    }
+    
+  public:
+
+    // Function to return a tree created from postorder and inoreder traversals.
+    Node* buildTree(vector<int> inorder, vector<int> postorder) {
+    int n = inorder.size();
+       if(n<=0){
+            return NULL;
+        }
+        
+        map<int,int> findIndex;
+        for(int i =0;i<n;i++){
+            findIndex[inorder[i]] =i;
+        }
+        
+        int postIndex=n-1;
+        int inStartIndex =0;
+        int inEndIndex = n-1;
+        
+        return solve(inorder,postorder,n,postIndex,inStartIndex,inEndIndex,findIndex);
     }
 };
 
@@ -87,17 +95,29 @@ class Solution {
 //{ Driver Code Starts.
 
 int main() {
-    int t, n;
+
+    int t;
     cin >> t;
+    cin.ignore();
     while (t--) {
-        cin >> n;
-        int in[n], post[n];
-        for (int i = 0; i < n; i++)
-            cin >> in[i];
-        for (int i = 0; i < n; i++)
-            cin >> post[i];
+        string input;
+        getline(cin, input);
+
+        stringstream ss(input);
+        vector<int> inorder;
+        int number;
+        while (ss >> number) {
+            inorder.push_back(number);
+        }
+
+        getline(cin, input);
+        stringstream ss2(input);
+        vector<int> postorder;
+        while (ss2 >> number) {
+            postorder.push_back(number);
+        }
         Solution obj;
-        Node* root = obj.buildTree(n, in, post);
+        Node* root = obj.buildTree(inorder, postorder);
         preOrder(root);
         cout << endl;
     }
