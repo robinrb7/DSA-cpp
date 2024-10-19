@@ -92,37 +92,35 @@ struct Node
 
 // Should return true if tree is Sum Tree, else false
 class Solution {
-    pair<bool,int> sumTree(Node *root){
+    private:
+    pair<bool,int> solve(Node* root){
         if(root==NULL){
-            pair<bool,int> p = make_pair(true,0);
+            pair<bool,int>p = make_pair(true,0);
             return p;
         }
         
-        pair<bool,int> leftAns = sumTree(root->left);
-        pair<bool,int> rightAns = sumTree(root->right);
+        pair<bool,int> leftAns = solve(root->left);
+        pair<bool,int> rightAns = solve(root->right);
         
         bool opt1 = leftAns.first;
         bool opt2 = rightAns.first;
         bool opt3 = root->data == leftAns.second + rightAns.second;
         
-        if(root->left == NULL && root->right == NULL){
-            opt3 = true;
+        if(root->left==NULL && root->right==NULL){
+            opt3=true;
         }
         
-        pair<bool,int>ans;
+        pair<bool,int>ans = make_pair(false,root->data+leftAns.second + rightAns.second);
+        
         if(opt1 && opt2 && opt3){
             ans.first = true;
         }
-        ans.second = leftAns.second + rightAns.second + root->data;
         
         return ans;
-        
     }
   public:
     bool isSumTree(Node* root) {
-     
-     return sumTree(root).first;
-      
+        return solve(root).first;
     }
 };
 
