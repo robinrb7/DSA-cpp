@@ -39,44 +39,49 @@ struct Node
 };
 */
 class Solution{
-    public:
-    void mapping(map<int,int> &nodeToIndx,int in[],int n){
-        for(int i =0;i<n;i++){
-            nodeToIndx[in[i]] = i;
-        }
-    }
+    private:
     
-    Node* solve(int in[],int inStartIndx, int inEndIndx, 
-               int pre[],int &index,
-               map<int,int> &nodeToIndx, int n)
-    {
-        if(index>=n|| inStartIndx>inEndIndx){
+    int findIndex(int in[],int num,int n){
+        for(int i =0;i<n;i++){
+            if(in[i]==num){
+                return i;
+            }
+        }
+        return -1;
+    }
+    Node* solve(int in[],int pre[],int n,int &preIndex, int inStartIndex,int inEndIndex){
+        if(preIndex>=n || inStartIndex>inEndIndex){
             return NULL;
-        } 
+        }
         
-        int element = pre[index++];
+        int element = pre[preIndex++];
+        int index = findIndex(in,element,n);
+        
+        if(index==-1){
+            return NULL;
+        }
+        
         Node* root = new Node(element);
-        int pos = nodeToIndx[element];
         
-        root->left = solve(in,inStartIndx,pos-1,pre,index,nodeToIndx,n);
-        root->right = solve(in,pos+1,inEndIndx,pre,index,nodeToIndx,n);
+        root->left = solve(in,pre,n,preIndex,inStartIndex,index-1);
+        root->right = solve(in,pre,n,preIndex,index+1,inEndIndex);
         
         return root;
     }
     
+    public:
     Node* buildTree(int in[],int pre[], int n)
     {
-      if(n==0){
-          return NULL;
-      }
-       map<int,int> nodeToIndx;
-       mapping(nodeToIndx,in,n);
-       
-       int inStartIndx=0, inEndIndex=n-1;
-       int index =0;
-       
-        Node* ans = solve(in,inStartIndx,inEndIndex,pre,index,nodeToIndx,n);
-        return ans;
+        if(n<=0){
+            return NULL;
+        }
+        
+        int preIndex=0;
+        int inStartIndex =0;
+        int inEndIndex = n-1;
+        
+        return solve(in,pre,n,preIndex,inStartIndex,inEndIndex);
+        
     }
 };
 
