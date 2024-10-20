@@ -97,37 +97,34 @@ struct Node
 */
 class Solution {
     private:
-    void solve(Node* root,int k, int &count, vector<int>&path){
+    void solve(Node* root,int &count,int k,vector<int>& v){
         if(root==NULL){
             return;
         }
         
-        path.push_back(root->data);
+        v.push_back(root->data);
         
-        solve(root->left,k,count,path);
-        
-        solve(root->right,k,count,path);
-        
+        int size = v.size();
         int sum =0;
-        for(int i = path.size()-1;i>=0;i--){
-            sum = sum + path[i];
+        for(int i = size-1;i>=0;i--){
+            sum = sum + v[i];
             if(sum==k){
                 count++;
             }
         }
         
-        path.pop_back();
+        solve(root->left,count,k,v);
+        solve(root->right,count,k,v);
+        
+        v.pop_back();
     }
-    
   public:
     int sumK(Node *root, int k) {
-        if(root==NULL){
-            return 0;
-        }
-        vector<int>path;
-        int count =0;
         
-        solve(root,k,count,path);
+        vector<int> v;
+        int count =0;
+        solve(root,count,k,v);
+        
         return count;
     }
 };
