@@ -116,29 +116,41 @@ struct Node
 */
 class Solution
 {
-public:
-    void solve(Node* root,int len,int &maxLen,int sum,int &maxSum){
+    private:
+    void solve(Node* root,int &maxSum,int sum,int len, int &maxLen){
         if(root==NULL){
+            
             if(len>maxLen){
                 maxLen = len;
                 maxSum = sum;
             }
             else if(len==maxLen){
-                maxSum = max(sum,maxSum);
+                maxSum = max(maxSum,sum);
             }
             return;
         }
         
         sum = sum + root->data;
         
-        solve(root->left,len+1,maxLen,sum,maxSum);
-        solve(root->right,len+1,maxLen,sum,maxSum);
+        solve(root->left,maxSum,sum,len+1,maxLen);
+        solve(root->right,maxSum,sum,len+1,maxLen);
+        
     }
+public:
     
     int sumOfLongRootToLeafPath(Node *root)
     {
-        int len =0,maxLen=0,sum=0,maxSum=INT_MIN;
-        solve(root,len,maxLen,sum,maxSum);
+        if(root==NULL){
+            return 0;
+        }
+        
+        int maxSum =0;
+        int sum =0;
+        int len =0;
+        int maxLen=0;
+        
+        solve(root,maxSum,sum,len,maxLen);
+        
         return maxSum;
     }
 };
