@@ -131,13 +131,18 @@ Node* newNode( int data )
 
 class Solution {
     private:
-    Node* solve( int pre[],int mini, int maxi ,int &i, int size){
+    Node* solve(int pre[], int mini, int maxi , int size,int &i){
         if(i>=size) return NULL;
+        
         if(pre[i] < mini || pre[i] > maxi) return NULL;
         
-        Node* root = newNode(pre[i++]);
-        root->left = solve(pre,mini,root->data,i,size);
-        root->right = solve(pre,root->data,maxi,i,size);
+        Node* root = NULL;
+        if(pre[i] > mini && pre[i] < maxi){
+            root = newNode(pre[i++]);
+        }
+        
+        root->left = solve(pre,mini,root->data,size,i);
+        root->right = solve(pre,root->data,maxi,size,i);
         
         return root;
     }
@@ -146,9 +151,8 @@ class Solution {
     Node* Bst(int pre[], int size) {
         if(size<=0) return NULL;
         
-        int mini = INT_MIN, maxi = INT_MAX;
-        int i =0;
-        return solve(pre,mini,maxi,i,size);
+        int i=0;
+        return solve(pre,INT_MIN,INT_MAX,size, i);
     }
 };
 
