@@ -118,39 +118,54 @@ struct Node
 // This function should return head to the DLL
 class Solution {
     private:
-    void solve(Node* root,Node* &head,Node* &tail){
-        if(root==NULL){
-            return;
+    Node* solve(Node *root, Node* &prev, Node* &head) {
+    Node* curr = root;
+
+    while (curr != NULL) {
+        if (curr->left == NULL) {
+            // Directly add curr to DLL if no left child
+            if (prev != NULL) {
+                prev->right = curr;
+            } else {
+                head = curr; // This is the leftmost node, so set as head
+            }
+            curr->left = prev;
+            prev = curr;
+            curr = curr->right;
+        } else {
+            // Find the inorder predecessor of curr
+            Node* pred = curr->left;
+            while (pred->right != NULL && pred->right != curr) {
+                pred = pred->right;
+            }
+
+            if (pred->right == NULL) {
+                // Link predecessor to curr to return later
+                pred->right = curr;
+                curr = curr->left;
+            } else {
+                // Revert the changes, establish the DLL links, and move right
+                pred->right = NULL;
+                
+                if (prev != NULL) {
+                    prev->right = curr;
+                } else {
+                    head = curr; // Set head for the first node in DLL
+                }
+                curr->left = prev;
+                prev = curr;
+                curr = curr->right;
+            }
         }
-        
-        solve(root->left,head,tail);
-        
-        if(head==NULL){
-           head = root;
-           tail = root;
-        }
-        else{
-            tail->right = root;
-            root->left = tail;
-            tail = root;
-        }
-        
-         solve(root->right,head,tail);
-        
     }
+    return head;
+}
   public:
     Node* bToDLL(Node* root) {
-        if(root==NULL){
-            return NULL;
-        }
-        
         Node* head = NULL;
-        Node* tail = NULL;
+        Node* prev = NULL;
         
-        solve(root,head,tail);
-        
-        return head;
-        
+        return solve(root,prev,head);
     }
 };
 
@@ -170,6 +185,9 @@ int main() {
         Solution ob;
         Node* head = ob.bToDLL(root);
         printList(head);
+
+        cout << "~"
+             << "\n";
     }
     return 0;
 }
