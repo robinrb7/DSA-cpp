@@ -93,48 +93,126 @@ struct Node {
 };
 */
 class Solution {
-    private:
-    void inorder(Node* root,vector<int> &vec){
-        if(root==NULL) return;
-        
-        inorder(root->left,vec);
-        vec.push_back(root->data);
-        inorder(root->right,vec);
+private:
+    void bstToList(Node* root, Node* &head, Node* &tail) {
+        if (root == NULL) return;
+
+        // Convert the left subtree
+        bstToList(root->left, head, tail);
+
+        // Process current node
+        if (head == NULL) {
+            head = root;
+            tail = root;
+        } else {
+            tail->right = root;
+            root->left = tail;
+            tail = root;
+        }
+
+        // Convert the right subtree
+        bstToList(root->right, head, tail);
     }
     
-    void solve(vector<int> vec1, vector<int> vec2,vector<int> &ans){
-        int i=0,j=0,k=0;
-        
-        while(i<vec1.size() && j<vec2.size()){
-            if(vec1[i]<vec2[j]){
-                ans[k++] = vec1[i++];
+    Node* sortList(Node* head1, Node* head2) {
+        if (!head1) return head2;
+        if (!head2) return head1;
+
+        Node* tempHead = nullptr;
+        Node* tempTail = nullptr;
+
+        // Initialize tempHead and tempTail
+        if (head1->data < head2->data) {
+            tempHead = tempTail = head1;
+            head1 = head1->right;
+        } else {
+            tempHead = tempTail = head2;
+            head2 = head2->right;
+        }
+
+        // Merge the two sorted DLLs
+        while (head1 && head2) {
+            if (head1->data < head2->data) {
+                tempTail->right = head1;
+                head1->left = tempTail;
+                tempTail = head1;
+                head1 = head1->right;
+            } else {
+                tempTail->right = head2;
+                head2->left = tempTail;
+                tempTail = head2;
+                head2 = head2->right;
             }
-            else{
-                ans[k++] = vec2[j++];
-            }
         }
-        while(i<vec1.size()){
-            ans[k++] = vec1[i++];
-        }
-        while(j<vec2.size()){
-            ans[k++] = vec2[j++];
-        }
+
+        // Attach remaining nodes from head1 or head2
+        tempTail->right = (head1) ? head1 : head2;
+        if (tempTail->right) tempTail->right->left = tempTail;
+
+        return tempHead;
     }
-  public:
-    // Function to return a list of integers denoting the node
-    // values of both the BST in a sorted order.
+    
+    int countNodes(Node* head) {
+        int count = 0;
+        while (head) {
+            count++;
+            head = head->right;
+        }
+        return count;
+    }
+    
+    Node* listToBst(Node* &head, int n) {
+        if (n <= 0) return NULL;
+
+        // Recursively construct the left subtree
+        Node* left = listToBst(head, n / 2);
+
+        // Create root node with the current head
+        Node* root = head;
+        root->left = left;
+
+        // Move head to the next node
+        head = head->right;
+
+        // Recursively construct the right subtree
+        root->right = listToBst(head, n - n / 2 - 1);
+
+        return root;
+    }
+    
+    void inorder(Node* root, vector<int> &vec) {
+        if (root == NULL) return;
+
+        inorder(root->left, vec);
+        vec.push_back(root->data);
+        inorder(root->right, vec);
+    }
+
+public:
     vector<int> merge(Node *root1, Node *root2) {
-        vector<int> vec1,vec2;
-        
-        inorder(root1,vec1);
-        inorder(root2,vec2);
-        
-        vector<int> ans(vec1.size()+vec2.size());
-        solve(vec1,vec2,ans);
-        
-        return ans;
+        // Convert both BSTs to sorted doubly linked lists
+        Node* head1 = NULL;
+        Node* tail1 = NULL;
+        Node* head2 = NULL;
+        Node* tail2 = NULL;
+
+        bstToList(root1, head1, tail1);
+        bstToList(root2, head2, tail2);
+
+        // Merge the two sorted DLLs
+        Node* mergedHead = sortList(head1, head2);
+
+        // Convert merged DLL back to a balanced BST
+        int nodeCount = countNodes(mergedHead);
+        Node* balancedRoot = listToBst(mergedHead, nodeCount);
+
+        // Get inorder traversal of the balanced BST
+        vector<int> result;
+        inorder(balancedRoot, result);
+        return result;
     }
 };
+
 
 //{ Driver Code Starts.
 int main() {
