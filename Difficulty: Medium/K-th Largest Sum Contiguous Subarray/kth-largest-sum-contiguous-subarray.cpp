@@ -9,19 +9,20 @@ using namespace std;
 class Solution {
   public:
     int kthLargest(vector<int> &arr, int k) {
-        vector<int> vec;
-        
-        for(int i =0;i<arr.size();i++){
-            int sum =0;
-            for(int j =i;j<arr.size();j++){
-                sum = sum + arr[j];
-                vec.push_back(sum);
+        priority_queue<int,vector<int>,greater<int> > minHeap;
+        int n = arr.size();
+        for(int i =0;i<n;i++){
+            int sum = 0;
+            for(int j =i;j<n;j++){
+                sum += arr[j];
+                minHeap.push(sum);
+                
+                if(minHeap.size() > k){
+                    minHeap.pop();
+                }
             }
         }
-        
-        sort(vec.begin(),vec.end());
-        
-        return vec[vec.size()-k];
+        return minHeap.top();
     }
 };
 
