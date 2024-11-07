@@ -18,50 +18,48 @@ for (int i=0; i < size; i++)
 class Solution
 {
     public:
-    class Node{
-        public:
-        int data;
-        int row;
-        int col;
-        
-        Node(int data, int row,int col){
-            this->data = data;
-            this->row = row;
-            this->col = col;
-        }
-    };
     
+    class Node{
+      public:
+      int data;
+      int row;
+      int col;
+      
+      Node(int data,int row,int col){
+          this->data = data;
+          this->row = row;
+          this->col = col;
+      }
+    };
     class compare{
         public:
-        
-        bool operator()(Node* a, Node* b){
+        bool operator()(Node* a,Node* b){
             return a->data > b->data;
         }
     };
-    
-    
-    //Function to merge k sorted arrays.
     vector<int> mergeKArrays(vector<vector<int>> arr, int K)
     {
-        vector<int>ans;
-        priority_queue<Node*,vector<Node*>,compare> pq;
+        vector<int> ans;
+        priority_queue<Node*,vector<Node*>,compare> minHeap;
         
         for(int i =0;i<K;i++){
             Node* temp = new Node(arr[i][0],i,0);
-            pq.push(temp);
+            minHeap.push(temp);
         }
         
-        while(!pq.empty()){
-            Node* temp = pq.top();
-            ans.push_back(temp->data);
-            pq.pop();
+        while(!minHeap.empty()){
+            Node* top = minHeap.top();
+            minHeap.pop();
             
-            int i = temp->row;
-            int j = temp->col;
-            if(j+1 <arr[i].size()){
+            ans.push_back(top->data);
+            
+            int i = top->row;
+            int j = top->col;
+            if(j+1 < arr[i].size()){
                 Node* next = new Node(arr[i][j+1],i,j+1);
-                pq.push(next);
+                minHeap.push(next);
             }
+            
         }
         return ans;
     }
