@@ -11,35 +11,41 @@ using namespace std;
 // User function Template for C++
 
 class Solution{
-    private:
-    void heapify(vector<int> &vec,int i , int n){
+    public:
+    void heapify(vector<int> &arr, int n ,int i){
         int largest = i;
-        int left = 2*i +1;
-        int right = 2*i +2;
+        int left = 2*i+1;
+        int right = 2*i+2;
         
-        if(left<n && vec[largest] < vec[left]) largest = left;
-        if(right<n && vec[largest] < vec[right]) largest = right;
+        if(left<n && arr[left] > arr[largest]) largest = left;
+        if(right<n && arr[right] > arr[largest]) largest = right;
         
         if(largest!=i){
-            swap(vec[i],vec[largest]);
-            heapify(vec,largest,n);
+            swap(arr[largest],arr[i]);
+            heapify(arr,n,largest);
         }
     }
-    public:
+    void buildHeaps(vector<int> &arr){
+        
+        for(int i = arr.size()/2 -1;i>=0;i--){
+            heapify(arr,arr.size(),i);
+        }
+    }
     vector<int> mergeHeaps(vector<int> &a, vector<int> &b, int n, int m) {
-        vector<int> ans;
-        for(int i=0;i<n;i++){
-            ans.push_back(a[i]);
+        
+        vector<int> merged;
+        
+        for(int i =0;i<n;i++){
+            merged.push_back(a[i]);
         }
-        for(int i=0;i<m;i++){
-            ans.push_back(b[i]);
+        for(int i =0;i<m;i++){
+            merged.push_back(b[i]);
         }
         
-        for(int i = (m+n)/2 -1;i>=0;i--){
-            heapify(ans,i,m+n);
-        }
+        buildHeaps(merged);
         
-        return ans;
+        return merged;
+        
     }
 };
 
