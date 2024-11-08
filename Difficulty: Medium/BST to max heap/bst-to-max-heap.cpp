@@ -111,7 +111,7 @@ void postorderTraversal(Node* root)
 
 class Solution{
     private:
-    void inorder(Node* root, vector<int>&vec){
+    void inorder(Node* root, vector<int> &vec){
         if(root==NULL) return;
         
         inorder(root->left,vec);
@@ -119,23 +119,25 @@ class Solution{
         inorder(root->right,vec);
     }
     
-    void fillPreorder(Node* root, int &index, vector<int> &vec){
-        if(index<0) return;
+    void fillPreorder(Node* root, vector<int> &vec, int &index){
+        if(index < 0) return;
         if(root==NULL) return;
         
+        
         root->data = vec[index--];
-        fillPreorder(root->right,index,vec);
-        fillPreorder(root->left,index,vec);
+        fillPreorder(root->right,vec,index);
+        fillPreorder(root->left,vec,index);
+        
     }
   public:
     void convertToMaxHeapUtil(Node* root)
     {
+        if(root ==NULL) return;
+        
         vector<int> vec;
         inorder(root,vec);
-        
         int index = vec.size()-1;
-        fillPreorder(root,index,vec);
-        return;
+        fillPreorder(root,vec, index);
     }    
 };
 
