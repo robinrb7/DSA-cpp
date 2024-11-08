@@ -15,54 +15,52 @@ class Solution{
         int row;
         int col;
         
-        Node(int data,int row, int col){
+        Node(int data, int row,int col){
             this->data = data;
             this->row = row;
             this->col = col;
         }
-      
     };
     class compare{
-        public:
-        bool operator()(Node* a, Node* b){
-            return a->data > b->data;
-        }
+      public:
+      bool operator()(Node* a, Node* b){
+          return a->data > b->data;
+      }
     };
-    
     pair<int,int> findSmallestRange(int KSortedArray[][N], int n, int k)
     {
-        priority_queue<Node*,vector<Node*>,compare> minHeap;
-        int mini = INT_MAX;
-        int maxi = INT_MIN;
-        
-        for(int i =0;i<k;i++){
-            Node* temp = new Node(KSortedArray[i][0],i,0);
-            maxi = max(maxi,temp->data);
-            minHeap.push(temp);
-        }
-        
-        int start = minHeap.top()->data , end = maxi;
-        
-        while(!minHeap.empty()){
-            Node* temp = minHeap.top();
-            minHeap.pop();
-            
-            mini = temp->data;
-            if(maxi - mini < end - start){
-                start = mini;
-                end = maxi;
-            }
-            
-            if(temp->col +1 < n){
-                   Node* next = new Node(KSortedArray[temp->row][temp->col +1],temp->row,temp->col+1);
-                   maxi = max(maxi,next->data);
-                   minHeap.push(next);
-                }    
-            else{
-                break;
-            }
-        }
-        return {start,end};
+          priority_queue<Node*,vector<Node*>,compare> minHeap;
+          int maxi = INT_MIN;
+          for(int i =0;i<k;i++){
+              Node* temp = new Node({KSortedArray[i][0],i,0});
+              maxi = max(maxi,temp->data);
+              minHeap.push(temp);
+          }
+          
+          int start = minHeap.top()->data, end = maxi;
+          
+          while(!minHeap.empty()){
+              Node* top = minHeap.top();
+              minHeap.pop();
+              
+              if(maxi - top->data < end  - start){
+                  start = top->data;
+                  end = maxi;
+              }
+              
+              int i = top->row;
+              int j = top->col;
+              
+              if(j+1 < n){
+                  Node* next = new Node({KSortedArray[i][j+1],i,j+1});
+                  maxi = max(maxi,next->data);
+                  minHeap.push(next);
+              }
+              else{
+                  return {start,end};
+              }
+          }
+          
     }
 };
 
