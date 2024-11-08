@@ -91,45 +91,40 @@ Node *buildTree(string str) {
 };*/
 
 class Solution {
-    private:
-    void countNodes(Node* root, int&count){
-        if(root == NULL) return;
-        
-        countNodes(root->left,count);
-        count++;
-        countNodes(root->right,count);
-    }
-    bool isCBT(Node* root, int index,int count){
-        if(root==NULL) return true;
-        if(index >= count) return false;
-        
-        bool left = isCBT(root->left, 2*index +1,count);
-        bool right = isCBT(root->right, 2*index +2,count);
-        return (left&&right);
-    }
-    
-    bool isMaxHeap(Node* root){
-        if(root==NULL) return true;
-        
-        if(root->left==NULL && root->right==NULL) return true;
-        else if(root->right==NULL){
-            return root->data > root->left->data;
-        }
-        else{
-            return (root->data > root->left->data) && (root->data > root->right->data)
-            && (isMaxHeap(root->left) && isMaxHeap(root->right));
-        }
-    }
   public:
     bool isHeap(struct Node* tree) {
+        if(tree==NULL) return true;
         
-        int count =0;
-        countNodes(tree,count);
+        queue<Node*> q;
+        q.push(tree);
+        bool lastNode = false;
         
-        int index =0;
+        while(!q.empty()){
+            Node* temp = q.front();
+            q.pop();
+            
+            if(temp->left){
+                if(lastNode || temp->left->data > temp->data){
+                    return false;
+                }
+                q.push(temp->left);
+            }
+            else{
+                lastNode = true;
+            }
+            
+            if(temp->right){
+                if(lastNode || temp->right->data > temp->data){
+                    return false;
+                }
+                q.push(temp->right);
+            }
+            else{
+                lastNode = true;
+            }
+        }
         
-        if(isCBT(tree,index,count) && isMaxHeap(tree)) return true;
-        else return false;
+        return true;
     }
 };
 
