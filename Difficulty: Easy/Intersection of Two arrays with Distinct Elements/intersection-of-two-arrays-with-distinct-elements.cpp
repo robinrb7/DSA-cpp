@@ -21,8 +21,6 @@ class Solution {
 	}        
 	for(auto i: b){
 		if(visited[i]==true) count++;
-
-		visited[i] = true;
 	}
 	
 	return count;
