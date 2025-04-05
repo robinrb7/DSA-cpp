@@ -14,36 +14,27 @@ public:
         if(list1==NULL) return list2;
         if(list2==NULL) return list1;
 
+        ListNode* dummy = new ListNode(-1);
         ListNode* temp1=list1;
-        ListNode* temp2 =list2;
-        if(list1->val > list2->val){
-            temp1=list2;
-            temp2=list1;
-        }
+        ListNode* temp2= list2;
+        ListNode* tail = dummy;
 
-        ListNode* head =temp1;
-
-        while(temp2!=NULL && temp1!=NULL){
-            if(temp1->next==NULL){
-                temp1->next = temp2;
-                break;
-            }
-
-
-            int data =temp2->val;
-            ListNode* front1 = temp1->next;
-            ListNode* front2 = temp2->next;
-            if(data >= temp1->val &&front1 !=NULL && data <= front1->val){
-                temp1->next = temp2;
-                temp2->next = front1;
-                temp2 = front2;
-            }
-            else{
+        while(temp1!=NULL && temp2!=NULL){
+            if(temp1->val < temp2->val){
+                tail->next = temp1;
+                tail=temp1;
                 temp1=temp1->next;
             }
+            else{
+                tail->next = temp2;
+                tail=temp2;
+                temp2=temp2->next;
+            }
         }
 
-        return head;
-        
+        if(temp1!=NULL) tail->next = temp1;
+        if(temp2!=NULL) tail->next = temp2;
+
+        return dummy->next;
     }
 };
