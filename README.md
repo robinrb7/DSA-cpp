@@ -31,6 +31,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0075-sort-colors](https://github.com/robinrb7/DSA-cpp/tree/master/0075-sort-colors) |
 | [0088-merge-sorted-array](https://github.com/robinrb7/DSA-cpp/tree/master/0088-merge-sorted-array) |
 | [0141-linked-list-cycle](https://github.com/robinrb7/DSA-cpp/tree/master/0141-linked-list-cycle) |
+| [0142-linked-list-cycle-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0142-linked-list-cycle-ii) |
 | [0160-intersection-of-two-linked-lists](https://github.com/robinrb7/DSA-cpp/tree/master/0160-intersection-of-two-linked-lists) |
 | [0287-find-the-duplicate-number](https://github.com/robinrb7/DSA-cpp/tree/master/0287-find-the-duplicate-number) |
 | [0908-middle-of-the-linked-list](https://github.com/robinrb7/DSA-cpp/tree/master/0908-middle-of-the-linked-list) |
@@ -86,6 +87,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0003-longest-substring-without-repeating-characters](https://github.com/robinrb7/DSA-cpp/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0128-longest-consecutive-sequence](https://github.com/robinrb7/DSA-cpp/tree/master/0128-longest-consecutive-sequence) |
 | [0141-linked-list-cycle](https://github.com/robinrb7/DSA-cpp/tree/master/0141-linked-list-cycle) |
+| [0142-linked-list-cycle-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0142-linked-list-cycle-ii) |
 | [0160-intersection-of-two-linked-lists](https://github.com/robinrb7/DSA-cpp/tree/master/0160-intersection-of-two-linked-lists) |
 | [0169-majority-element](https://github.com/robinrb7/DSA-cpp/tree/master/0169-majority-element) |
 | [0229-majority-element-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0229-majority-element-ii) |
@@ -147,6 +149,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0019-remove-nth-node-from-end-of-list](https://github.com/robinrb7/DSA-cpp/tree/master/0019-remove-nth-node-from-end-of-list) |
 | [0021-merge-two-sorted-lists](https://github.com/robinrb7/DSA-cpp/tree/master/0021-merge-two-sorted-lists) |
 | [0141-linked-list-cycle](https://github.com/robinrb7/DSA-cpp/tree/master/0141-linked-list-cycle) |
+| [0142-linked-list-cycle-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0142-linked-list-cycle-ii) |
 | [0160-intersection-of-two-linked-lists](https://github.com/robinrb7/DSA-cpp/tree/master/0160-intersection-of-two-linked-lists) |
 | [0206-reverse-linked-list](https://github.com/robinrb7/DSA-cpp/tree/master/0206-reverse-linked-list) |
 | [0237-delete-node-in-a-linked-list](https://github.com/robinrb7/DSA-cpp/tree/master/0237-delete-node-in-a-linked-list) |
