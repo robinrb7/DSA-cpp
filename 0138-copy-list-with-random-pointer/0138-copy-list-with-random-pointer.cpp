@@ -46,8 +46,8 @@ public:
 
         temp=head;
         while(temp){
-            if(temp->next)
-                temp->next->random = (temp->random==NULL)? NULL : temp->random->next;
+            if(temp->random)
+                temp->next->random = temp->random->next;
             temp=temp->next->next;
         }
 
