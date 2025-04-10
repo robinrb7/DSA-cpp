@@ -20,6 +20,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0169-majority-element](https://github.com/robinrb7/DSA-cpp/tree/master/0169-majority-element) |
 | [0229-majority-element-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0229-majority-element-ii) |
 | [0287-find-the-duplicate-number](https://github.com/robinrb7/DSA-cpp/tree/master/0287-find-the-duplicate-number) |
+| [0485-max-consecutive-ones](https://github.com/robinrb7/DSA-cpp/tree/master/0485-max-consecutive-ones) |
 | [0493-reverse-pairs](https://github.com/robinrb7/DSA-cpp/tree/master/0493-reverse-pairs) |
 | [0560-subarray-sum-equals-k](https://github.com/robinrb7/DSA-cpp/tree/master/0560-subarray-sum-equals-k) |
 ## Two Pointers
