@@ -10,6 +10,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0026-remove-duplicates-from-sorted-array](https://github.com/robinrb7/DSA-cpp/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0031-next-permutation](https://github.com/robinrb7/DSA-cpp/tree/master/0031-next-permutation) |
 | [0035-search-insert-position](https://github.com/robinrb7/DSA-cpp/tree/master/0035-search-insert-position) |
+| [0042-trapping-rain-water](https://github.com/robinrb7/DSA-cpp/tree/master/0042-trapping-rain-water) |
 | [0048-rotate-image](https://github.com/robinrb7/DSA-cpp/tree/master/0048-rotate-image) |
 | [0054-spiral-matrix](https://github.com/robinrb7/DSA-cpp/tree/master/0054-spiral-matrix) |
 | [0056-merge-intervals](https://github.com/robinrb7/DSA-cpp/tree/master/0056-merge-intervals) |
@@ -31,6 +32,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0019-remove-nth-node-from-end-of-list](https://github.com/robinrb7/DSA-cpp/tree/master/0019-remove-nth-node-from-end-of-list) |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/robinrb7/DSA-cpp/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0031-next-permutation](https://github.com/robinrb7/DSA-cpp/tree/master/0031-next-permutation) |
+| [0042-trapping-rain-water](https://github.com/robinrb7/DSA-cpp/tree/master/0042-trapping-rain-water) |
 | [0061-rotate-list](https://github.com/robinrb7/DSA-cpp/tree/master/0061-rotate-list) |
 | [0075-sort-colors](https://github.com/robinrb7/DSA-cpp/tree/master/0075-sort-colors) |
 | [0088-merge-sorted-array](https://github.com/robinrb7/DSA-cpp/tree/master/0088-merge-sorted-array) |
@@ -113,6 +115,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Dynamic Programming
 |  |
 | ------- |
+| [0042-trapping-rain-water](https://github.com/robinrb7/DSA-cpp/tree/master/0042-trapping-rain-water) |
 | [0062-unique-paths](https://github.com/robinrb7/DSA-cpp/tree/master/0062-unique-paths) |
 ## Combinatorics
 |  |
@@ -170,5 +173,10 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Stack
 |  |
 | ------- |
+| [0042-trapping-rain-water](https://github.com/robinrb7/DSA-cpp/tree/master/0042-trapping-rain-water) |
 | [0234-palindrome-linked-list](https://github.com/robinrb7/DSA-cpp/tree/master/0234-palindrome-linked-list) |
+## Monotonic Stack
+|  |
+| ------- |
+| [0042-trapping-rain-water](https://github.com/robinrb7/DSA-cpp/tree/master/0042-trapping-rain-water) |
 <!---LeetCode Topics End-->
