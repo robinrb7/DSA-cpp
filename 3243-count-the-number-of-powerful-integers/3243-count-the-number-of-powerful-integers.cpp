@@ -1,6 +1,6 @@
 class Solution {
     private:
-    long long solve(string str, string suffix, int limit){
+    long long solve(string &str, string &suffix, int limit){
         if(str.length() < suffix.length()) return 0;
 
         int remainLen = str.length() - suffix.length();
