@@ -8,8 +8,6 @@ class Solution {
         if(index>=n || target<0) return;
 
         for(int i = index;i<n;i++){
-            if(i!=index && cand[i]==cand[i-1]) continue;
-
             temp.push_back(cand[i]);
             solve(cand,target-cand[i],ans,temp,i,n);
             temp.pop_back();
