@@ -122,6 +122,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0042-trapping-rain-water](https://github.com/robinrb7/DSA-cpp/tree/master/0042-trapping-rain-water) |
 | [0062-unique-paths](https://github.com/robinrb7/DSA-cpp/tree/master/0062-unique-paths) |
+| [0131-palindrome-partitioning](https://github.com/robinrb7/DSA-cpp/tree/master/0131-palindrome-partitioning) |
 | [3243-count-the-number-of-powerful-integers](https://github.com/robinrb7/DSA-cpp/tree/master/3243-count-the-number-of-powerful-integers) |
 ## Combinatorics
 |  |
@@ -155,6 +156,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/robinrb7/DSA-cpp/tree/master/0003-longest-substring-without-repeating-characters) |
+| [0131-palindrome-partitioning](https://github.com/robinrb7/DSA-cpp/tree/master/0131-palindrome-partitioning) |
 | [3243-count-the-number-of-powerful-integers](https://github.com/robinrb7/DSA-cpp/tree/master/3243-count-the-number-of-powerful-integers) |
 ## Sliding Window
 |  |
@@ -192,4 +194,5 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0039-combination-sum](https://github.com/robinrb7/DSA-cpp/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0040-combination-sum-ii) |
 | [0090-subsets-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0090-subsets-ii) |
+| [0131-palindrome-partitioning](https://github.com/robinrb7/DSA-cpp/tree/master/0131-palindrome-partitioning) |
 <!---LeetCode Topics End-->
