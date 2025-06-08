@@ -1,28 +1,29 @@
 class Solution {
     private:
-    bool palin(string s){
-        int n =  s.length();
-        if(n==0) return 1;
+    bool palin(string s, int i, int j,vector<vector<int>>&dp){
 
-        int i =0,j=n-1;
-        while(i<j){
-            if(s[i++]!=s[j--]){
-                return 0;
+        if(dp[i][j] != -1) return dp[i][j];
+
+        int left = i, right =j;
+        while(left<right){
+            if(s[left++]!=s[right--]){
+                dp[i][j]=0;
+                return dp[i][j];
             }
         }
-        return 1;
+        dp[i][j] = 1;
+        return dp[i][j];
     }
-    void solve(string s, vector<vector<string>>&ans, vector<string> &temp, int partIndx, int n){
+    void solve(string s, vector<vector<string>>&ans, vector<string> &temp, int partIndx, int n,vector<vector<int>>&dp){
         if(partIndx == n){
             ans.push_back(temp);
             return;
         } 
 
         for(int i=partIndx;i<n;i++){
-            string str = s.substr(partIndx,i - partIndx +1);
-            if(palin(str)){
-                temp.push_back(str);
-                solve(s,ans,temp,i+1,n);
+            if(palin(s,partIndx,i,dp)){
+                temp.push_back(s.substr(partIndx,i - partIndx +1));
+                solve(s,ans,temp,i+1,n,dp);
                 temp.pop_back();
             }
         }
@@ -34,7 +35,9 @@ public:
         vector<string> temp;
         int n= s.length();
 
-        solve(s,ans,temp,0,n);
+        vector<vector<int>>dp(n+1,vector<int>(n+1,-1));
+
+        solve(s,ans,temp,0,n,dp);
         return ans;
     }
 };
