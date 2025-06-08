@@ -11,6 +11,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0031-next-permutation](https://github.com/robinrb7/DSA-cpp/tree/master/0031-next-permutation) |
 | [0035-search-insert-position](https://github.com/robinrb7/DSA-cpp/tree/master/0035-search-insert-position) |
 | [0039-combination-sum](https://github.com/robinrb7/DSA-cpp/tree/master/0039-combination-sum) |
+| [0040-combination-sum-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0040-combination-sum-ii) |
 | [0042-trapping-rain-water](https://github.com/robinrb7/DSA-cpp/tree/master/0042-trapping-rain-water) |
 | [0048-rotate-image](https://github.com/robinrb7/DSA-cpp/tree/master/0048-rotate-image) |
 | [0054-spiral-matrix](https://github.com/robinrb7/DSA-cpp/tree/master/0054-spiral-matrix) |
@@ -189,5 +190,6 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0039-combination-sum](https://github.com/robinrb7/DSA-cpp/tree/master/0039-combination-sum) |
+| [0040-combination-sum-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0040-combination-sum-ii) |
 | [0090-subsets-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0090-subsets-ii) |
 <!---LeetCode Topics End-->
