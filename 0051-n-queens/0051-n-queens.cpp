@@ -1,40 +1,25 @@
 class Solution {
     private:
-    bool isSafe(vector<string> &board, int row, int col, int n){
-        int i = row, j= col;
-        while(j>=0){
-            if(board[i][j]=='Q') return false;
-            j--;
-        }
-
-        i = row, j= col;
-        while(i>=0 && j>=0){
-            if(board[i][j]=='Q') return false;
-            i--;
-            j--;
-        }
-
-        i = row, j= col;
-        while(i<n && j>=0){
-            if(board[i][j]=='Q') return false;
-            i++;
-            j--;
-        }
-
-        return true;
-    }
-    
-    void solve(int n,vector<string> &board, vector<vector<string>> &ans,int col){
+    void solve(int n,vector<string> &board, vector<vector<string>> &ans,int col,vector<int>&leftRow,vector<int>&upDiagonal,vector<int>&lowDiagonal){
         if(col == n){
             ans.push_back(board);
             return;
         }
 
         for(int row =0;row<n;row++){
-            if(isSafe(board,row,col,n)){
+            if(leftRow[row] ==0 && upDiagonal[n-1+row-col]==0 && lowDiagonal[row+col]==0){
                 board[row][col] = 'Q';
-                solve(n,board,ans,col+1);
+
+                leftRow[row] = 1;
+                upDiagonal[n-1+row-col]=1;
+                lowDiagonal[row+col]=1;
+
+                solve(n,board,ans,col+1,leftRow,upDiagonal,lowDiagonal);
                 board[row][col] = '.';
+
+                leftRow[row] = 0;
+                upDiagonal[n-1+row-col]=0;
+                lowDiagonal[row+col]=0;
             }
         }
 
@@ -44,7 +29,11 @@ public:
         vector<string>board(n,string(n,'.'));
         vector<vector<string>>ans;
 
-        solve(n,board,ans,0);
+        vector<int>leftRow(n,0);
+        vector<int>upDiagonal(2*n-1,0);
+        vector<int>lowDiagonal(2*n-1,0);
+
+        solve(n,board,ans,0,leftRow,upDiagonal,lowDiagonal);
         return ans;
     }
 };
