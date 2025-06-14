@@ -15,6 +15,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0040-combination-sum-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0040-combination-sum-ii) |
 | [0042-trapping-rain-water](https://github.com/robinrb7/DSA-cpp/tree/master/0042-trapping-rain-water) |
 | [0046-permutations](https://github.com/robinrb7/DSA-cpp/tree/master/0046-permutations) |
+| [0047-permutations-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0047-permutations-ii) |
 | [0048-rotate-image](https://github.com/robinrb7/DSA-cpp/tree/master/0048-rotate-image) |
 | [0051-n-queens](https://github.com/robinrb7/DSA-cpp/tree/master/0051-n-queens) |
 | [0054-spiral-matrix](https://github.com/robinrb7/DSA-cpp/tree/master/0054-spiral-matrix) |
@@ -53,6 +54,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0015-3sum](https://github.com/robinrb7/DSA-cpp/tree/master/0015-3sum) |
 | [0018-4sum](https://github.com/robinrb7/DSA-cpp/tree/master/0018-4sum) |
+| [0047-permutations-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0047-permutations-ii) |
 | [0056-merge-intervals](https://github.com/robinrb7/DSA-cpp/tree/master/0056-merge-intervals) |
 | [0075-sort-colors](https://github.com/robinrb7/DSA-cpp/tree/master/0075-sort-colors) |
 | [0088-merge-sorted-array](https://github.com/robinrb7/DSA-cpp/tree/master/0088-merge-sorted-array) |
@@ -202,6 +204,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0039-combination-sum](https://github.com/robinrb7/DSA-cpp/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0040-combination-sum-ii) |
 | [0046-permutations](https://github.com/robinrb7/DSA-cpp/tree/master/0046-permutations) |
+| [0047-permutations-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0047-permutations-ii) |
 | [0051-n-queens](https://github.com/robinrb7/DSA-cpp/tree/master/0051-n-queens) |
 | [0090-subsets-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0090-subsets-ii) |
 | [0131-palindrome-partitioning](https://github.com/robinrb7/DSA-cpp/tree/master/0131-palindrome-partitioning) |
