@@ -30,6 +30,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0169-majority-element](https://github.com/robinrb7/DSA-cpp/tree/master/0169-majority-element) |
 | [0189-rotate-array](https://github.com/robinrb7/DSA-cpp/tree/master/0189-rotate-array) |
 | [0229-majority-element-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0229-majority-element-ii) |
+| [0283-move-zeroes](https://github.com/robinrb7/DSA-cpp/tree/master/0283-move-zeroes) |
 | [0287-find-the-duplicate-number](https://github.com/robinrb7/DSA-cpp/tree/master/0287-find-the-duplicate-number) |
 | [0485-max-consecutive-ones](https://github.com/robinrb7/DSA-cpp/tree/master/0485-max-consecutive-ones) |
 | [0493-reverse-pairs](https://github.com/robinrb7/DSA-cpp/tree/master/0493-reverse-pairs) |
@@ -52,6 +53,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0160-intersection-of-two-linked-lists](https://github.com/robinrb7/DSA-cpp/tree/master/0160-intersection-of-two-linked-lists) |
 | [0189-rotate-array](https://github.com/robinrb7/DSA-cpp/tree/master/0189-rotate-array) |
 | [0234-palindrome-linked-list](https://github.com/robinrb7/DSA-cpp/tree/master/0234-palindrome-linked-list) |
+| [0283-move-zeroes](https://github.com/robinrb7/DSA-cpp/tree/master/0283-move-zeroes) |
 | [0287-find-the-duplicate-number](https://github.com/robinrb7/DSA-cpp/tree/master/0287-find-the-duplicate-number) |
 | [0567-permutation-in-string](https://github.com/robinrb7/DSA-cpp/tree/master/0567-permutation-in-string) |
 | [0908-middle-of-the-linked-list](https://github.com/robinrb7/DSA-cpp/tree/master/0908-middle-of-the-linked-list) |
