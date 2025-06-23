@@ -1,22 +1,21 @@
 class Solution {
 public:
     int subarraySum(vector<int>& nums, int k) {
-        int n =nums.size();
-        unordered_map<int,int>hash;
+        int n = nums.size();
+        unordered_map<int,int> preSum;
         int count=0,sum=0;
+        preSum[0]=1;
+
         for(int i =0;i<n;i++){
             sum += nums[i];
-            if(sum==k){
-                count++;
+
+            if(preSum.find(sum-k) != preSum.end()){
+                count = count + preSum[sum-k];
             }
-            if(hash.find(sum-k)!=hash.end()){
-                count = count + hash[sum-k];
-            }
-            
-            if(hash.find(sum)!=hash.end()) hash[sum]++;
-            else hash[sum]=1;
+
+            preSum[sum]++;
         }
-        
+
         return count;
     }
 };
