@@ -21,6 +21,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0051-n-queens](https://github.com/robinrb7/DSA-cpp/tree/master/0051-n-queens) |
 | [0054-spiral-matrix](https://github.com/robinrb7/DSA-cpp/tree/master/0054-spiral-matrix) |
 | [0056-merge-intervals](https://github.com/robinrb7/DSA-cpp/tree/master/0056-merge-intervals) |
+| [0073-set-matrix-zeroes](https://github.com/robinrb7/DSA-cpp/tree/master/0073-set-matrix-zeroes) |
 | [0074-search-a-2d-matrix](https://github.com/robinrb7/DSA-cpp/tree/master/0074-search-a-2d-matrix) |
 | [0075-sort-colors](https://github.com/robinrb7/DSA-cpp/tree/master/0075-sort-colors) |
 | [0088-merge-sorted-array](https://github.com/robinrb7/DSA-cpp/tree/master/0088-merge-sorted-array) |
@@ -74,6 +75,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0037-sudoku-solver](https://github.com/robinrb7/DSA-cpp/tree/master/0037-sudoku-solver) |
 | [0048-rotate-image](https://github.com/robinrb7/DSA-cpp/tree/master/0048-rotate-image) |
 | [0054-spiral-matrix](https://github.com/robinrb7/DSA-cpp/tree/master/0054-spiral-matrix) |
+| [0073-set-matrix-zeroes](https://github.com/robinrb7/DSA-cpp/tree/master/0073-set-matrix-zeroes) |
 | [0074-search-a-2d-matrix](https://github.com/robinrb7/DSA-cpp/tree/master/0074-search-a-2d-matrix) |
 ## Simulation
 |  |
@@ -120,6 +122,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0001-two-sum](https://github.com/robinrb7/DSA-cpp/tree/master/0001-two-sum) |
 | [0003-longest-substring-without-repeating-characters](https://github.com/robinrb7/DSA-cpp/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0037-sudoku-solver](https://github.com/robinrb7/DSA-cpp/tree/master/0037-sudoku-solver) |
+| [0073-set-matrix-zeroes](https://github.com/robinrb7/DSA-cpp/tree/master/0073-set-matrix-zeroes) |
 | [0128-longest-consecutive-sequence](https://github.com/robinrb7/DSA-cpp/tree/master/0128-longest-consecutive-sequence) |
 | [0138-copy-list-with-random-pointer](https://github.com/robinrb7/DSA-cpp/tree/master/0138-copy-list-with-random-pointer) |
 | [0141-linked-list-cycle](https://github.com/robinrb7/DSA-cpp/tree/master/0141-linked-list-cycle) |
