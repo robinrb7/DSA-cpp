@@ -26,17 +26,18 @@ class Solution {
 
     }
 
-    int countPairs(vector<int>& nums,int s,int mid,int e){
-        int cnt = 0;
+    int countPairs(vector<int>&nums, int low,int mid,int high){
+        int count=0;
+        int right = mid+1;
 
-        int right =mid+1;
-        for(int left = s;left<=mid;left++){
-            while(right<=e && ((long long)nums[left] > (long long)2* nums[right])) right++;
-            cnt += (right - (mid+1));
+        for(int i =low;i<=mid;i++){
+            while(right<=high && nums[i] > 2LL * nums[right]) right++;
+            count += right -(mid+1);
         }
-        return cnt;
 
+        return count;
     }
+    
     int mergeSort(vector<int>& nums,int s,int e){
         int cnt =0;
         if(s>=e) return cnt;
