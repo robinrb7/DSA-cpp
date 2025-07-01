@@ -6,19 +6,19 @@ public:
 
         int mini = INT_MAX;
 
-        while(low<=high){
+        while(low < high){
             int mid = low + (high-low)/2;
 
-            if(nums[low]<=nums[mid]){
-                mini = min(mini,nums[low]);
+            if(nums[low] <= nums[high]) break;
+
+            if(nums[mid] >= nums[0]){
                 low = mid+1;
             }
             else{
-                mini = min(mini,nums[mid]);
-                high = mid-1;
+                high = mid;
             }
         }
 
-        return mini;
+        return nums[low];
     }
 };
