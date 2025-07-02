@@ -5,8 +5,7 @@ class Solution {
         for(int i=0;i<n;i++){
             sum += (nums[i] +mid-1)/mid;
         }
-        if(sum <= threshold) return 1;
-        return 0;
+        return sum <= threshold;
     }
 public:
     int smallestDivisor(vector<int>& nums, int threshold) {
