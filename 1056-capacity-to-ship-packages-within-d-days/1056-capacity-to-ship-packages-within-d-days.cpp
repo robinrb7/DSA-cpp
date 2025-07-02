@@ -18,12 +18,13 @@ class Solution {
 public:
     int shipWithinDays(vector<int>& weights, int days) {
         int n = weights.size();
-        int sum =0;
+        int sum =0, maxi = INT_MIN;
         for(int i =0;i<n;i++){
+            if(weights[i]>maxi) maxi = weights[i];
             sum += weights[i];
         }
 
-        int low = 1,high=sum;
+        int low = maxi,high=sum;
         while(low<=high){
             int mid = low +(high-low)/2;
             if(poss(weights,days,mid)){
