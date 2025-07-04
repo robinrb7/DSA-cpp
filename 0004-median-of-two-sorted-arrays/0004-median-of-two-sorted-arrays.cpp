@@ -1,45 +1,37 @@
 class Solution {
+    
 public:
     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
-        int element1 =-1,element2 =-1;
-        int count=0;
-        int n = nums1.size(),m= nums2.size();
-        int N = n+m;
-        int indx2 = N/2,indx1 = indx2-1;
-        int i=0,j=0;
+        int n = nums1.size(), m = nums2.size();
+        if(m<n){
+            return findMedianSortedArrays(nums2,nums1);
+        }
 
-        while(i<n && j<m){
-            if(nums1[i]<nums2[j]){
-                if(count==indx1) element1= nums1[i];
-                if(count==indx2) element2 = nums1[i];
-                count++;
-                i++;
-            }
+        double median = -1.0;
+        int low=0, high=n;
+        int numLeft = (n+m+1)/2;
+        while(low<=high){
+            int mid1 = low +(high-low)/2;
+            int mid2= numLeft - mid1;
+
+            int l1 = INT_MIN, l2 = INT_MIN;
+            int r1 = INT_MAX, r2 = INT_MAX;
+
+            if(mid1 < n) r1 = nums1[mid1];
+            if(mid2 < m) r2 = nums2[mid2];
+            if(mid1>0) l1 = nums1[mid1-1];
+            if(mid2>0) l2 = nums2[mid2-1];
+
+            if(l1>r2) high = mid1-1;
+            else if (l2>r1) low = mid1+1;
             else{
-                if(count==indx1) element1= nums2[j];
-                if(count==indx2) element2 = nums2[j];
-                count++;
-                j++;
+                if((n+m) %2==0){
+                    return (double)(max(l1,l2) + min(r1,r2))/2.0;
+                }
+                else return (double)max(l1,l2);
             }
         }
-        while(i<n){
-             if(count==indx1) element1= nums1[i];
-                if(count==indx2) element2 = nums1[i];
-                count++;
-                i++;
-        }
-        while(j<m){
-            if(count==indx1) element1= nums2[j];
-                if(count==indx2) element2 = nums2[j];
-                count++;
-                j++;
-        }
+        return median;
 
-        if(N%2==0){
-            return (double)(element1+element2) /2.0;
-        }
-        else{
-            return element2;
-        }
     }
 };
