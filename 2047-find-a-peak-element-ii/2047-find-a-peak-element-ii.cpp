@@ -1,13 +1,16 @@
 class Solution {
     private:
-    bool poss(vector<vector<int>>& mat,int row,int col,int n,int m){
-        if((row >0 && mat[row][col] < mat[row-1][col]) || (row<n-1 && mat[row][col] < mat[row+1][col]) 
-            || (col >0 && mat[row][col] < mat[row][col-1]) || (col<m-1 && mat[row][col] < mat[row][col+1])){
-            return 0;
-           }
-
-           return 1;
+    int rowInd(vector<vector<int>>& mat,int col, int n){
+        int maxRow=-1, maxi=INT_MIN;
+            for(int i=0;i<n;i++){
+                if(mat[i][col]>maxi){
+                    maxi = mat[i][col];
+                    maxRow = i;
+                }
+            }
+        return maxRow;
     }
+    
 public:
     vector<int> findPeakGrid(vector<vector<int>>& mat) {
         int n= mat.size();
@@ -16,17 +19,13 @@ public:
         int low =0,high =m-1;
         while(low<=high){
             int mid = low + (high-low)/2;
+            int maxRow = rowInd(mat,mid,n);
 
-            int maxRow=-1, maxi=INT_MIN;
-            for(int i=0;i<n;i++){
-                if(mat[i][mid]>maxi){
-                    maxi = mat[i][mid];
-                    maxRow = i;
-                }
-            }
+            int left = mid>0? mat[maxRow][mid-1]:-1;
+            int right= mid<m-1? mat[maxRow][mid+1]:-1;
 
-            if(poss(mat,maxRow,mid,n,m)) return {maxRow,mid};
-            else if(mid >0 && mat[maxRow][mid-1] > mat[maxRow][mid]) high = mid-1;
+            if(mat[maxRow][mid]> left && mat[maxRow][mid]> right) return {maxRow,mid};
+            else if(left > mat[maxRow][mid]) high = mid-1;
             else low = mid+1;
         }
         return {-1,-1};
