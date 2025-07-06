@@ -3,20 +3,24 @@ public:
     string reverseWords(string s) {
         int n =s.length();
 
-        string ans= "";
-        int i=n-1;
-        while(i>=0){
-            while(i>=0 && s[i]==' ')i--;
-            if(i<0) break;
+        int i=0,j=0;
+        while(i<n){
+            while(i<n && s[i]==' ')i++;
+            while(i<n && s[i] !=' ') s[j++]=s[i++];
+            while(i<n && s[i]==' ')i++;
+            if(i<n) s[j++]=' ';
+        }
+        s.resize(j);
 
-            int j=i;
-            while(i>=0 && s[i]!=' ')i--;
-            ans += s.substr(i+1,j-i) + " ";
-
-            i--;
+        reverse(s.begin(),s.end());
+        int start=0;
+        for(int end=0;end<=s.size();end++){
+            if(s[end]==' ' || end == s.size()){
+                reverse(s.begin()+start,s.begin()+end);
+                start = end+1;
+            }
         }
 
-        ans.resize(ans.length()-1);
-        return ans;
+        return s;
     }
 };
