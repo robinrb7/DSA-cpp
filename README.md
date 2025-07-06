@@ -87,6 +87,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0088-merge-sorted-array](https://github.com/robinrb7/DSA-cpp/tree/master/0088-merge-sorted-array) |
 | [0169-majority-element](https://github.com/robinrb7/DSA-cpp/tree/master/0169-majority-element) |
 | [0229-majority-element-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0229-majority-element-ii) |
+| [0242-valid-anagram](https://github.com/robinrb7/DSA-cpp/tree/master/0242-valid-anagram) |
 | [1675-magnetic-force-between-two-balls](https://github.com/robinrb7/DSA-cpp/tree/master/1675-magnetic-force-between-two-balls) |
 ## Matrix
 |  |
@@ -168,6 +169,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0169-majority-element](https://github.com/robinrb7/DSA-cpp/tree/master/0169-majority-element) |
 | [0205-isomorphic-strings](https://github.com/robinrb7/DSA-cpp/tree/master/0205-isomorphic-strings) |
 | [0229-majority-element-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0229-majority-element-ii) |
+| [0242-valid-anagram](https://github.com/robinrb7/DSA-cpp/tree/master/0242-valid-anagram) |
 | [0560-subarray-sum-equals-k](https://github.com/robinrb7/DSA-cpp/tree/master/0560-subarray-sum-equals-k) |
 | [0567-permutation-in-string](https://github.com/robinrb7/DSA-cpp/tree/master/0567-permutation-in-string) |
 ## Divide and Conquer
@@ -229,6 +231,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0131-palindrome-partitioning](https://github.com/robinrb7/DSA-cpp/tree/master/0131-palindrome-partitioning) |
 | [0151-reverse-words-in-a-string](https://github.com/robinrb7/DSA-cpp/tree/master/0151-reverse-words-in-a-string) |
 | [0205-isomorphic-strings](https://github.com/robinrb7/DSA-cpp/tree/master/0205-isomorphic-strings) |
+| [0242-valid-anagram](https://github.com/robinrb7/DSA-cpp/tree/master/0242-valid-anagram) |
 | [0567-permutation-in-string](https://github.com/robinrb7/DSA-cpp/tree/master/0567-permutation-in-string) |
 | [1078-remove-outermost-parentheses](https://github.com/robinrb7/DSA-cpp/tree/master/1078-remove-outermost-parentheses) |
 | [3243-count-the-number-of-powerful-integers](https://github.com/robinrb7/DSA-cpp/tree/master/3243-count-the-number-of-powerful-integers) |
