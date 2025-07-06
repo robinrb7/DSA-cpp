@@ -1,4 +1,8 @@
 class Solution {
+    private:
+    bool static cmp(pair<char,int>&a, pair<char,int>&b){
+        return a.second > b.second;
+    }
 public:
     string frequencySort(string s) {
         int n = s.length();
@@ -9,15 +13,12 @@ public:
             hash[s[i]]++;
         }
 
-        for(auto it:hash){
-            pq.push({it.second,it.first});
-        }
+        vector<pair<char,int>> charFreq(hash.begin(),hash.end());
+        sort(charFreq.begin(),charFreq.end(),cmp);
 
         string result = "";
-        while(!pq.empty()){
-            pair<int,char> top = pq.top();
-            pq.pop();
-            result.append(top.first,top.second);
+        for(auto it:charFreq){
+            result.append(it.second,it.first);
         }
 
         return result;
