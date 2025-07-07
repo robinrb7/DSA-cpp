@@ -16,17 +16,12 @@ public:
        unordered_map<char,int> val;
        insertVal(val);
 
-       int i=0;
-       int ans=0;
-       while(i<n){
-            if(i+1<n && (s[i]=='I'||s[i]=='X' || s[i]=='C') && val[s[i]]<val[s[i+1]]){
-                ans += val[s[i+1]]-val[s[i]];
-                i=i+2;
-            }
-            else {
-                ans += val[s[i]];
-                i++;
-            }
+       int i=n-2;
+       int ans= val[s[n-1]];
+       while(i>=0){
+            if(val[s[i]]<val[s[i+1]]) ans -= val[s[i]];
+            else ans += val[s[i]];
+            i--;
        }
 
        return ans;
