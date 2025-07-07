@@ -53,6 +53,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1605-minimum-number-of-days-to-make-m-bouquets](https://github.com/robinrb7/DSA-cpp/tree/master/1605-minimum-number-of-days-to-make-m-bouquets) |
 | [1646-kth-missing-positive-number](https://github.com/robinrb7/DSA-cpp/tree/master/1646-kth-missing-positive-number) |
 | [1675-magnetic-force-between-two-balls](https://github.com/robinrb7/DSA-cpp/tree/master/1675-magnetic-force-between-two-balls) |
+| [1786-count-the-number-of-consistent-strings](https://github.com/robinrb7/DSA-cpp/tree/master/1786-count-the-number-of-consistent-strings) |
 | [2047-find-a-peak-element-ii](https://github.com/robinrb7/DSA-cpp/tree/master/2047-find-a-peak-element-ii) |
 ## Two Pointers
 |  |
@@ -146,6 +147,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0090-subsets-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0090-subsets-ii) |
 | [0136-single-number](https://github.com/robinrb7/DSA-cpp/tree/master/0136-single-number) |
 | [0287-find-the-duplicate-number](https://github.com/robinrb7/DSA-cpp/tree/master/0287-find-the-duplicate-number) |
+| [1786-count-the-number-of-consistent-strings](https://github.com/robinrb7/DSA-cpp/tree/master/1786-count-the-number-of-consistent-strings) |
 ## Recursion
 |  |
 | ------- |
@@ -176,6 +178,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0451-sort-characters-by-frequency](https://github.com/robinrb7/DSA-cpp/tree/master/0451-sort-characters-by-frequency) |
 | [0560-subarray-sum-equals-k](https://github.com/robinrb7/DSA-cpp/tree/master/0560-subarray-sum-equals-k) |
 | [0567-permutation-in-string](https://github.com/robinrb7/DSA-cpp/tree/master/0567-permutation-in-string) |
+| [1786-count-the-number-of-consistent-strings](https://github.com/robinrb7/DSA-cpp/tree/master/1786-count-the-number-of-consistent-strings) |
 ## Divide and Conquer
 |  |
 | ------- |
@@ -189,6 +192,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0169-majority-element](https://github.com/robinrb7/DSA-cpp/tree/master/0169-majority-element) |
 | [0229-majority-element-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0229-majority-element-ii) |
 | [0451-sort-characters-by-frequency](https://github.com/robinrb7/DSA-cpp/tree/master/0451-sort-characters-by-frequency) |
+| [1786-count-the-number-of-consistent-strings](https://github.com/robinrb7/DSA-cpp/tree/master/1786-count-the-number-of-consistent-strings) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -243,6 +247,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0567-permutation-in-string](https://github.com/robinrb7/DSA-cpp/tree/master/0567-permutation-in-string) |
 | [1078-remove-outermost-parentheses](https://github.com/robinrb7/DSA-cpp/tree/master/1078-remove-outermost-parentheses) |
 | [1737-maximum-nesting-depth-of-the-parentheses](https://github.com/robinrb7/DSA-cpp/tree/master/1737-maximum-nesting-depth-of-the-parentheses) |
+| [1786-count-the-number-of-consistent-strings](https://github.com/robinrb7/DSA-cpp/tree/master/1786-count-the-number-of-consistent-strings) |
 | [3243-count-the-number-of-powerful-integers](https://github.com/robinrb7/DSA-cpp/tree/master/3243-count-the-number-of-powerful-integers) |
 ## Sliding Window
 |  |
