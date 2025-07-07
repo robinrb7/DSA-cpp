@@ -10,8 +10,10 @@ public:
                 freq[s[j]-'a']++;
                 int maxi =INT_MIN, mini = INT_MAX;
                 for(int k =0;k<26;k++){
-                    if(freq[k] !=0 && freq[k]<mini) mini = freq[k];
-                    if(freq[k] !=0 && freq[k]>maxi) maxi = freq[k];
+                    if(freq[k] != 0){
+                        maxi = max(maxi, freq[k]);
+                        mini = min(mini,freq[k]);
+                    }
                 }
                 res += (maxi - mini);
             }
