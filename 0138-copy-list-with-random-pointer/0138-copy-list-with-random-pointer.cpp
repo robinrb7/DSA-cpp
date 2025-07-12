@@ -23,7 +23,7 @@ public:
         Node* temp = head;
         while(temp){
             Node* newNode = new Node(temp->val);
-            if(temp==head) copyHead=newNode;
+            if(!copyHead) copyHead=newNode;
             newNode->next = temp->next;
             temp->next = newNode;
             temp = newNode->next;
