@@ -15,57 +15,71 @@ public:
 */
 
 class Solution {
-public:
-    Node* copyRandomList(Node* head) {
-        if(head==NULL) return head;
-
+    private:
+    Node* makeList(Node* head){
         Node* temp = head;
-        Node* dummy = new Node(-1);
-        Node* tail = dummy;
-
+        Node* copyHead = NULL;
+        Node* copyTail = NULL;
         while(temp){
-            Node* node = new Node(temp->val);
-            tail->next = node;
-            tail=node;
+            Node* newNode = new Node(temp->val);
+            if(temp==head){
+                copyHead = newNode;
+                copyTail = newNode;
+            }
+            else{
+                copyTail->next = newNode;
+                copyTail=newNode;
+            }
+
             temp=temp->next;
         }
-        temp=head;
-        tail=dummy->next;
+
+        return copyHead;
+    }
+public:
+    Node* copyRandomList(Node* head) {
+        if(!head) return head;
+
+        Node* copyHead = NULL; 
+        copyHead = makeList(head);
+        
+        Node* temp1 = head;
+        Node* temp2 = copyHead;
         Node* front1 = NULL;
         Node* front2 = NULL;
-        while(temp){
-            front1 = temp->next;
-            front2= tail->next;
 
-            temp->next=tail;
-            tail->next= front1;
+        while(temp1 && temp2){
+            front1 = temp1->next;
+            front2 = temp2->next;
 
-            temp=front1;
-            tail=front2;
+            temp1->next = temp2;
+            temp2->next = front1;
+
+            temp1=front1;
+            temp2=front2;
         }
 
-        temp=head;
-        while(temp){
-            if(temp->random)
-                temp->next->random = temp->random->next;
-            temp=temp->next->next;
+        temp1 = head;
+        temp2 = copyHead;
+        while(temp1 && temp2){
+            temp2->random = (temp1->random)? temp1->random->next : NULL;
+
+            temp1 = temp2->next;;
+            temp2 = (temp1)?temp1->next:NULL;
         }
 
-        temp = head;
-        tail = dummy->next;
-        while(temp){
-            front1 = temp->next->next;
-            if(front1) front2 = front1->next;
-            else front2 = front1;
+        temp1 = head;
+        temp2 = copyHead;
+        while(temp1 && temp2){
 
-            temp->next= front1;
-            tail->next= front2;
+            temp1->next = temp2->next;
+            temp2->next = (temp1->next)?temp1->next->next:NULL;
 
-            temp=front1;
-            tail=front2;
+            temp1=temp1->next;
+            temp2=temp2->next;
         }
 
-        return dummy->next;
-        
+        return copyHead;
+
     }
 };
