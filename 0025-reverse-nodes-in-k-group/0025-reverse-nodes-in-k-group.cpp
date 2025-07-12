@@ -23,8 +23,7 @@ class Solution {
     ListNode* findKNode(ListNode* head, int k){
         int cnt =1;
         ListNode* temp = head;
-        while(cnt < k){
-            if(!temp) return NULL;
+        while(temp && cnt<k){
             temp=temp->next;
             cnt++;
         }
@@ -36,18 +35,22 @@ public:
 
         ListNode* temp = head;
         ListNode* previous = NULL;
+        ListNode* nextNode = NULL;
         while(temp){
             ListNode* kNode = findKNode(temp,k);
-            ListNode* nextNode = NULL;
-            if(kNode){
-                nextNode = kNode->next;
-                kNode->next = NULL;
-                kNode = rev(temp);
+            if(!kNode){
+                if(previous) previous->next = temp;
+                break;
             }
+            
+            nextNode = kNode->next;
+            kNode->next = NULL;
+            kNode = rev(temp);
+
             if(temp==head) head = kNode;
-            if(kNode && head!=kNode) previous->next = kNode;
+            else previous->next = kNode;
+             
             previous = temp;
-            if(nextNode) temp->next = nextNode;
             temp = nextNode;
         }
         
