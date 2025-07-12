@@ -15,68 +15,35 @@ public:
 */
 
 class Solution {
-    private:
-    Node* makeList(Node* head){
-        Node* temp = head;
-        Node* copyHead = NULL;
-        Node* copyTail = NULL;
-        while(temp){
-            Node* newNode = new Node(temp->val);
-            if(temp==head){
-                copyHead = newNode;
-                copyTail = newNode;
-            }
-            else{
-                copyTail->next = newNode;
-                copyTail=newNode;
-            }
-
-            temp=temp->next;
-        }
-
-        return copyHead;
-    }
 public:
     Node* copyRandomList(Node* head) {
         if(!head) return head;
 
-        Node* copyHead = NULL; 
-        copyHead = makeList(head);
-        
-        Node* temp1 = head;
-        Node* temp2 = copyHead;
-        Node* front1 = NULL;
-        Node* front2 = NULL;
-
-        while(temp1 && temp2){
-            front1 = temp1->next;
-            front2 = temp2->next;
-
-            temp1->next = temp2;
-            temp2->next = front1;
-
-            temp1=front1;
-            temp2=front2;
+        Node* copyHead = NULL;
+        Node* temp = head;
+        while(temp){
+            Node* newNode = new Node(temp->val);
+            if(temp==head) copyHead=newNode;
+            newNode->next = temp->next;
+            temp->next = newNode;
+            temp = newNode->next;
         }
 
-        temp1 = head;
-        temp2 = copyHead;
-        while(temp1 && temp2){
-            temp2->random = (temp1->random)? temp1->random->next : NULL;
+        temp = head;
+        while(temp){
+            temp->next->random = (temp->random)? temp->random->next : NULL;
 
-            temp1 = temp2->next;;
-            temp2 = (temp1)?temp1->next:NULL;
+            temp = (temp->next)?temp->next->next : NULL;
         }
 
-        temp1 = head;
-        temp2 = copyHead;
-        while(temp1 && temp2){
+        temp = head;
+        Node* copy = copyHead;
+        while(temp){
+            temp->next = copy->next;
+            copy->next = (copy->next)?copy->next->next : NULL;
 
-            temp1->next = temp2->next;
-            temp2->next = (temp1->next)?temp1->next->next:NULL;
-
-            temp1=temp1->next;
-            temp2=temp2->next;
+            temp=temp->next;
+            copy=copy->next;
         }
 
         return copyHead;
