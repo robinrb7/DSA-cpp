@@ -120,6 +120,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0062-unique-paths](https://github.com/robinrb7/DSA-cpp/tree/master/0062-unique-paths) |
 | [0069-sqrtx](https://github.com/robinrb7/DSA-cpp/tree/master/0069-sqrtx) |
 | [0189-rotate-array](https://github.com/robinrb7/DSA-cpp/tree/master/0189-rotate-array) |
+| [2050-count-good-numbers](https://github.com/robinrb7/DSA-cpp/tree/master/2050-count-good-numbers) |
 | [3243-count-the-number-of-powerful-integers](https://github.com/robinrb7/DSA-cpp/tree/master/3243-count-the-number-of-powerful-integers) |
 ## Binary Search
 |  |
@@ -162,6 +163,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0060-permutation-sequence](https://github.com/robinrb7/DSA-cpp/tree/master/0060-permutation-sequence) |
 | [0206-reverse-linked-list](https://github.com/robinrb7/DSA-cpp/tree/master/0206-reverse-linked-list) |
 | [0234-palindrome-linked-list](https://github.com/robinrb7/DSA-cpp/tree/master/0234-palindrome-linked-list) |
+| [2050-count-good-numbers](https://github.com/robinrb7/DSA-cpp/tree/master/2050-count-good-numbers) |
 ## Hash Table
 |  |
 | ------- |
