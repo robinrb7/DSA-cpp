@@ -1,35 +1,34 @@
 class Solution {
+    private:
+    void solve(double x ,long long n,double &ans){
+        if(n<=0) return;
+
+        if(n%2!=0){
+            ans = ans*x;
+            n=n-1;
+        }
+        else{
+            x=x*x;
+            n=n/2;
+        }
+
+        return solve(x,n,ans);
+    }
 public:
     double myPow(double x, int n) {
-        if(x==0) return 0.0;
         if(n==0) return 1.0;
+        if(x==0) return 0.0;
 
-        double ans = 1.0;
+        bool reciprocal = 0;
         long long N = n;
         if(n<0){
-            x = 1.0/x;
-            N = N*-1;
+            reciprocal = 1;
+            N=-N;
         }
+        double ans = 1.0;
+        solve(x,N,ans);
 
-        bool flag =0;
-        if(x<0){
-            x= x*-1.0;
-            if(N%2!=0) flag=1;
-        }
-
-        while(N>1){
-            if(N%2!=0){
-                ans = ans*x;
-                N= N-1;
-            }
-            else{
-                x = x*x;
-                N = N/2;
-            }
-        }
-
-        ans = ans*x;
-        if(flag) ans = ans*-1.0;
+        if(reciprocal) ans = 1/ans;
         return ans;
     }
 };
