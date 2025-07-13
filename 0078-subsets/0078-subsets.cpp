@@ -1,5 +1,5 @@
 class Solution {
-    void solve(vector<int>& nums,vector<int> temp,vector<vector<int>> &res, int index, int n){
+    void solve(vector<int>& nums,vector<int> &temp,vector<vector<int>> &res, int index, int n){
         if(index==n) {
             res.push_back(temp);
             return;
