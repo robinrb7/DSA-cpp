@@ -7,6 +7,7 @@ class Solution {
         }
 
         for(int i = startIndx;i<=9;i++){
+            if(i>target) break;
             temp.push_back(i);
             solve(k,target-i,temp,res,len+1,i+1);
             temp.pop_back();
