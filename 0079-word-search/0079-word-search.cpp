@@ -23,7 +23,9 @@ public:
 
         for(int i =0;i<nRow;i++){
             for(int j=0;j<nCol;j++){
-                if(solve(board,word,0,i,j,nRow,nCol)) return 1;
+                if(board[i][j]==word[0]){
+                    if(solve(board,word,0,i,j,nRow,nCol)) return 1;
+                }
             }
         }
        return 0; 
