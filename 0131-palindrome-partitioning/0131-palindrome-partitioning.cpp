@@ -11,8 +11,6 @@ class Solution {
             return;
         }
 
-        
-
         for(int partitionIndex = startIndex;partitionIndex<n;partitionIndex++){
             if(!isPalindrome(s,startIndex, partitionIndex)) continue;
 
