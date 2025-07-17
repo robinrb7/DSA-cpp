@@ -124,6 +124,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0062-unique-paths](https://github.com/robinrb7/DSA-cpp/tree/master/0062-unique-paths) |
 | [0069-sqrtx](https://github.com/robinrb7/DSA-cpp/tree/master/0069-sqrtx) |
 | [0189-rotate-array](https://github.com/robinrb7/DSA-cpp/tree/master/0189-rotate-array) |
+| [0282-expression-add-operators](https://github.com/robinrb7/DSA-cpp/tree/master/0282-expression-add-operators) |
 | [2050-count-good-numbers](https://github.com/robinrb7/DSA-cpp/tree/master/2050-count-good-numbers) |
 | [3243-count-the-number-of-powerful-integers](https://github.com/robinrb7/DSA-cpp/tree/master/3243-count-the-number-of-powerful-integers) |
 ## Binary Search
@@ -265,6 +266,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0151-reverse-words-in-a-string](https://github.com/robinrb7/DSA-cpp/tree/master/0151-reverse-words-in-a-string) |
 | [0205-isomorphic-strings](https://github.com/robinrb7/DSA-cpp/tree/master/0205-isomorphic-strings) |
 | [0242-valid-anagram](https://github.com/robinrb7/DSA-cpp/tree/master/0242-valid-anagram) |
+| [0282-expression-add-operators](https://github.com/robinrb7/DSA-cpp/tree/master/0282-expression-add-operators) |
 | [0451-sort-characters-by-frequency](https://github.com/robinrb7/DSA-cpp/tree/master/0451-sort-characters-by-frequency) |
 | [0567-permutation-in-string](https://github.com/robinrb7/DSA-cpp/tree/master/0567-permutation-in-string) |
 | [1078-remove-outermost-parentheses](https://github.com/robinrb7/DSA-cpp/tree/master/1078-remove-outermost-parentheses) |
@@ -324,6 +326,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0090-subsets-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0090-subsets-ii) |
 | [0131-palindrome-partitioning](https://github.com/robinrb7/DSA-cpp/tree/master/0131-palindrome-partitioning) |
 | [0216-combination-sum-iii](https://github.com/robinrb7/DSA-cpp/tree/master/0216-combination-sum-iii) |
+| [0282-expression-add-operators](https://github.com/robinrb7/DSA-cpp/tree/master/0282-expression-add-operators) |
 ## Greedy
 |  |
 | ------- |
