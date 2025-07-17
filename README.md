@@ -157,6 +157,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0078-subsets](https://github.com/robinrb7/DSA-cpp/tree/master/0078-subsets) |
 | [0090-subsets-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0090-subsets-ii) |
 | [0136-single-number](https://github.com/robinrb7/DSA-cpp/tree/master/0136-single-number) |
+| [0191-number-of-1-bits](https://github.com/robinrb7/DSA-cpp/tree/master/0191-number-of-1-bits) |
 | [0287-find-the-duplicate-number](https://github.com/robinrb7/DSA-cpp/tree/master/0287-find-the-duplicate-number) |
 | [1786-count-the-number-of-consistent-strings](https://github.com/robinrb7/DSA-cpp/tree/master/1786-count-the-number-of-consistent-strings) |
 ## Recursion
@@ -199,6 +200,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0004-median-of-two-sorted-arrays](https://github.com/robinrb7/DSA-cpp/tree/master/0004-median-of-two-sorted-arrays) |
 | [0148-sort-list](https://github.com/robinrb7/DSA-cpp/tree/master/0148-sort-list) |
 | [0169-majority-element](https://github.com/robinrb7/DSA-cpp/tree/master/0169-majority-element) |
+| [0191-number-of-1-bits](https://github.com/robinrb7/DSA-cpp/tree/master/0191-number-of-1-bits) |
 | [0240-search-a-2d-matrix-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0240-search-a-2d-matrix-ii) |
 | [0493-reverse-pairs](https://github.com/robinrb7/DSA-cpp/tree/master/0493-reverse-pairs) |
 ## Counting
