@@ -163,6 +163,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0287-find-the-duplicate-number](https://github.com/robinrb7/DSA-cpp/tree/master/0287-find-the-duplicate-number) |
 | [0461-hamming-distance](https://github.com/robinrb7/DSA-cpp/tree/master/0461-hamming-distance) |
 | [1786-count-the-number-of-consistent-strings](https://github.com/robinrb7/DSA-cpp/tree/master/1786-count-the-number-of-consistent-strings) |
+| [2323-minimum-bit-flips-to-convert-number](https://github.com/robinrb7/DSA-cpp/tree/master/2323-minimum-bit-flips-to-convert-number) |
 ## Recursion
 |  |
 | ------- |
