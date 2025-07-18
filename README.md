@@ -161,6 +161,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0136-single-number](https://github.com/robinrb7/DSA-cpp/tree/master/0136-single-number) |
 | [0191-number-of-1-bits](https://github.com/robinrb7/DSA-cpp/tree/master/0191-number-of-1-bits) |
 | [0287-find-the-duplicate-number](https://github.com/robinrb7/DSA-cpp/tree/master/0287-find-the-duplicate-number) |
+| [0461-hamming-distance](https://github.com/robinrb7/DSA-cpp/tree/master/0461-hamming-distance) |
 | [1786-count-the-number-of-consistent-strings](https://github.com/robinrb7/DSA-cpp/tree/master/1786-count-the-number-of-consistent-strings) |
 ## Recursion
 |  |
