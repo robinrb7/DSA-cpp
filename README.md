@@ -41,6 +41,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0162-find-peak-element](https://github.com/robinrb7/DSA-cpp/tree/master/0162-find-peak-element) |
 | [0169-majority-element](https://github.com/robinrb7/DSA-cpp/tree/master/0169-majority-element) |
 | [0189-rotate-array](https://github.com/robinrb7/DSA-cpp/tree/master/0189-rotate-array) |
+| [0204-count-primes](https://github.com/robinrb7/DSA-cpp/tree/master/0204-count-primes) |
 | [0216-combination-sum-iii](https://github.com/robinrb7/DSA-cpp/tree/master/0216-combination-sum-iii) |
 | [0229-majority-element-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0229-majority-element-ii) |
 | [0240-search-a-2d-matrix-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0240-search-a-2d-matrix-ii) |
@@ -127,6 +128,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0062-unique-paths](https://github.com/robinrb7/DSA-cpp/tree/master/0062-unique-paths) |
 | [0069-sqrtx](https://github.com/robinrb7/DSA-cpp/tree/master/0069-sqrtx) |
 | [0189-rotate-array](https://github.com/robinrb7/DSA-cpp/tree/master/0189-rotate-array) |
+| [0204-count-primes](https://github.com/robinrb7/DSA-cpp/tree/master/0204-count-primes) |
 | [0282-expression-add-operators](https://github.com/robinrb7/DSA-cpp/tree/master/0282-expression-add-operators) |
 | [2050-count-good-numbers](https://github.com/robinrb7/DSA-cpp/tree/master/2050-count-good-numbers) |
 | [3243-count-the-number-of-powerful-integers](https://github.com/robinrb7/DSA-cpp/tree/master/3243-count-the-number-of-powerful-integers) |
@@ -357,4 +359,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0079-word-search](https://github.com/robinrb7/DSA-cpp/tree/master/0079-word-search) |
+## Enumeration
+|  |
+| ------- |
+| [0204-count-primes](https://github.com/robinrb7/DSA-cpp/tree/master/0204-count-primes) |
+## Number Theory
+|  |
+| ------- |
+| [0204-count-primes](https://github.com/robinrb7/DSA-cpp/tree/master/0204-count-primes) |
 <!---LeetCode Topics End-->
