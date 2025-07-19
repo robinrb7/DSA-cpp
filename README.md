@@ -44,6 +44,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0216-combination-sum-iii](https://github.com/robinrb7/DSA-cpp/tree/master/0216-combination-sum-iii) |
 | [0229-majority-element-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0229-majority-element-ii) |
 | [0240-search-a-2d-matrix-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0240-search-a-2d-matrix-ii) |
+| [0260-single-number-iii](https://github.com/robinrb7/DSA-cpp/tree/master/0260-single-number-iii) |
 | [0283-move-zeroes](https://github.com/robinrb7/DSA-cpp/tree/master/0283-move-zeroes) |
 | [0287-find-the-duplicate-number](https://github.com/robinrb7/DSA-cpp/tree/master/0287-find-the-duplicate-number) |
 | [0410-split-array-largest-sum](https://github.com/robinrb7/DSA-cpp/tree/master/0410-split-array-largest-sum) |
@@ -162,6 +163,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0136-single-number](https://github.com/robinrb7/DSA-cpp/tree/master/0136-single-number) |
 | [0137-single-number-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0137-single-number-ii) |
 | [0191-number-of-1-bits](https://github.com/robinrb7/DSA-cpp/tree/master/0191-number-of-1-bits) |
+| [0260-single-number-iii](https://github.com/robinrb7/DSA-cpp/tree/master/0260-single-number-iii) |
 | [0287-find-the-duplicate-number](https://github.com/robinrb7/DSA-cpp/tree/master/0287-find-the-duplicate-number) |
 | [0461-hamming-distance](https://github.com/robinrb7/DSA-cpp/tree/master/0461-hamming-distance) |
 | [1786-count-the-number-of-consistent-strings](https://github.com/robinrb7/DSA-cpp/tree/master/1786-count-the-number-of-consistent-strings) |
