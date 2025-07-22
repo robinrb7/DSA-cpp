@@ -1,43 +1,28 @@
 class Solution {
-    private:
-    void prevGreaterElement(vector<int>& height,vector<int>&prefixMax,int n){
-        prefixMax[0]=height[0];
-        int maxi = prefixMax[0];
-        for(int i=1;i<n;i++){
-            prefixMax[i] = max(height[i],maxi);
-            maxi = prefixMax[i];
-        }
-    }
-
-    void nextGreaterElement(vector<int>& height,vector<int>&suffixMax,int n){
-        suffixMax[n-1] = height[n-1];
-        int maxi = suffixMax[n-1];
-
-        for(int i=n-2;i>=0;i--){
-            suffixMax[i] = max(height[i],maxi);
-            maxi = suffixMax[i];
-        }
-    }
-    
 public:
     int trap(vector<int>& height) {
         int n = height.size();
-        vector<int>prefixMax(n,-1);
-        vector<int>suffixMax(n,-1);
-
-        prevGreaterElement(height,prefixMax,n);
-        nextGreaterElement(height,suffixMax,n);
 
         int width=1;
+        int leftMax=0, rightMax=0;
         int totalWater = 0;
-        for(int i=0;i<n;i++){
-            int leftMax = prefixMax[i];
-            int rightMax = suffixMax[i];
-
-            if(height[i]< leftMax && height[i]<rightMax){
-                totalWater +=(min(leftMax,rightMax) - height[i]) * width;
+        
+        int left=0,right=n-1;
+        while(left<right){
+            if(height[left]<=height[right]){
+                if(height[left]<leftMax){
+                    totalWater += (leftMax-height[left]) *width;
+                }
+                leftMax = max(leftMax,height[left]);
+                left++;
             }
-            
+            else{
+                if(height[right]<rightMax){
+                    totalWater += (rightMax-height[right]) *width;
+                }
+                rightMax = max(rightMax,height[right]);
+                right--;
+            }
         }
 
         return totalWater;
