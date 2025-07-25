@@ -29,7 +29,7 @@ public:
         int maxArea= INT_MIN;
         for(int i=0;i<n;i++){
 
-            while(!st.empty() && heights[i] <= heights[st.top()]){
+            while(!st.empty() && heights[i] < heights[st.top()]){
                 int height = heights[st.top()];
                 st.pop();
                 int width=0;
