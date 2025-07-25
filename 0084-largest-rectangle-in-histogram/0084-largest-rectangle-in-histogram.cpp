@@ -24,18 +24,32 @@ public:
     int largestRectangleArea(vector<int>& heights) {
         int n= heights.size();
 
-        vector<int>pse(n,-1);
-        vector<int>nse(n,-1);
-        previousSmaller(heights,pse,n);
-        nextSmaller(heights,nse,n);
+        stack<int>st;
 
         int maxArea= INT_MIN;
         for(int i=0;i<n;i++){
-            int height = heights[i];
-            int width = nse[i]-pse[i]-1;
-            int area = height * width;
 
-            maxArea = max(maxArea,area);
+            while(!st.empty() && heights[i] <= heights[st.top()]){
+                int height = heights[st.top()];
+                st.pop();
+                int width=0;
+                if(!st.empty()) width = i - st.top() - 1;
+                else width = i - (-1) - 1;
+                int area = height * width;
+                maxArea = max(maxArea,area);
+            }
+
+            st.push(i);
+        }
+
+        while(!st.empty()){
+            int height = heights[st.top()];
+                st.pop();
+                int width=0;
+                if(!st.empty()) width = n - st.top() - 1;
+                else width = n - (-1) - 1;
+                int area = height * width;
+                maxArea = max(maxArea,area);
         }
 
         return maxArea;
