@@ -46,6 +46,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0204-count-primes](https://github.com/robinrb7/DSA-cpp/tree/master/0204-count-primes) |
 | [0216-combination-sum-iii](https://github.com/robinrb7/DSA-cpp/tree/master/0216-combination-sum-iii) |
 | [0229-majority-element-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0229-majority-element-ii) |
+| [0239-sliding-window-maximum](https://github.com/robinrb7/DSA-cpp/tree/master/0239-sliding-window-maximum) |
 | [0240-search-a-2d-matrix-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0240-search-a-2d-matrix-ii) |
 | [0260-single-number-iii](https://github.com/robinrb7/DSA-cpp/tree/master/0260-single-number-iii) |
 | [0283-move-zeroes](https://github.com/robinrb7/DSA-cpp/tree/master/0283-move-zeroes) |
@@ -304,6 +305,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/robinrb7/DSA-cpp/tree/master/0003-longest-substring-without-repeating-characters) |
+| [0239-sliding-window-maximum](https://github.com/robinrb7/DSA-cpp/tree/master/0239-sliding-window-maximum) |
 | [0567-permutation-in-string](https://github.com/robinrb7/DSA-cpp/tree/master/0567-permutation-in-string) |
 ## Linked List
 |  |
@@ -384,6 +386,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Heap (Priority Queue)
 |  |
 | ------- |
+| [0239-sliding-window-maximum](https://github.com/robinrb7/DSA-cpp/tree/master/0239-sliding-window-maximum) |
 | [0451-sort-characters-by-frequency](https://github.com/robinrb7/DSA-cpp/tree/master/0451-sort-characters-by-frequency) |
 ## Bucket Sort
 |  |
@@ -412,4 +415,9 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0225-implement-stack-using-queues](https://github.com/robinrb7/DSA-cpp/tree/master/0225-implement-stack-using-queues) |
 | [0232-implement-queue-using-stacks](https://github.com/robinrb7/DSA-cpp/tree/master/0232-implement-queue-using-stacks) |
+| [0239-sliding-window-maximum](https://github.com/robinrb7/DSA-cpp/tree/master/0239-sliding-window-maximum) |
+## Monotonic Queue
+|  |
+| ------- |
+| [0239-sliding-window-maximum](https://github.com/robinrb7/DSA-cpp/tree/master/0239-sliding-window-maximum) |
 <!---LeetCode Topics End-->
