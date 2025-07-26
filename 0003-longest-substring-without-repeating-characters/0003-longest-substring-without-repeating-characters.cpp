@@ -2,20 +2,20 @@ class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
         int n = s.length();
-        unordered_map<char,int>umap;
-        int len=0,maxi=0;
+        unordered_map<char,int> hashMap;
 
-        int left=0,right=0;
-        while(right<n){
-            if(umap.find(s[right]) != umap.end()){
-                left = max(umap[s[right]] + 1,left);
+        int maxLen =0;
+        int i=0,j=0;
+        while(i<n && j<n){
+            if((hashMap.find(s[j]) != hashMap.end()) &&  hashMap[s[j]] >=i){
+                i = hashMap[s[j]] + 1;
             }
-            len = right-left+1;
-            maxi=max(maxi,len);
-            umap[s[right]]=right;
-            right++;
+            int len = j-i+1;
+            maxLen = max(maxLen,len);
+            hashMap[s[j]] = j;
+            j++;
         }
-        
-        return maxi;
+
+        return maxLen;
     }
 };
