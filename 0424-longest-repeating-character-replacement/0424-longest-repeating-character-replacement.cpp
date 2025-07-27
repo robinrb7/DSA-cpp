@@ -12,17 +12,11 @@ public:
 
             int len = r-l+1;
             int replacements = len - maxFreq;
-            while(replacements > k){
+            if(replacements > k){
                 charFreq[s[l]-'A']--;
                 l++;
-                maxFreq = 0;
-                for(auto it : charFreq){
-                    if(it> maxFreq) maxFreq = it;
-                }
-                len = r-l+1;
-                replacements = len - maxFreq;
             }
-            maxLen = max(maxLen,len);
+            if(replacements<=k) maxLen = max(maxLen,len);
         }
 
         return maxLen;
