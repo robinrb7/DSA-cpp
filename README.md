@@ -213,6 +213,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0205-isomorphic-strings](https://github.com/robinrb7/DSA-cpp/tree/master/0205-isomorphic-strings) |
 | [0229-majority-element-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0229-majority-element-ii) |
 | [0242-valid-anagram](https://github.com/robinrb7/DSA-cpp/tree/master/0242-valid-anagram) |
+| [0424-longest-repeating-character-replacement](https://github.com/robinrb7/DSA-cpp/tree/master/0424-longest-repeating-character-replacement) |
 | [0451-sort-characters-by-frequency](https://github.com/robinrb7/DSA-cpp/tree/master/0451-sort-characters-by-frequency) |
 | [0496-next-greater-element-i](https://github.com/robinrb7/DSA-cpp/tree/master/0496-next-greater-element-i) |
 | [0560-subarray-sum-equals-k](https://github.com/robinrb7/DSA-cpp/tree/master/0560-subarray-sum-equals-k) |
@@ -300,6 +301,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0242-valid-anagram](https://github.com/robinrb7/DSA-cpp/tree/master/0242-valid-anagram) |
 | [0282-expression-add-operators](https://github.com/robinrb7/DSA-cpp/tree/master/0282-expression-add-operators) |
 | [0402-remove-k-digits](https://github.com/robinrb7/DSA-cpp/tree/master/0402-remove-k-digits) |
+| [0424-longest-repeating-character-replacement](https://github.com/robinrb7/DSA-cpp/tree/master/0424-longest-repeating-character-replacement) |
 | [0451-sort-characters-by-frequency](https://github.com/robinrb7/DSA-cpp/tree/master/0451-sort-characters-by-frequency) |
 | [0567-permutation-in-string](https://github.com/robinrb7/DSA-cpp/tree/master/0567-permutation-in-string) |
 | [1078-remove-outermost-parentheses](https://github.com/robinrb7/DSA-cpp/tree/master/1078-remove-outermost-parentheses) |
@@ -312,6 +314,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/robinrb7/DSA-cpp/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0239-sliding-window-maximum](https://github.com/robinrb7/DSA-cpp/tree/master/0239-sliding-window-maximum) |
+| [0424-longest-repeating-character-replacement](https://github.com/robinrb7/DSA-cpp/tree/master/0424-longest-repeating-character-replacement) |
 | [0567-permutation-in-string](https://github.com/robinrb7/DSA-cpp/tree/master/0567-permutation-in-string) |
 | [0940-fruit-into-baskets](https://github.com/robinrb7/DSA-cpp/tree/master/0940-fruit-into-baskets) |
 | [1046-max-consecutive-ones-iii](https://github.com/robinrb7/DSA-cpp/tree/master/1046-max-consecutive-ones-iii) |
