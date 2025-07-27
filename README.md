@@ -65,6 +65,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0966-binary-subarrays-with-sum](https://github.com/robinrb7/DSA-cpp/tree/master/0966-binary-subarrays-with-sum) |
 | [1046-max-consecutive-ones-iii](https://github.com/robinrb7/DSA-cpp/tree/master/1046-max-consecutive-ones-iii) |
 | [1056-capacity-to-ship-packages-within-d-days](https://github.com/robinrb7/DSA-cpp/tree/master/1056-capacity-to-ship-packages-within-d-days) |
+| [1370-count-number-of-nice-subarrays](https://github.com/robinrb7/DSA-cpp/tree/master/1370-count-number-of-nice-subarrays) |
 | [1408-find-the-smallest-divisor-given-a-threshold](https://github.com/robinrb7/DSA-cpp/tree/master/1408-find-the-smallest-divisor-given-a-threshold) |
 | [1605-minimum-number-of-days-to-make-m-bouquets](https://github.com/robinrb7/DSA-cpp/tree/master/1605-minimum-number-of-days-to-make-m-bouquets) |
 | [1646-kth-missing-positive-number](https://github.com/robinrb7/DSA-cpp/tree/master/1646-kth-missing-positive-number) |
@@ -143,6 +144,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0189-rotate-array](https://github.com/robinrb7/DSA-cpp/tree/master/0189-rotate-array) |
 | [0204-count-primes](https://github.com/robinrb7/DSA-cpp/tree/master/0204-count-primes) |
 | [0282-expression-add-operators](https://github.com/robinrb7/DSA-cpp/tree/master/0282-expression-add-operators) |
+| [1370-count-number-of-nice-subarrays](https://github.com/robinrb7/DSA-cpp/tree/master/1370-count-number-of-nice-subarrays) |
 | [2050-count-good-numbers](https://github.com/robinrb7/DSA-cpp/tree/master/2050-count-good-numbers) |
 | [3243-count-the-number-of-powerful-integers](https://github.com/robinrb7/DSA-cpp/tree/master/3243-count-the-number-of-powerful-integers) |
 ## Binary Search
@@ -221,6 +223,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0567-permutation-in-string](https://github.com/robinrb7/DSA-cpp/tree/master/0567-permutation-in-string) |
 | [0940-fruit-into-baskets](https://github.com/robinrb7/DSA-cpp/tree/master/0940-fruit-into-baskets) |
 | [0966-binary-subarrays-with-sum](https://github.com/robinrb7/DSA-cpp/tree/master/0966-binary-subarrays-with-sum) |
+| [1370-count-number-of-nice-subarrays](https://github.com/robinrb7/DSA-cpp/tree/master/1370-count-number-of-nice-subarrays) |
 | [1786-count-the-number-of-consistent-strings](https://github.com/robinrb7/DSA-cpp/tree/master/1786-count-the-number-of-consistent-strings) |
 | [1890-sum-of-beauty-of-all-substrings](https://github.com/robinrb7/DSA-cpp/tree/master/1890-sum-of-beauty-of-all-substrings) |
 ## Divide and Conquer
@@ -286,6 +289,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0560-subarray-sum-equals-k](https://github.com/robinrb7/DSA-cpp/tree/master/0560-subarray-sum-equals-k) |
 | [0966-binary-subarrays-with-sum](https://github.com/robinrb7/DSA-cpp/tree/master/0966-binary-subarrays-with-sum) |
 | [1046-max-consecutive-ones-iii](https://github.com/robinrb7/DSA-cpp/tree/master/1046-max-consecutive-ones-iii) |
+| [1370-count-number-of-nice-subarrays](https://github.com/robinrb7/DSA-cpp/tree/master/1370-count-number-of-nice-subarrays) |
 ## String
 |  |
 | ------- |
@@ -322,6 +326,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0940-fruit-into-baskets](https://github.com/robinrb7/DSA-cpp/tree/master/0940-fruit-into-baskets) |
 | [0966-binary-subarrays-with-sum](https://github.com/robinrb7/DSA-cpp/tree/master/0966-binary-subarrays-with-sum) |
 | [1046-max-consecutive-ones-iii](https://github.com/robinrb7/DSA-cpp/tree/master/1046-max-consecutive-ones-iii) |
+| [1370-count-number-of-nice-subarrays](https://github.com/robinrb7/DSA-cpp/tree/master/1370-count-number-of-nice-subarrays) |
 ## Linked List
 |  |
 | ------- |
