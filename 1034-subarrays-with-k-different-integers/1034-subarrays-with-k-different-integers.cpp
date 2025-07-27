@@ -8,7 +8,7 @@ class Solution {
         while(r<n){
             freq[nums[r]]++;
 
-            while(freq.size()>k){
+            while(l<=r && freq.size()>k){
                 freq[nums[l]]--;
                 if(freq[nums[l]]==0) freq.erase(nums[l]);
                 l++;
