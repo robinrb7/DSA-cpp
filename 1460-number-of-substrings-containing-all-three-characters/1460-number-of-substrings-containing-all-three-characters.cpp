@@ -8,9 +8,7 @@ public:
         for(int i =0;i<n;i++){
             charLastSeenIndex[s[i]-'a'] = i;
 
-            if(charLastSeenIndex[0]!=-1 && charLastSeenIndex[1]!=-1 && charLastSeenIndex[2]!=-1){
-                cnt += 1 + min(min(charLastSeenIndex[0],charLastSeenIndex[1]),charLastSeenIndex[2]);
-            }
+            cnt += 1 + min(min(charLastSeenIndex[0],charLastSeenIndex[1]),charLastSeenIndex[2]);
         }
         return cnt;
     }
