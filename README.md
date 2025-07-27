@@ -63,6 +63,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0940-fruit-into-baskets](https://github.com/robinrb7/DSA-cpp/tree/master/0940-fruit-into-baskets) |
 | [0943-sum-of-subarray-minimums](https://github.com/robinrb7/DSA-cpp/tree/master/0943-sum-of-subarray-minimums) |
 | [0966-binary-subarrays-with-sum](https://github.com/robinrb7/DSA-cpp/tree/master/0966-binary-subarrays-with-sum) |
+| [1034-subarrays-with-k-different-integers](https://github.com/robinrb7/DSA-cpp/tree/master/1034-subarrays-with-k-different-integers) |
 | [1046-max-consecutive-ones-iii](https://github.com/robinrb7/DSA-cpp/tree/master/1046-max-consecutive-ones-iii) |
 | [1056-capacity-to-ship-packages-within-d-days](https://github.com/robinrb7/DSA-cpp/tree/master/1056-capacity-to-ship-packages-within-d-days) |
 | [1370-count-number-of-nice-subarrays](https://github.com/robinrb7/DSA-cpp/tree/master/1370-count-number-of-nice-subarrays) |
@@ -224,6 +225,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0567-permutation-in-string](https://github.com/robinrb7/DSA-cpp/tree/master/0567-permutation-in-string) |
 | [0940-fruit-into-baskets](https://github.com/robinrb7/DSA-cpp/tree/master/0940-fruit-into-baskets) |
 | [0966-binary-subarrays-with-sum](https://github.com/robinrb7/DSA-cpp/tree/master/0966-binary-subarrays-with-sum) |
+| [1034-subarrays-with-k-different-integers](https://github.com/robinrb7/DSA-cpp/tree/master/1034-subarrays-with-k-different-integers) |
 | [1370-count-number-of-nice-subarrays](https://github.com/robinrb7/DSA-cpp/tree/master/1370-count-number-of-nice-subarrays) |
 | [1460-number-of-substrings-containing-all-three-characters](https://github.com/robinrb7/DSA-cpp/tree/master/1460-number-of-substrings-containing-all-three-characters) |
 | [1786-count-the-number-of-consistent-strings](https://github.com/robinrb7/DSA-cpp/tree/master/1786-count-the-number-of-consistent-strings) |
@@ -243,6 +245,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0169-majority-element](https://github.com/robinrb7/DSA-cpp/tree/master/0169-majority-element) |
 | [0229-majority-element-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0229-majority-element-ii) |
 | [0451-sort-characters-by-frequency](https://github.com/robinrb7/DSA-cpp/tree/master/0451-sort-characters-by-frequency) |
+| [1034-subarrays-with-k-different-integers](https://github.com/robinrb7/DSA-cpp/tree/master/1034-subarrays-with-k-different-integers) |
 | [1786-count-the-number-of-consistent-strings](https://github.com/robinrb7/DSA-cpp/tree/master/1786-count-the-number-of-consistent-strings) |
 | [1890-sum-of-beauty-of-all-substrings](https://github.com/robinrb7/DSA-cpp/tree/master/1890-sum-of-beauty-of-all-substrings) |
 ## Dynamic Programming
@@ -329,6 +332,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0567-permutation-in-string](https://github.com/robinrb7/DSA-cpp/tree/master/0567-permutation-in-string) |
 | [0940-fruit-into-baskets](https://github.com/robinrb7/DSA-cpp/tree/master/0940-fruit-into-baskets) |
 | [0966-binary-subarrays-with-sum](https://github.com/robinrb7/DSA-cpp/tree/master/0966-binary-subarrays-with-sum) |
+| [1034-subarrays-with-k-different-integers](https://github.com/robinrb7/DSA-cpp/tree/master/1034-subarrays-with-k-different-integers) |
 | [1046-max-consecutive-ones-iii](https://github.com/robinrb7/DSA-cpp/tree/master/1046-max-consecutive-ones-iii) |
 | [1370-count-number-of-nice-subarrays](https://github.com/robinrb7/DSA-cpp/tree/master/1370-count-number-of-nice-subarrays) |
 | [1460-number-of-substrings-containing-all-three-characters](https://github.com/robinrb7/DSA-cpp/tree/master/1460-number-of-substrings-containing-all-three-characters) |
