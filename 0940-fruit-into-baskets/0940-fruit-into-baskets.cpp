@@ -9,13 +9,13 @@ public:
         for(int r = 0;r<n;r++){
             fruitType[fruits[r]]++;
 
-            while(fruitType.size()>2){
+            if(fruitType.size()>2){
                 fruitType[fruits[l]]--;
                 if(fruitType[fruits[l]]==0) fruitType.erase(fruits[l]);
                 l++;
             }
 
-            maxLen = max(maxLen,r-l+1);
+            if(fruitType.size()<=2) maxLen = max(maxLen,r-l+1);
         }
         return maxLen;
     }
