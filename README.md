@@ -44,6 +44,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0169-majority-element](https://github.com/robinrb7/DSA-cpp/tree/master/0169-majority-element) |
 | [0189-rotate-array](https://github.com/robinrb7/DSA-cpp/tree/master/0189-rotate-array) |
 | [0204-count-primes](https://github.com/robinrb7/DSA-cpp/tree/master/0204-count-primes) |
+| [0215-kth-largest-element-in-an-array](https://github.com/robinrb7/DSA-cpp/tree/master/0215-kth-largest-element-in-an-array) |
 | [0216-combination-sum-iii](https://github.com/robinrb7/DSA-cpp/tree/master/0216-combination-sum-iii) |
 | [0229-majority-element-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0229-majority-element-ii) |
 | [0239-sliding-window-maximum](https://github.com/robinrb7/DSA-cpp/tree/master/0239-sliding-window-maximum) |
@@ -111,6 +112,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0088-merge-sorted-array](https://github.com/robinrb7/DSA-cpp/tree/master/0088-merge-sorted-array) |
 | [0148-sort-list](https://github.com/robinrb7/DSA-cpp/tree/master/0148-sort-list) |
 | [0169-majority-element](https://github.com/robinrb7/DSA-cpp/tree/master/0169-majority-element) |
+| [0215-kth-largest-element-in-an-array](https://github.com/robinrb7/DSA-cpp/tree/master/0215-kth-largest-element-in-an-array) |
 | [0229-majority-element-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0229-majority-element-ii) |
 | [0242-valid-anagram](https://github.com/robinrb7/DSA-cpp/tree/master/0242-valid-anagram) |
 | [0451-sort-characters-by-frequency](https://github.com/robinrb7/DSA-cpp/tree/master/0451-sort-characters-by-frequency) |
@@ -238,6 +240,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0148-sort-list](https://github.com/robinrb7/DSA-cpp/tree/master/0148-sort-list) |
 | [0169-majority-element](https://github.com/robinrb7/DSA-cpp/tree/master/0169-majority-element) |
 | [0191-number-of-1-bits](https://github.com/robinrb7/DSA-cpp/tree/master/0191-number-of-1-bits) |
+| [0215-kth-largest-element-in-an-array](https://github.com/robinrb7/DSA-cpp/tree/master/0215-kth-largest-element-in-an-array) |
 | [0240-search-a-2d-matrix-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0240-search-a-2d-matrix-ii) |
 | [0493-reverse-pairs](https://github.com/robinrb7/DSA-cpp/tree/master/0493-reverse-pairs) |
 ## Counting
@@ -422,6 +425,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Heap (Priority Queue)
 |  |
 | ------- |
+| [0215-kth-largest-element-in-an-array](https://github.com/robinrb7/DSA-cpp/tree/master/0215-kth-largest-element-in-an-array) |
 | [0239-sliding-window-maximum](https://github.com/robinrb7/DSA-cpp/tree/master/0239-sliding-window-maximum) |
 | [0451-sort-characters-by-frequency](https://github.com/robinrb7/DSA-cpp/tree/master/0451-sort-characters-by-frequency) |
 ## Bucket Sort
@@ -466,4 +470,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0146-lru-cache](https://github.com/robinrb7/DSA-cpp/tree/master/0146-lru-cache) |
+## Quickselect
+|  |
+| ------- |
+| [0215-kth-largest-element-in-an-array](https://github.com/robinrb7/DSA-cpp/tree/master/0215-kth-largest-element-in-an-array) |
 <!---LeetCode Topics End-->
