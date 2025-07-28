@@ -5,7 +5,7 @@ public:
         int m = t.length();
         if(m>n) return "";
 
-        unordered_map<char,int> charFreq;
+        vector<int> charFreq(128,0);
         for(int i=0;i<m;i++) charFreq[t[i]]++;
 
         int minLen = INT_MAX, cnt = 0, startIndx = -1;
