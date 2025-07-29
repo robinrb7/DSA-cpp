@@ -23,9 +23,10 @@ public:
         ListNode* dummyNode = new ListNode(-1);
         ListNode* temp = dummyNode;
         while(!minHeap.empty()){
-            temp->next = minHeap.top().second;
-            if(minHeap.top().second->next) 
-                minHeap.push({minHeap.top().second->next->val,minHeap.top().second->next});
+            pair<int,ListNode*> top = minHeap.top();
+            temp->next = top.second;
+            if(top.second->next) 
+                minHeap.push({top.second->next->val,top.second->next});
             minHeap.pop();
             temp=temp->next;
         }
