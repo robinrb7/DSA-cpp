@@ -6,36 +6,16 @@ public:
         vector<int> taskFreq(26,0);
         for(int i=0;i<tasksSize;i++) taskFreq[tasks[i]-'A']++;
 
-        priority_queue<int> maxHeap;
-        for(int i=0;i<26;i++){
-            if(taskFreq[i]!=0) maxHeap.push(taskFreq[i]);
-        } 
+        sort(taskFreq.begin(),taskFreq.end());
+        int maxFreq = taskFreq[25];
+        int maxSlots = maxFreq - 1;
+        int spotsLeft = maxSlots * n;
 
-        int minTimeRequired = 0;
-        while(!maxHeap.empty()){
-            vector<int> temp;
-            for(int i= 0;i<n+1;i++){
-                if(!maxHeap.empty()){
-                    int topFreq = maxHeap.top();
-                    maxHeap.pop();
-                    topFreq--;
-                    temp.push_back(topFreq);
-                }
-            }
-
-            for(int i =0;i<temp.size();i++){
-                if(temp[i]!=0) maxHeap.push(temp[i]);
-            }
-
-            if(maxHeap.empty()){
-                minTimeRequired += temp.size();
-            }
-            else{
-                minTimeRequired += n+1;
-            }
-
+        for(int i =24;i>=0;i--){
+            spotsLeft -= min(maxSlots,taskFreq[i]);
         }
 
-        return minTimeRequired;
+        if(spotsLeft > 0) return (tasks.size() + spotsLeft);
+        return tasks.size();
     }
 };
