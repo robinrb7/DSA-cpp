@@ -53,6 +53,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0283-move-zeroes](https://github.com/robinrb7/DSA-cpp/tree/master/0283-move-zeroes) |
 | [0287-find-the-duplicate-number](https://github.com/robinrb7/DSA-cpp/tree/master/0287-find-the-duplicate-number) |
 | [0410-split-array-largest-sum](https://github.com/robinrb7/DSA-cpp/tree/master/0410-split-array-largest-sum) |
+| [0455-assign-cookies](https://github.com/robinrb7/DSA-cpp/tree/master/0455-assign-cookies) |
 | [0485-max-consecutive-ones](https://github.com/robinrb7/DSA-cpp/tree/master/0485-max-consecutive-ones) |
 | [0493-reverse-pairs](https://github.com/robinrb7/DSA-cpp/tree/master/0493-reverse-pairs) |
 | [0496-next-greater-element-i](https://github.com/robinrb7/DSA-cpp/tree/master/0496-next-greater-element-i) |
@@ -101,6 +102,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0234-palindrome-linked-list](https://github.com/robinrb7/DSA-cpp/tree/master/0234-palindrome-linked-list) |
 | [0283-move-zeroes](https://github.com/robinrb7/DSA-cpp/tree/master/0283-move-zeroes) |
 | [0287-find-the-duplicate-number](https://github.com/robinrb7/DSA-cpp/tree/master/0287-find-the-duplicate-number) |
+| [0455-assign-cookies](https://github.com/robinrb7/DSA-cpp/tree/master/0455-assign-cookies) |
 | [0567-permutation-in-string](https://github.com/robinrb7/DSA-cpp/tree/master/0567-permutation-in-string) |
 | [0908-middle-of-the-linked-list](https://github.com/robinrb7/DSA-cpp/tree/master/0908-middle-of-the-linked-list) |
 | [2216-delete-the-middle-node-of-a-linked-list](https://github.com/robinrb7/DSA-cpp/tree/master/2216-delete-the-middle-node-of-a-linked-list) |
@@ -119,6 +121,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0229-majority-element-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0229-majority-element-ii) |
 | [0242-valid-anagram](https://github.com/robinrb7/DSA-cpp/tree/master/0242-valid-anagram) |
 | [0451-sort-characters-by-frequency](https://github.com/robinrb7/DSA-cpp/tree/master/0451-sort-characters-by-frequency) |
+| [0455-assign-cookies](https://github.com/robinrb7/DSA-cpp/tree/master/0455-assign-cookies) |
 | [0621-task-scheduler](https://github.com/robinrb7/DSA-cpp/tree/master/0621-task-scheduler) |
 | [0876-hand-of-straights](https://github.com/robinrb7/DSA-cpp/tree/master/0876-hand-of-straights) |
 | [1256-rank-transform-of-an-array](https://github.com/robinrb7/DSA-cpp/tree/master/1256-rank-transform-of-an-array) |
@@ -431,6 +434,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0402-remove-k-digits](https://github.com/robinrb7/DSA-cpp/tree/master/0402-remove-k-digits) |
 | [0410-split-array-largest-sum](https://github.com/robinrb7/DSA-cpp/tree/master/0410-split-array-largest-sum) |
+| [0455-assign-cookies](https://github.com/robinrb7/DSA-cpp/tree/master/0455-assign-cookies) |
 | [0621-task-scheduler](https://github.com/robinrb7/DSA-cpp/tree/master/0621-task-scheduler) |
 | [0876-hand-of-straights](https://github.com/robinrb7/DSA-cpp/tree/master/0876-hand-of-straights) |
 ## Trie
