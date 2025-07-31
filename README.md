@@ -279,6 +279,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0131-palindrome-partitioning](https://github.com/robinrb7/DSA-cpp/tree/master/0131-palindrome-partitioning) |
 | [0152-maximum-product-subarray](https://github.com/robinrb7/DSA-cpp/tree/master/0152-maximum-product-subarray) |
 | [0410-split-array-largest-sum](https://github.com/robinrb7/DSA-cpp/tree/master/0410-split-array-largest-sum) |
+| [0678-valid-parenthesis-string](https://github.com/robinrb7/DSA-cpp/tree/master/0678-valid-parenthesis-string) |
 | [0943-sum-of-subarray-minimums](https://github.com/robinrb7/DSA-cpp/tree/master/0943-sum-of-subarray-minimums) |
 | [3243-count-the-number-of-powerful-integers](https://github.com/robinrb7/DSA-cpp/tree/master/3243-count-the-number-of-powerful-integers) |
 ## Combinatorics
@@ -338,6 +339,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0424-longest-repeating-character-replacement](https://github.com/robinrb7/DSA-cpp/tree/master/0424-longest-repeating-character-replacement) |
 | [0451-sort-characters-by-frequency](https://github.com/robinrb7/DSA-cpp/tree/master/0451-sort-characters-by-frequency) |
 | [0567-permutation-in-string](https://github.com/robinrb7/DSA-cpp/tree/master/0567-permutation-in-string) |
+| [0678-valid-parenthesis-string](https://github.com/robinrb7/DSA-cpp/tree/master/0678-valid-parenthesis-string) |
 | [1078-remove-outermost-parentheses](https://github.com/robinrb7/DSA-cpp/tree/master/1078-remove-outermost-parentheses) |
 | [1460-number-of-substrings-containing-all-three-characters](https://github.com/robinrb7/DSA-cpp/tree/master/1460-number-of-substrings-containing-all-three-characters) |
 | [1737-maximum-nesting-depth-of-the-parentheses](https://github.com/robinrb7/DSA-cpp/tree/master/1737-maximum-nesting-depth-of-the-parentheses) |
@@ -395,6 +397,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0402-remove-k-digits](https://github.com/robinrb7/DSA-cpp/tree/master/0402-remove-k-digits) |
 | [0496-next-greater-element-i](https://github.com/robinrb7/DSA-cpp/tree/master/0496-next-greater-element-i) |
 | [0503-next-greater-element-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0503-next-greater-element-ii) |
+| [0678-valid-parenthesis-string](https://github.com/robinrb7/DSA-cpp/tree/master/0678-valid-parenthesis-string) |
 | [0735-asteroid-collision](https://github.com/robinrb7/DSA-cpp/tree/master/0735-asteroid-collision) |
 | [0937-online-stock-span](https://github.com/robinrb7/DSA-cpp/tree/master/0937-online-stock-span) |
 | [0943-sum-of-subarray-minimums](https://github.com/robinrb7/DSA-cpp/tree/master/0943-sum-of-subarray-minimums) |
@@ -437,6 +440,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0410-split-array-largest-sum](https://github.com/robinrb7/DSA-cpp/tree/master/0410-split-array-largest-sum) |
 | [0455-assign-cookies](https://github.com/robinrb7/DSA-cpp/tree/master/0455-assign-cookies) |
 | [0621-task-scheduler](https://github.com/robinrb7/DSA-cpp/tree/master/0621-task-scheduler) |
+| [0678-valid-parenthesis-string](https://github.com/robinrb7/DSA-cpp/tree/master/0678-valid-parenthesis-string) |
 | [0876-hand-of-straights](https://github.com/robinrb7/DSA-cpp/tree/master/0876-hand-of-straights) |
 | [0890-lemonade-change](https://github.com/robinrb7/DSA-cpp/tree/master/0890-lemonade-change) |
 ## Trie
