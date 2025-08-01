@@ -1,22 +1,15 @@
 class Solution {
-    private:
-    bool solve(vector<int> &nums, int index, int n,vector<int>&dp){
-        if(index==n-1) return 1;
-
-        if(dp[index] != -1) return dp[index];
-        for(int i =1; i<=nums[index];i++){
-            if(solve(nums,index+i,n,dp)) return dp[index] = true;
-        }
-
-        return dp[index] = false;
-    }
 public:
     bool canJump(vector<int>& nums) {
         int n = nums.size();
         if(n<=1) return 1;
 
-        vector<int>dp(n,-1);
+        int maxIndex = 0;
+        for(int i=0;i<n;i++){
+            if(i > maxIndex) return false;
+            maxIndex = max(maxIndex,nums[i]+i);
+        }
 
-        return solve(nums,0,n,dp);
+        return true;
     }
 };
