@@ -23,6 +23,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0048-rotate-image](https://github.com/robinrb7/DSA-cpp/tree/master/0048-rotate-image) |
 | [0051-n-queens](https://github.com/robinrb7/DSA-cpp/tree/master/0051-n-queens) |
 | [0054-spiral-matrix](https://github.com/robinrb7/DSA-cpp/tree/master/0054-spiral-matrix) |
+| [0055-jump-game](https://github.com/robinrb7/DSA-cpp/tree/master/0055-jump-game) |
 | [0056-merge-intervals](https://github.com/robinrb7/DSA-cpp/tree/master/0056-merge-intervals) |
 | [0073-set-matrix-zeroes](https://github.com/robinrb7/DSA-cpp/tree/master/0073-set-matrix-zeroes) |
 | [0074-search-a-2d-matrix](https://github.com/robinrb7/DSA-cpp/tree/master/0074-search-a-2d-matrix) |
@@ -273,6 +274,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0005-longest-palindromic-substring](https://github.com/robinrb7/DSA-cpp/tree/master/0005-longest-palindromic-substring) |
 | [0022-generate-parentheses](https://github.com/robinrb7/DSA-cpp/tree/master/0022-generate-parentheses) |
 | [0042-trapping-rain-water](https://github.com/robinrb7/DSA-cpp/tree/master/0042-trapping-rain-water) |
+| [0055-jump-game](https://github.com/robinrb7/DSA-cpp/tree/master/0055-jump-game) |
 | [0062-unique-paths](https://github.com/robinrb7/DSA-cpp/tree/master/0062-unique-paths) |
 | [0085-maximal-rectangle](https://github.com/robinrb7/DSA-cpp/tree/master/0085-maximal-rectangle) |
 | [0118-pascals-triangle](https://github.com/robinrb7/DSA-cpp/tree/master/0118-pascals-triangle) |
@@ -436,6 +438,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Greedy
 |  |
 | ------- |
+| [0055-jump-game](https://github.com/robinrb7/DSA-cpp/tree/master/0055-jump-game) |
 | [0402-remove-k-digits](https://github.com/robinrb7/DSA-cpp/tree/master/0402-remove-k-digits) |
 | [0410-split-array-largest-sum](https://github.com/robinrb7/DSA-cpp/tree/master/0410-split-array-largest-sum) |
 | [0455-assign-cookies](https://github.com/robinrb7/DSA-cpp/tree/master/0455-assign-cookies) |
