@@ -15,7 +15,7 @@ public:
         vector<vector<int>>res;
         if(root==NULL) return res;
 
-        map<int,map<int,multiset<int>>> uMap;
+        map<int,map<int,vector<int>>> uMap;
         queue<pair<TreeNode*,pair<int,int>>> q;
         q.push({root,{0,0}});
         while(!q.empty()){
@@ -24,7 +24,7 @@ public:
 
             TreeNode* node = qfront.first;
             int vertical =qfront.second.first, level = qfront.second.second;
-            uMap[vertical][level].insert(node->val);
+            uMap[vertical][level].push_back(node->val);
 
             if(node->left){
                 q.push({node->left,{vertical-1,level+1}});
@@ -37,6 +37,7 @@ public:
         for(auto p : uMap){
             vector<int> temp;
             for(auto q : p.second){
+                sort(q.second.begin(),q.second.end());
                 temp.insert(temp.end(),q.second.begin(),q.second.end());
             }
             res.push_back(temp);
