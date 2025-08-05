@@ -11,19 +11,31 @@
  */
 class Solution {
     private:
-    void traverse(TreeNode* root, int &count){
-        if(root==NULL) return;
-
-        count++;
-        traverse(root->left,count);
-        traverse(root->right,count);
+    int leftHeight(TreeNode* node){
+        int height =0;
+        while(node){
+            height++;
+            node=node->left;
+        }
+        return height;
+    }
+    int rightHeight(TreeNode* node){
+        int height =0;
+        while(node){
+            height++;
+            node=node->right;
+        }
+        return height;
     }
 public:
     int countNodes(TreeNode* root) {
         if(!root) return 0;
 
-        int count=0;
-        traverse(root,count);
-        return count;
+        int left = leftHeight(root);
+        int right = rightHeight(root);
+
+        if(left==right) return (1<<left) -1;
+
+        return 1 + countNodes(root->left) + countNodes(root->right);
     }
 };
