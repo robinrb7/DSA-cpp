@@ -16,23 +16,14 @@ public:
 
         TreeNode* curr = root;
         while(curr){
-            if(curr->left==NULL){
-                curr=curr->right;
-            }
-            else{
+            if(curr->left!=NULL){
                 TreeNode* temp = curr->left;
-                while(temp->right && temp->right!=curr) temp=temp->right;
-                if(temp->right==NULL){
-                    temp->right=curr;
-                    curr=curr->left;
-                }
-                else{
-                    temp->right = curr->right;
-                    curr->right = curr->left;
-                    curr->left = NULL;
-                    curr = temp->right;
-                }
+                while(temp->right) temp=temp->right;
+                temp->right = curr->right;
+                curr->right = curr->left;
+                curr->left=NULL;
             }
+            curr=curr->right;
         }
     }
 };
