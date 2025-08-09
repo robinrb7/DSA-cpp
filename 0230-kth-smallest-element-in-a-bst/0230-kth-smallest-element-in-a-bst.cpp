@@ -17,27 +17,34 @@ public:
 
         int node=-1;
         int cnt=0;
-        stack<TreeNode*>st;
+
         TreeNode* curr=root;
-        while(true){
-            if(curr){
-                st.push(curr);
-                curr=curr->left;
-            }
-            else{
-                if(st.empty()) break;
-                curr=st.top();
-                st.pop();
+        while(curr){
+            if(curr->left==NULL){
                 cnt++;
                 if(cnt==k){
                     node = curr->val;
-                    break;
-                } 
-
-                curr= curr->right;
+                }
+                curr=curr->right;
             }
-        }
+            else{
+                TreeNode* temp = curr->left;
+                while(temp->right && temp->right!=curr) temp= temp->right;
+                if(temp->right==NULL){
+                    temp->right=curr;
+                    curr=curr->left;
+                } 
+                else{
+                    cnt++;
+                    if(cnt==k){
+                        node = curr->val;
+                    }
+                    temp->right = NULL;
+                    curr=curr->right;
+                } 
+            }
 
+        }
         return node;
     }
 };
