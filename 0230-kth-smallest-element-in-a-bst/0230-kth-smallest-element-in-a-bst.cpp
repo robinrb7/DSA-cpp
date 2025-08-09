@@ -10,25 +10,34 @@
  * };
  */
 class Solution {
-    private:
-    void inorder(TreeNode* root, int &k,int &nodeToFind){
-        if(nodeToFind != -1) return;
-        if(root==NULL) return;
 
-        inorder(root->left,k,nodeToFind);
-        k--;
-        if(k==0){
-            nodeToFind  = root->val;
-            return;
-        }
-        inorder(root->right,k,nodeToFind);
-    }
 public:
     int kthSmallest(TreeNode* root, int k) {
         if(!root) return -1;
 
-        int nodeToFind=-1;
-        inorder(root,k,nodeToFind);
-        return nodeToFind;
+        int node=-1;
+        int cnt=0;
+        stack<TreeNode*>st;
+        TreeNode* curr=root;
+        while(true){
+            if(curr){
+                st.push(curr);
+                curr=curr->left;
+            }
+            else{
+                if(st.empty()) break;
+                curr=st.top();
+                st.pop();
+                cnt++;
+                if(cnt==k){
+                    node = curr->val;
+                    break;
+                } 
+
+                curr= curr->right;
+            }
+        }
+
+        return node;
     }
 };
