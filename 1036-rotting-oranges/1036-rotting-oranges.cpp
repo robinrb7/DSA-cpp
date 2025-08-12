@@ -18,6 +18,9 @@ public:
         }
 
         int maxTime = 0;
+        int dRow[4] = {-1,1,0,0};
+        int dCol[4] = {0,0,-1,1};
+        
         while(!q.empty()){
             int row = q.front().first.first;
             int col = q.front().first.second;
@@ -25,8 +28,6 @@ public:
             q.pop();
 
             maxTime = max(maxTime,time);
-            int dRow[4] = {-1,1,0,0};
-            int dCol[4] = {0,0,-1,1};
 
             for(int k=0;k<4;k++){
                 int nRow = row + dRow[k];
