@@ -28,18 +28,17 @@ public:
             if(grid[0][col]==1 && visited[0][col]!=1){
                 dfs(grid,visited,0,col);
             }
-        }
-        for(int col=0;col<m;col++){
+
             if(grid[n-1][col]==1 && visited[n-1][col]!=1){
                 dfs(grid,visited,n-1,col);
             }
         }
+       
         for(int row=1;row<n-1;row++){
             if(grid[row][0]==1 && visited[row][0]!=1){
                 dfs(grid,visited,row,0);
             }
-        }
-        for(int row=1;row<n-1;row++){
+
             if(grid[row][m-1]==1 && visited[row][m-1]!=1){
                 dfs(grid,visited,row,m-1);
             }
