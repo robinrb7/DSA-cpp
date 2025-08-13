@@ -17,14 +17,16 @@ public:
             auto[word,depth] = q.front();
             q.pop();
             if(word==endWord) return depth;
-            s.erase(word);
 
             for(int i=0;i<word.length();i++){
                 string temp = word;
                 for(char ch='a';ch<='z';ch++){
                     if(ch==temp[i]) continue;
                     temp[i] = ch;
-                    if(s.find(temp) != s.end()) q.push({temp,depth+1});
+                    if(s.find(temp) != s.end()){
+                        q.push({temp,depth+1});
+                        s.erase(temp);
+                    } 
                 }
             }
         }
