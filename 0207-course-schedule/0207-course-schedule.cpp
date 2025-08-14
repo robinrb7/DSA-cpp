@@ -14,12 +14,23 @@ class Solution {
         return false;
     }
 
-    bool checkCycleBFS(vector<vector<int>> &adjList,vector<int> &visited,vector<int>& indegree, int startNode){
+public:
+    bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
+        int n = numCourses;
+
+        vector<int>visited(n,0);
+        vector<int> indegree(n,0);
+
+        vector<vector<int>> adjList(n);
+        for(int i=0;i<prerequisites.size();i++){
+            adjList[prerequisites[i][0]].push_back(prerequisites[i][1]);
+            indegree[prerequisites[i][1]]++;
+        }
+
         queue<int>q;
-        for(int i=startNode;i<visited.size();i++){
+        for(int i=0;i<n;i++){
             if(indegree[i]==0){
                 q.push(i);
-                visited[i]=1;
             } 
         }
 
@@ -38,28 +49,7 @@ class Solution {
             }
         }
 
-        if(cnt!=visited.size()) return true;
-        return false;
-    }
-public:
-    bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
-        int n = numCourses;
-
-        vector<int>visited(n,0);
-        vector<int> indegree(n,0);
-
-        vector<vector<int>> adjList(n);
-        for(int i=0;i<prerequisites.size();i++){
-            adjList[prerequisites[i][0]].push_back(prerequisites[i][1]);
-            indegree[prerequisites[i][1]]++;
-        }
-
-        for(int i=0;i<n;i++){
-            if(visited[i]==0){
-                if(checkCycleBFS(adjList,visited,indegree, i)) return false;
-            }
-        }
-
+        if(cnt!=visited.size()) return false;
         return true;
     }
 };
