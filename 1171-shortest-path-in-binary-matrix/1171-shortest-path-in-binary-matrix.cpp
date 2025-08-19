@@ -12,16 +12,16 @@ public:
         q.push({{0,0},1});
         visited[0][0]=1;
 
+        int dRow[8] = {-1,1,0,0,-1,-1,1,1};
+        int dCol[8] = {0,0,-1,1,-1,1,-1,1};
+
         while(!q.empty()){
             auto[cord, len] = q.front();
             auto[row , col] = cord;
             q.pop();
 
             if(row==n-1 && col==m-1) return len;
-
-            int dRow[8] = {-1,1,0,0,-1,-1,1,1};
-            int dCol[8] = {0,0,-1,1,-1,1,-1,1};
-
+            
             for(int i=0;i<8;i++){
                 int nRow = row + dRow[i];
                 int nCol = col + dCol[i];
