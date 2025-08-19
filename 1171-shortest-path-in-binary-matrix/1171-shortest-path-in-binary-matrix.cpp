@@ -7,7 +7,6 @@ public:
         if(grid[0][0]!=0 || grid[n-1][m-1]!=0) return -1;
 
         vector<vector<int>> visited(n,vector<int>(m,0));
-        int minLen=-1;
 
         queue<pair<pair<int,int>,int> > q;
         q.push({{0,0},1});
@@ -18,10 +17,7 @@ public:
             auto[row , col] = cord;
             q.pop();
 
-            if(row==n-1 && col==m-1){
-                minLen = len;
-                break;
-            } 
+            if(row==n-1 && col==m-1) return len;
 
             int dRow[8] = {-1,1,0,0,-1,-1,1,1};
             int dCol[8] = {0,0,-1,1,-1,1,-1,1};
@@ -38,6 +34,6 @@ public:
             }
         }
 
-        return minLen;
+        return -1;
     }
 };
