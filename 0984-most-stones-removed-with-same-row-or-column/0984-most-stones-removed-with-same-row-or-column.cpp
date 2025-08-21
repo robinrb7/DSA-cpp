@@ -52,10 +52,9 @@ public:
         for(auto it: stones){
             int u = it[0];
             int v = it[1]+nRow;
+            
+            ds.unionByRank(u,v);
 
-            if(ds.findParent(u) != ds.findParent(v)){
-                ds.unionByRank(u,v);
-            }
             stoneNodes[u]=1;
             stoneNodes[v]=1;
         }
