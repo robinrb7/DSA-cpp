@@ -89,9 +89,7 @@ public:
         }
 
         for(int i=0;i<n*n;i++){
-            if(ds.parent[i]==i){
-                maxIslandSize = max(maxIslandSize,ds.size[i]);
-            }
+            if(ds.findParent(i)==i) maxIslandSize = max(maxIslandSize,ds.size[i]);
         }
 
         return maxIslandSize;
