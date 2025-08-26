@@ -10,9 +10,8 @@ private:
             for(int i=0;i<coins.size();i++){
                 int coinsReq = INT_MAX;
                 if(price-coins[i] >=0){
-                    int subPrblm = dp[price-coins[i]];
-                    if(subPrblm !=-1){
-                        coinsReq = 1 + subPrblm;
+                    if(dp[price-coins[i]] !=-1){
+                        coinsReq = 1 + dp[price-coins[i]];
                         minCoins = min(minCoins,coinsReq);
                     } 
                 }   
