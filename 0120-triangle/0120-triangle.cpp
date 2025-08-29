@@ -12,20 +12,23 @@ private:
 
     int solveTab(vector<vector<int>>& triangle){
         int nRow = triangle.size();
-        vector<vector<int>> dp(nRow,vector<int>(nRow,0));
+        vector<int> nextRow(triangle[nRow-1].size(),0);
+        vector<int> currRow(triangle[nRow-1].size(),0);
+
         for(int i=0;i<triangle[nRow-1].size();i++){
-            dp[nRow-1][i] = triangle[nRow-1][i];
+            nextRow[i] = triangle[nRow-1][i];
         }
 
         for(int row=nRow-2;row>=0;row--){
             for(int col=0;col<triangle[row].size();col++){
-                int choice1 = triangle[row][col] + dp[row+1][col];
-                int choice2 = triangle[row][col] + dp[row+1][col+1];
+                int choice1 = triangle[row][col] + nextRow[col];
+                int choice2 = triangle[row][col] + nextRow[col+1];
 
-                dp[row][col] = min(choice1,choice2);
+                currRow[col] = min(choice1,choice2);
             }
+            nextRow=currRow;
         }
-        return dp[0][0];
+        return nextRow[0];
     }
 public:
     int minimumTotal(vector<vector<int>>& triangle) {
