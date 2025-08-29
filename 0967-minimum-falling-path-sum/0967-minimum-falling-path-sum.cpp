@@ -14,26 +14,27 @@ private:
 
     int solveTab(vector<vector<int>> &matrix){
         int n =  matrix.size();
-        vector<vector<int>> dp(n,vector<int>(n,0));
-
+        vector<int> frontRow(n);
+        vector<int> currRow(n);
         for(int i=0;i<n;i++){
-            dp[n-1][i] = matrix[n-1][i];
+            frontRow[i] = matrix[n-1][i];
         }
 
         for(int row=n-2;row>=0;row--){
             for(int col=0;col<n;col++){
                 int leftDg = INT_MAX, rightDg=INT_MAX;
-                if(col>0) leftDg = dp[row+1][col-1];
-                int down = dp[row+1][col];
-                if(col<n-1) rightDg = dp[row+1][col+1];
+                if(col>0) leftDg = frontRow[col-1];
+                int down = frontRow[col];
+                if(col<n-1) rightDg = frontRow[col+1];
 
-                dp[row][col] = matrix[row][col] + min(leftDg,min(down,rightDg));
+                currRow[col] = matrix[row][col] + min(leftDg,min(down,rightDg));
             }
+            frontRow=currRow;
         }
 
         int mini = INT_MAX;
         for(int i=0;i<n;i++){
-            mini = min(mini,dp[0][i]);
+            mini = min(mini,frontRow[i]);
         }
 
         return mini;;
