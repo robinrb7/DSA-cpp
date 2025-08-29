@@ -14,22 +14,24 @@ private:
     }
 
     int solveTab( int n, int m,vector<vector<int>>& obstacleGrid){
-        vector<vector<int>> dp(n,vector<int>(m,0));
-        dp[0][0]=1;
-
+        vector<int> prevRow(m,0);
+        vector<int>currRow(m,0);
+        currRow[0]=1;
+        
         for(int rowIndex=0;rowIndex<n;rowIndex++){
             for(int colIndex=0;colIndex<m;colIndex++){
                 if(rowIndex==0 && colIndex==0) continue;
-                if(obstacleGrid[rowIndex][colIndex]==1) dp[rowIndex][colIndex]=0;
+                if(obstacleGrid[rowIndex][colIndex]==1) currRow[colIndex]=0;
                 else{
                     int up=0,left=0;
-                    if(rowIndex>0) up = dp[rowIndex-1][colIndex];
-                    if(colIndex>0) left = dp[rowIndex][colIndex-1];
-                    dp[rowIndex][colIndex] =  up + left;
+                    if(rowIndex>0) up = prevRow[colIndex];
+                    if(colIndex>0) left = currRow[colIndex-1];
+                    currRow[colIndex] =  up + left;
                 }
             }
+            prevRow=currRow;
         }
-        return dp[n-1][m-1];
+        return prevRow[m-1];
     }
 public:
     int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {
