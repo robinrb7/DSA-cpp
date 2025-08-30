@@ -44,16 +44,13 @@ class Solution {
                     for(int i=-1;i<=1;i++){
                         for(int j=-1;j<=1;j++){
                             int sum=0;
-                            if(col1==col2){
-                                sum = grid[row][col1];
-                                if(col1+i>=0 && col1+i <m && col2+j>=0 & col2+j<m)
+                            if(col1==col2) sum = grid[row][col1];
+                            else sum = grid[row][col1] + grid[row][col2];
+
+                            if(col1+i>=0 && col1+i <m && col2+j>=0 && col2+j<m)
                                     sum += dp[row+1][col1+i][col2+j];
-                            }
-                            else{
-                                sum = grid[row][col1] + grid[row][col2];
-                                if(col1+i>=0 && col1+i <m && col2+j>=0 & col2+j<m)
-                                    sum += dp[row+1][col1+i][col2+j];
-                            }
+                            else sum = INT_MIN;
+                             
                             maxi =  max(maxi,sum);
                         }
                     }                    
