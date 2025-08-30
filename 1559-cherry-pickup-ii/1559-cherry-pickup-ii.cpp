@@ -27,12 +27,13 @@ class Solution {
 
     int solveTab(vector<vector<int>>& grid){
         int n =grid.size(), m= grid[0].size();
-        vector<vector<vector<int>>> dp(n,vector<vector<int>>(m,vector<int>(m,0))); 
+        vector<vector<int>> front(m,vector<int>(m,0));
+        vector<vector<int>> curr(m,vector<int>(m,0));
 
         for(int i=0;i<m;i++){
             for(int j=0;j<m;j++){
-                if(i==j) dp[n-1][i][j] = grid[n-1][i];
-                else dp[n-1][i][j] = grid[n-1][i] + grid[n-1][j];
+                if(i==j) front[i][j] = grid[n-1][i];
+                else front[i][j] = grid[n-1][i] + grid[n-1][j];
             }
         }
 
@@ -48,17 +49,18 @@ class Solution {
                             else sum = grid[row][col1] + grid[row][col2];
 
                             if(col1+i>=0 && col1+i <m && col2+j>=0 && col2+j<m)
-                                    sum += dp[row+1][col1+i][col2+j];
+                                    sum += front[col1+i][col2+j];
                             else sum = INT_MIN;
-                             
+
                             maxi =  max(maxi,sum);
                         }
                     }                    
-                    dp[row][col1][col2] = maxi;
+                    curr[col1][col2] = maxi;
                 }
             }
+            front = curr;
         }
-        return dp[0][0][m-1];
+        return front[0][m-1];
     }
 public:
     int cherryPickup(vector<vector<int>>& grid){
