@@ -19,7 +19,6 @@ private:
     int solveTab(vector<int>& coins, int cost){
         int n =coins.size();
         vector<int>prev(cost+1,0);
-        vector<int>curr(cost+1,0);
 
         for(int i=0;i<=cost;i++){
             if(i%coins[0]==0) prev[i]= i/coins[0];
@@ -31,11 +30,10 @@ private:
 
                 int notTake = 0 + prev[amount];
                 int take = INT_MAX;
-                if(amount >= coins[index]) take = 1 + curr[amount-coins[index]];
+                if(amount >= coins[index]) take = 1 + prev[amount-coins[index]];
                 
-                curr[amount] = min(take,notTake);
+                prev[amount] = min(take,notTake);
             }
-            prev = curr;
         }
         
         return prev[cost];
