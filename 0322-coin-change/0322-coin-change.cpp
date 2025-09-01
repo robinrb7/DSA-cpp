@@ -18,24 +18,27 @@ private:
 
     int solveTab(vector<int>& coins, int cost){
         int n =coins.size();
-        vector<vector<int>> dp(n,vector<int>(cost+1,0));
+        vector<int>prev(cost+1,0);
+        vector<int>curr(cost+1,0);
+
         for(int i=0;i<=cost;i++){
-            if(i%coins[0]==0) dp[0][i]= i/coins[0];
-            else dp[0][i] = 1e9;
+            if(i%coins[0]==0) prev[i]= i/coins[0];
+            else prev[i] = 1e9;
         }
 
         for(int index=1;index<n;index++){
             for(int amount=1;amount<=cost;amount++){
 
-                int notTake = 0 + dp[index-1][amount];
+                int notTake = 0 + prev[amount];
                 int take = INT_MAX;
-                if(amount >= coins[index]) take = 1 + dp[index][amount-coins[index]];
+                if(amount >= coins[index]) take = 1 + curr[amount-coins[index]];
                 
-                dp[index][amount] = min(take,notTake);
+                curr[amount] = min(take,notTake);
             }
+            prev = curr;
         }
         
-        return dp[n-1][cost];
+        return prev[cost];
     }
 
 public:
