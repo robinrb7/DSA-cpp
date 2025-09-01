@@ -24,6 +24,36 @@ class Solution {
         return dp[index1+1][index2+1] = ans;
     }
 
+    int solveTab(string word1,string word2){
+        int n1 = word1.length();
+        int n2 = word2.length();
+
+        vector<vector<int>> dp(n1+1,vector<int>(n2+1,0));
+        dp[0][0]=0;
+        for(int i=0;i<=n1;i++) dp[i][0] = i;
+        for(int j=0;j<=n2;j++) dp[0][j] = j;
+
+        for(int index1=1;index1<=n1;index1++){
+            for(int index2=1;index2<=n2;index2++){
+                int ans = 0;
+                if(word1[index1-1]==word2[index2-1]){
+                    ans = 0 + dp[index1-1][index2-1];
+                }
+                else{
+                    int insertCh = 1 + dp[index1][index2-1];
+                    int deleteCh = 1 + dp[index1-1][index2];
+                    int replaceCh = 1 + dp[index1-1][index2-1];
+
+                    ans = min(insertCh,min(deleteCh,replaceCh));
+                }
+
+                dp[index1][index2] = ans;
+            }
+        }
+
+        return dp[n1][n2];
+    }
+
 
 public:
     int minDistance(string word1, string word2) {
@@ -34,7 +64,6 @@ public:
         if(n1==0 && n2!=0) return n2;
         if(n1!=0 && n2==0) return n1;
 
-        vector<vector<int>> dp(n1+1,vector<int>(n2+1,-1));
-        return solve(word1,word2,n1-1,n2-1,dp);
+        return solveTab(word1,word2);
     }
 };
