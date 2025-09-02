@@ -18,25 +18,26 @@ class Solution {
 
     int solveTab(string text1,string text2){
         int n1= text1.length(), n2 = text2.length();
-        vector<vector<int>> dp(n1+1,vector<int>(n2+1,0));
+        vector<int> prev(n2+1,0);
 
         for(int index1=1;index1<=n1;index1++){
+            int prevDiagonal=0;
             for(int index2=1;index2<=n2;index2++){
 
                 int ans = 0;
                 if(text1[index1 -1]==text2[index2 -1]){
-                    ans = 1 + dp[index1 -1][index2 -1];
+                    ans = 1 + prevDiagonal;
                 }
                 else{
-                    int moveFirst = dp[index1 -1][index2];
-                    int moveSecond = dp[index1][index2 -1];
+                    int moveFirst = prev[index2];
+                    int moveSecond = prev[index2 -1];
                     ans = max(moveFirst,moveSecond);
                 }
-
-                dp[index1][index2] = ans;
+                prevDiagonal = prev[index2];
+                prev[index2] = ans;
             }
         }
-        return dp[n1][n2];
+        return prev[n2];
     }
 public:
     int longestCommonSubsequence(string text1, string text2) {
