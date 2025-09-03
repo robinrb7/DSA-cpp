@@ -17,24 +17,26 @@ class Solution {
 
     int solveTab(string word1,string word2){
         int n1=word1.length(), n2=word2.length();
-        vector<vector<int>> dp(n1+1,vector<int>(n2+1,0));
+        vector<int> prev(n2+1,0);
 
-        for(int j=0;j<=n2;j++) dp[0][j] = j;
-        for(int i=0;i<=n1;i++) dp[i][0] = i;
+        for(int j=0;j<=n2;j++) prev[j] = j;
 
         for(int index1=1;index1<=n1;index1++){
+            int prevDiagonal = prev[0];
+            prev[0]=index1;
             for(int index2=1;index2<=n2;index2++){
                 int ans=0;
                 if(word1[index1-1]==word2[index2-1]){
-                    ans = dp[index1-1][index2-1];
+                    ans = prevDiagonal;
                 }
                 else{
-                    ans = 1 + min(dp[index1-1][index2],dp[index1][index2-1]);
+                    ans = 1 + min(prev[index2],prev[index2-1]);
                 }
-                dp[index1][index2] = ans;
+                prevDiagonal = prev[index2];
+                prev[index2] = ans;
             }
         }
-        return dp[n1][n2];        
+        return prev[n2];        
     }
 public:
     int minDistance(string word1, string word2) {
