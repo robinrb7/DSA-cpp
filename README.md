@@ -357,6 +357,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0516-longest-palindromic-subsequence](https://github.com/robinrb7/DSA-cpp/tree/master/0516-longest-palindromic-subsequence) |
 | [0518-coin-change-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0518-coin-change-ii) |
 | [0542-01-matrix](https://github.com/robinrb7/DSA-cpp/tree/master/0542-01-matrix) |
+| [0583-delete-operation-for-two-strings](https://github.com/robinrb7/DSA-cpp/tree/master/0583-delete-operation-for-two-strings) |
 | [0678-valid-parenthesis-string](https://github.com/robinrb7/DSA-cpp/tree/master/0678-valid-parenthesis-string) |
 | [0803-cheapest-flights-within-k-stops](https://github.com/robinrb7/DSA-cpp/tree/master/0803-cheapest-flights-within-k-stops) |
 | [0943-sum-of-subarray-minimums](https://github.com/robinrb7/DSA-cpp/tree/master/0943-sum-of-subarray-minimums) |
@@ -438,6 +439,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0451-sort-characters-by-frequency](https://github.com/robinrb7/DSA-cpp/tree/master/0451-sort-characters-by-frequency) |
 | [0516-longest-palindromic-subsequence](https://github.com/robinrb7/DSA-cpp/tree/master/0516-longest-palindromic-subsequence) |
 | [0567-permutation-in-string](https://github.com/robinrb7/DSA-cpp/tree/master/0567-permutation-in-string) |
+| [0583-delete-operation-for-two-strings](https://github.com/robinrb7/DSA-cpp/tree/master/0583-delete-operation-for-two-strings) |
 | [0678-valid-parenthesis-string](https://github.com/robinrb7/DSA-cpp/tree/master/0678-valid-parenthesis-string) |
 | [0721-accounts-merge](https://github.com/robinrb7/DSA-cpp/tree/master/0721-accounts-merge) |
 | [1078-remove-outermost-parentheses](https://github.com/robinrb7/DSA-cpp/tree/master/1078-remove-outermost-parentheses) |
