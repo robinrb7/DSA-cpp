@@ -26,9 +26,9 @@ private:
 
     bool solveTab(string str1,string str2){
         int n1=str1.length(), n2=str2.length();
-        vector<vector<bool>> dp(n1+1,vector<bool>(n2+1,0));
-        dp[0][0]=1;
-        for(int i=1;i<=n1;i++) dp[i][0]=0;
+        vector<bool> prev(n2+1,0) , curr(n2+1,0);
+        prev[0]=1;
+      
         int firstChIndex=-1;
         for(int i=0;i<n2;i++){
             if(str2[i]!='*'){
@@ -37,27 +37,29 @@ private:
             }
         }
         if(firstChIndex==-1){
-            for(int j=1;j<=n2;j++) dp[0][j]=1;
+            for(int j=1;j<=n2;j++) prev[j]=1;
         }
         else{
-            for(int j=1;j<=firstChIndex;j++) dp[0][j]=1;
+            for(int j=1;j<=firstChIndex;j++) prev[j]=1;
         }
 
         for(int index1=1;index1<=n1;index1++){
+            curr[0]=0;
             for(int index2=1;index2<=n2;index2++){
                 bool ans=0;
                 if(str1[index1-1]==str2[index2-1] || str2[index2-1]=='?'){
-                    ans = dp[index1-1][index2-1];
+                    ans = prev[index2-1];
                 }
                 else if(str2[index2-1]=='*'){
-                    ans = dp[index1-1][index2] || dp[index1][index2-1];
+                    ans = prev[index2] || curr[index2-1];
                 }
 
-                dp[index1][index2] = ans;
+                curr[index2] = ans;
             }
+            prev=curr;
         }
 
-        return dp[n1][n2];
+        return prev[n2];
     }
 public:
     bool isMatch(string s, string p) {
