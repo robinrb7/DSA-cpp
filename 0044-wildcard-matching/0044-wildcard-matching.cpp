@@ -29,19 +29,11 @@ private:
         vector<bool> prev(n2+1,0);
         prev[0]=1;
       
-        int firstChIndex=-1;
-        for(int i=0;i<n2;i++){
-            if(str2[i]!='*'){
-                firstChIndex=i;
-                break;
-            }
+
+        for(int j=1;j<=n2;j++){
+            if(str2[j-1]=='*') prev[j] = prev[j-1];   
         }
-        if(firstChIndex==-1){
-            for(int j=1;j<=n2;j++) prev[j]=1;
-        }
-        else{
-            for(int j=1;j<=firstChIndex;j++) prev[j]=1;
-        }
+      
 
         for(int index1=1;index1<=n1;index1++){
             int prevDg = prev[0];
