@@ -19,22 +19,19 @@ private:
         int n1 = str1.length();
         int n2 = str2.length();
         vector<long long>prev(n2+1,0);
-        vector<long long>curr(n2+1,0);
         prev[0]=1;
 
         for(int index1=1;index1<=n1;index1++){
-            curr[0]=1;
-            for(int index2=1;index2<=n2;index2++){
+            for(int index2=n2;index2>=1;index2--){
                 int ans=0;
                 if(str1[index1-1]==str2[index2-1]){
-                    ans = prev[index2-1]  + prev[index2];
+                    ans = prev[index2-1] + prev[index2];
                 }
                 else{
                     ans = prev[index2];
                 }
-                curr[index2] = ans;
+                prev[index2] = ans;
             }
-            prev=curr;
         }
 
        return (int)prev[n2];
