@@ -28,27 +28,27 @@ class Solution {
         int n2 = word2.length();
         
         vector<int>prev(n2+1,0);
-        vector<int>curr(n2+1,0);
 
         for(int j=0;j<=n2;j++) prev[j]=j;
 
         for(int index1=1;index1<=n1;index1++){
-            curr[0]=index1;
+            int prevDg = prev[0];
+            prev[0]=index1;
             for(int index2=1;index2<=n2;index2++){
                 int ans = 0;
                 if(word1[index1-1]==word2[index2-1]){
-                    ans = prev[index2-1];
+                    ans = prevDg;
                 }
                 else{
-                    int insertCh = 1 + curr[index2-1];
+                    int insertCh = 1 + prev[index2-1];
                     int deleteCh = 1 + prev[index2];
-                    int replaceCh = 1 + prev[index2-1];
+                    int replaceCh = 1 + prevDg;
 
                     ans = min(insertCh,min(deleteCh,replaceCh));
                 }
-                curr[index2] = ans;
+                prevDg = prev[index2];
+                prev[index2] = ans;
             }
-            prev=curr;
         }
         return prev[n2];
     }
