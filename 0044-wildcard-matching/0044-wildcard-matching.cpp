@@ -26,7 +26,7 @@ private:
 
     bool solveTab(string str1,string str2){
         int n1=str1.length(), n2=str2.length();
-        vector<bool> prev(n2+1,0) , curr(n2+1,0);
+        vector<bool> prev(n2+1,0);
         prev[0]=1;
       
         int firstChIndex=-1;
@@ -44,19 +44,20 @@ private:
         }
 
         for(int index1=1;index1<=n1;index1++){
-            curr[0]=0;
+            int prevDg = prev[0];
+            prev[0] = 0;
             for(int index2=1;index2<=n2;index2++){
                 bool ans=0;
                 if(str1[index1-1]==str2[index2-1] || str2[index2-1]=='?'){
-                    ans = prev[index2-1];
+                    ans = prevDg;
                 }
                 else if(str2[index2-1]=='*'){
-                    ans = prev[index2] || curr[index2-1];
+                    ans = prev[index2] || prev[index2-1];
                 }
 
-                curr[index2] = ans;
+                prevDg = prev[index2];
+                prev[index2] = ans;
             }
-            prev=curr;
         }
 
         return prev[n2];
@@ -75,7 +76,6 @@ public:
         }
         
 
-        vector<vector<int>> dp(n1,vector<int>(n2,-1));
         return solveTab(s,p);
     }
 };
