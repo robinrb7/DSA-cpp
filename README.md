@@ -343,6 +343,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0070-climbing-stairs](https://github.com/robinrb7/DSA-cpp/tree/master/0070-climbing-stairs) |
 | [0072-edit-distance](https://github.com/robinrb7/DSA-cpp/tree/master/0072-edit-distance) |
 | [0085-maximal-rectangle](https://github.com/robinrb7/DSA-cpp/tree/master/0085-maximal-rectangle) |
+| [0115-distinct-subsequences](https://github.com/robinrb7/DSA-cpp/tree/master/0115-distinct-subsequences) |
 | [0118-pascals-triangle](https://github.com/robinrb7/DSA-cpp/tree/master/0118-pascals-triangle) |
 | [0120-triangle](https://github.com/robinrb7/DSA-cpp/tree/master/0120-triangle) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/robinrb7/DSA-cpp/tree/master/0124-binary-tree-maximum-path-sum) |
@@ -428,6 +429,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0072-edit-distance](https://github.com/robinrb7/DSA-cpp/tree/master/0072-edit-distance) |
 | [0076-minimum-window-substring](https://github.com/robinrb7/DSA-cpp/tree/master/0076-minimum-window-substring) |
 | [0079-word-search](https://github.com/robinrb7/DSA-cpp/tree/master/0079-word-search) |
+| [0115-distinct-subsequences](https://github.com/robinrb7/DSA-cpp/tree/master/0115-distinct-subsequences) |
 | [0127-word-ladder](https://github.com/robinrb7/DSA-cpp/tree/master/0127-word-ladder) |
 | [0131-palindrome-partitioning](https://github.com/robinrb7/DSA-cpp/tree/master/0131-palindrome-partitioning) |
 | [0151-reverse-words-in-a-string](https://github.com/robinrb7/DSA-cpp/tree/master/0151-reverse-words-in-a-string) |
