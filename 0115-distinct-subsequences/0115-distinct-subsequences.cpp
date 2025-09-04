@@ -14,12 +14,34 @@ private:
         }
         return dp[index1][index2] = ans;
     }
+
+    int solveTab(string str1, string str2){
+        int n1 = str1.length();
+        int n2 = str2.length();
+        vector<vector<long long>> dp(n1+1,vector<long long>(n2+1,0));
+        for(int i=0;i<=n1;i++)dp[i][0]=1;
+
+        for(int index1=1;index1<=n1;index1++){
+            for(int index2=1;index2<=n2;index2++){
+
+                int ans=0;
+                if(str1[index1-1]==str2[index2-1]){
+                    ans = dp[index1-1][index2-1]  + dp[index1-1][index2];
+                }
+                else{
+                    ans = dp[index1-1][index2];
+                }
+                dp[index1][index2] = ans;
+            }
+        }
+
+       return (int)dp[n1][n2];
+    }
 public:
     int numDistinct(string s, string t) {
         int n1 = s.length();
         int n2 = t.length();
 
-        vector<vector<int>> dp(n1,vector<int>(n2,-1));
-        return solve(s,t,n1-1,n2-1,dp);
+        return solveTab(s,t);
     }
 };
