@@ -15,11 +15,31 @@ private:
 
         return dp[index][transLimit] = ans;
     }
+
+    int solveTab(vector<int>& prices,int k){
+        int n=prices.size();
+        vector<vector<int>> dp(n+1,vector<int>(2*k+1,0));
+
+        for(int index=n-1;index>=0;index--){
+            for(int transLimit=1;transLimit<=2*k;transLimit++){
+                int ans = 0;
+                if(transLimit %2==0){
+                    ans = max(-prices[index] + dp[index+1][transLimit-1] , dp[index+1][transLimit]);
+                }
+                else{
+                    ans = max(prices[index] + dp[index+1][transLimit-1] , dp[index+1][transLimit]);
+                }
+
+                dp[index][transLimit] = ans;
+            }
+        }
+
+        return dp[0][2*k];
+    }
 public:
     int maxProfit(int k, vector<int>& prices) {
         int n = prices.size();
 
-        vector<vector<int>> dp(n,vector<int>(2*k+1,-1));
-        return solve(prices,0,2*k,dp);
+        return solveTab(prices,k);
     }
 };
