@@ -18,10 +18,10 @@ int solve(vector<int>& prices, int index, int transLimit,vector<vector<int>> &dp
 
 int solveTab(vector<int>& prices){
     int n=prices.size();
-    vector<int>front(5,0) , curr(5,0);
+    vector<int>front(5,0);
 
     for(int index=n-1;index>=0;index--){
-        for(int transLimit=3;transLimit>=0;transLimit--){
+        for(int transLimit=0;transLimit<=3;transLimit++){
             int ans = 0;
             if(transLimit %2==0){
                 ans = max(-prices[index] + front[transLimit+1] , front[transLimit]);
@@ -30,9 +30,8 @@ int solveTab(vector<int>& prices){
                 ans = max(prices[index] + front[transLimit+1] , front[transLimit]);
             }
 
-            curr[transLimit] = ans;
+            front[transLimit] = ans;
         }
-        front=curr;
     }
     return front[0];
 }
