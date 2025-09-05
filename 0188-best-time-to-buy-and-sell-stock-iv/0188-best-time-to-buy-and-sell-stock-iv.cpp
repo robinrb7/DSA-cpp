@@ -18,23 +18,23 @@ private:
 
     int solveTab(vector<int>& prices,int k){
         int n=prices.size();
-        vector<vector<int>> dp(n+1,vector<int>(2*k+1,0));
+        vector<int> front(2*k+1,0);
 
         for(int index=n-1;index>=0;index--){
-            for(int transLimit=1;transLimit<=2*k;transLimit++){
+            for(int transLimit=2*k;transLimit>=1;transLimit--){
                 int ans = 0;
                 if(transLimit %2==0){
-                    ans = max(-prices[index] + dp[index+1][transLimit-1] , dp[index+1][transLimit]);
+                    ans = max(-prices[index] + front[transLimit-1] , front[transLimit]);
                 }
                 else{
-                    ans = max(prices[index] + dp[index+1][transLimit-1] , dp[index+1][transLimit]);
+                    ans = max(prices[index] + front[transLimit-1] , front[transLimit]);
                 }
 
-                dp[index][transLimit] = ans;
+                front[transLimit] = ans;
             }
         }
 
-        return dp[0][2*k];
+        return front[2*k];
     }
 public:
     int maxProfit(int k, vector<int>& prices) {
