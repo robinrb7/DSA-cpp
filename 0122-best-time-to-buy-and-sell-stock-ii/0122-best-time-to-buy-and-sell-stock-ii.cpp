@@ -1,15 +1,16 @@
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
-        int maxProfit = 0;
+        int n =prices.size();
 
-        for (int i = 1; i < prices.size(); i++) {
-            // If the price today is higher than yesterday, we can profit
-            if (prices[i] > prices[i - 1]) {
-                maxProfit += prices[i] - prices[i - 1];
+        int totalProfit=0;
+
+        for(int i=1;i<n;i++){
+            if(prices[i]>prices[i-1]){
+                totalProfit += prices[i]-prices[i-1];
             }
         }
 
-        return maxProfit;
+        return totalProfit;
     }
 };
