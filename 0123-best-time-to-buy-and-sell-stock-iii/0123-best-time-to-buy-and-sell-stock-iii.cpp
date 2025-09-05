@@ -1,48 +1,47 @@
 class Solution {
 private:
-    int solve(vector<int>& prices, int index,int buyAllowed,int limit,vector<vector<vector<int>> > &dp){
-        int n=prices.size();
-        if(index==n || limit==0) return 0;
-        if(dp[index][buyAllowed][limit]!=-1) return dp[index][buyAllowed][limit];
+int solve(vector<int>& prices, int index, int transLimit,vector<vector<int>> &dp){
+    int n=prices.size();
+    if(index==n || transLimit==4) return 0;
+    if(dp[index][transLimit]!=-1) return dp[index][transLimit];
 
-        int ans = 0;
-        if(buyAllowed){
-            ans = max(-prices[index] + solve(prices,index+1,0,limit,dp) , 0 + solve(prices,index+1,1,limit,dp));
-        }
-        else{
-            ans = max(prices[index] + solve(prices,index+1,1,limit-1,dp) , 0 + solve(prices,index+1,0,limit,dp));
-        }
-
-        return dp[index][buyAllowed][limit] = ans;
+    int ans = 0;
+    if(transLimit %2==0){
+        ans = max(-prices[index] + solve(prices,index+1,transLimit+1,dp) , 0 + solve(prices,index+1,transLimit,dp));
+    }
+    else{
+        ans = max(prices[index] + solve(prices,index+1,transLimit+1,dp) , 0 + solve(prices,index+1,transLimit,dp));
     }
 
-    int solveTab(vector<int>& prices){
-        int n=prices.size();
-       vector<vector<vector<int>> > dp(n+1,vector<vector<int>>(2,vector<int>(3,0)));
+    return dp[index][transLimit] = ans;
+}
 
-       for(int index=n-1;index>=0;index--){
-            for(int buyAllowed=0;buyAllowed<=1;buyAllowed++){
-                for(int limit=1;limit<=2;limit++){
-                    int ans = 0;
-                    if(buyAllowed){
-                        ans = max(-prices[index] + dp[index+1][0][limit] , dp[index+1][1][limit]);
-                    }
-                    else{
-                        ans = max(prices[index] + dp[index+1][1][limit-1], dp[index+1][0][limit]);
-                    }
+int solveTab(vector<int>& prices){
+    int n=prices.size();
+    vector<int>front(5,0) , curr(5,0);
 
-                    dp[index][buyAllowed][limit] = ans;
-                }
+    for(int index=n-1;index>=0;index--){
+        for(int transLimit=3;transLimit>=0;transLimit--){
+            int ans = 0;
+            if(transLimit %2==0){
+                ans = max(-prices[index] + front[transLimit+1] , front[transLimit]);
             }
-       }
+            else{
+                ans = max(prices[index] + front[transLimit+1] , front[transLimit]);
+            }
 
-       return dp[0][1][2];
+            curr[transLimit] = ans;
+        }
+        front=curr;
     }
+    return front[0];
+}
+
+
 public:
     int maxProfit(vector<int>& prices) {
         int n=prices.size();
 
-        vector<vector<vector<int>> > dp(n,vector<vector<int>>(2,vector<int>(3,-1)));
         return solveTab(prices);
     }
 };
