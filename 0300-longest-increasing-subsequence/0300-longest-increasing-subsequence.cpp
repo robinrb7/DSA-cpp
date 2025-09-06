@@ -1,40 +1,23 @@
 class Solution {
-    int solve(vector<int>&nums,int index, int prevIndex,vector<vector<int>> &dp){
-        int n =nums.size();
-        if(index==n) return 0;
-        if(dp[index][prevIndex+1]!=-1) return dp[index][prevIndex+1];
-
-        int take = 0;
-        if(prevIndex == -1 || nums[index]>nums[prevIndex])
-            take = 1 + solve(nums,index+1,index,dp);
-        int notTake = 0 + solve(nums,index+1,prevIndex,dp);
-
-        return dp[index][prevIndex+1] = max(take,notTake);
-    }
-
-    int solveTab(vector<int>&nums){
-        int n =nums.size();
-        vector<int>front(n+1,0), curr(n+1,0);
-
-        for(int index=n-1;index>=0;index--){
-            for(int prevIndex=index-1;prevIndex>=-1;prevIndex--){
-                int take = 0;
-                if(prevIndex == -1 || nums[index]>nums[prevIndex])
-                    take = 1 + front[index+1];
-                int notTake = front[prevIndex+1];
-
-                curr[prevIndex+1] = max(take,notTake);
-            }
-            front=curr;
-        }
-
-        return front[0];        
-    }
 public:
     int lengthOfLIS(vector<int>& nums) {
         int n =nums.size();
-        if(n==0 || n==1) return n;
+        if(n==0 || n==1) return 1;
 
-        return solveTab(nums);
+        vector<int> temp;
+        temp.push_back(nums[0]);
+
+        for(int i=1;i<n;i++){
+            if(nums[i]>temp.back()){
+                temp.push_back(nums[i]);
+            }
+
+            else{
+                int index = lower_bound(temp.begin(),temp.end(),nums[i]) - temp.begin();
+                temp[index] = nums[i];
+            }
+        }
+
+        return temp.size();
     }
 };
