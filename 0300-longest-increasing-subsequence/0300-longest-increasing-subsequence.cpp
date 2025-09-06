@@ -11,12 +11,29 @@ class Solution {
 
         return dp[index][prevIndex+1] = max(take,notTake);
     }
+
+    int solveTab(vector<int>&nums){
+        int n =nums.size();
+        vector<vector<int>> dp(n+1,vector<int>(n+1,0));
+
+        for(int index=n-1;index>=0;index--){
+            for(int prevIndex=index-1;prevIndex>=-1;prevIndex--){
+                int take = 0;
+                if(prevIndex == -1 || nums[index]>nums[prevIndex])
+                    take = 1 + dp[index+1][index+1];
+                int notTake = dp[index+1][prevIndex+1];
+
+                dp[index][prevIndex+1] = max(take,notTake);
+            }
+        }
+
+        return dp[0][0];        
+    }
 public:
     int lengthOfLIS(vector<int>& nums) {
         int n =nums.size();
         if(n==0 || n==1) return n;
 
-        vector<vector<int>> dp(n+1,vector<int>(n+1,-1));
-        return solve(nums,0,-1,dp);
+        return solveTab(nums);
     }
 };
