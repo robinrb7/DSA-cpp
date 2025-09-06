@@ -11,7 +11,7 @@ public:
         for(int i=0;i<n;i++){
             for(int prevIndex=0;prevIndex<i;prevIndex++){
 
-                if(nums[i]%nums[prevIndex]==0 || nums[prevIndex]%nums[i]==0){
+                if(nums[i]%nums[prevIndex]==0){
                     if(1 + dp[prevIndex] > dp[i]){
                         dp[i] = 1 + dp[prevIndex];
                         parent[i] = prevIndex;
