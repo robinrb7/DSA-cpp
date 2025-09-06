@@ -70,6 +70,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0260-single-number-iii](https://github.com/robinrb7/DSA-cpp/tree/master/0260-single-number-iii) |
 | [0283-move-zeroes](https://github.com/robinrb7/DSA-cpp/tree/master/0283-move-zeroes) |
 | [0287-find-the-duplicate-number](https://github.com/robinrb7/DSA-cpp/tree/master/0287-find-the-duplicate-number) |
+| [0300-longest-increasing-subsequence](https://github.com/robinrb7/DSA-cpp/tree/master/0300-longest-increasing-subsequence) |
 | [0309-best-time-to-buy-and-sell-stock-with-cooldown](https://github.com/robinrb7/DSA-cpp/tree/master/0309-best-time-to-buy-and-sell-stock-with-cooldown) |
 | [0322-coin-change](https://github.com/robinrb7/DSA-cpp/tree/master/0322-coin-change) |
 | [0410-split-array-largest-sum](https://github.com/robinrb7/DSA-cpp/tree/master/0410-split-array-largest-sum) |
@@ -228,6 +229,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0222-count-complete-tree-nodes](https://github.com/robinrb7/DSA-cpp/tree/master/0222-count-complete-tree-nodes) |
 | [0240-search-a-2d-matrix-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0240-search-a-2d-matrix-ii) |
 | [0287-find-the-duplicate-number](https://github.com/robinrb7/DSA-cpp/tree/master/0287-find-the-duplicate-number) |
+| [0300-longest-increasing-subsequence](https://github.com/robinrb7/DSA-cpp/tree/master/0300-longest-increasing-subsequence) |
 | [0410-split-array-largest-sum](https://github.com/robinrb7/DSA-cpp/tree/master/0410-split-array-largest-sum) |
 | [0493-reverse-pairs](https://github.com/robinrb7/DSA-cpp/tree/master/0493-reverse-pairs) |
 | [0540-single-element-in-a-sorted-array](https://github.com/robinrb7/DSA-cpp/tree/master/0540-single-element-in-a-sorted-array) |
@@ -362,6 +364,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0188-best-time-to-buy-and-sell-stock-iv](https://github.com/robinrb7/DSA-cpp/tree/master/0188-best-time-to-buy-and-sell-stock-iv) |
 | [0198-house-robber](https://github.com/robinrb7/DSA-cpp/tree/master/0198-house-robber) |
 | [0213-house-robber-ii](https://github.com/robinrb7/DSA-cpp/tree/master/0213-house-robber-ii) |
+| [0300-longest-increasing-subsequence](https://github.com/robinrb7/DSA-cpp/tree/master/0300-longest-increasing-subsequence) |
 | [0309-best-time-to-buy-and-sell-stock-with-cooldown](https://github.com/robinrb7/DSA-cpp/tree/master/0309-best-time-to-buy-and-sell-stock-with-cooldown) |
 | [0322-coin-change](https://github.com/robinrb7/DSA-cpp/tree/master/0322-coin-change) |
 | [0410-split-array-largest-sum](https://github.com/robinrb7/DSA-cpp/tree/master/0410-split-array-largest-sum) |
