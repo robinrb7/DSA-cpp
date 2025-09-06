@@ -105,6 +105,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1050-construct-binary-search-tree-from-preorder-traversal](https://github.com/robinrb7/DSA-cpp/tree/master/1050-construct-binary-search-tree-from-preorder-traversal) |
 | [1056-capacity-to-ship-packages-within-d-days](https://github.com/robinrb7/DSA-cpp/tree/master/1056-capacity-to-ship-packages-within-d-days) |
 | [1073-number-of-enclaves](https://github.com/robinrb7/DSA-cpp/tree/master/1073-number-of-enclaves) |
+| [1129-longest-string-chain](https://github.com/robinrb7/DSA-cpp/tree/master/1129-longest-string-chain) |
 | [1171-shortest-path-in-binary-matrix](https://github.com/robinrb7/DSA-cpp/tree/master/1171-shortest-path-in-binary-matrix) |
 | [1256-rank-transform-of-an-array](https://github.com/robinrb7/DSA-cpp/tree/master/1256-rank-transform-of-an-array) |
 | [1370-count-number-of-nice-subarrays](https://github.com/robinrb7/DSA-cpp/tree/master/1370-count-number-of-nice-subarrays) |
@@ -143,6 +144,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0567-permutation-in-string](https://github.com/robinrb7/DSA-cpp/tree/master/0567-permutation-in-string) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/robinrb7/DSA-cpp/tree/master/0653-two-sum-iv-input-is-a-bst) |
 | [0908-middle-of-the-linked-list](https://github.com/robinrb7/DSA-cpp/tree/master/0908-middle-of-the-linked-list) |
+| [1129-longest-string-chain](https://github.com/robinrb7/DSA-cpp/tree/master/1129-longest-string-chain) |
 | [2216-delete-the-middle-node-of-a-linked-list](https://github.com/robinrb7/DSA-cpp/tree/master/2216-delete-the-middle-node-of-a-linked-list) |
 ## Sorting
 |  |
@@ -166,6 +168,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0721-accounts-merge](https://github.com/robinrb7/DSA-cpp/tree/master/0721-accounts-merge) |
 | [0876-hand-of-straights](https://github.com/robinrb7/DSA-cpp/tree/master/0876-hand-of-straights) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/robinrb7/DSA-cpp/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
+| [1129-longest-string-chain](https://github.com/robinrb7/DSA-cpp/tree/master/1129-longest-string-chain) |
 | [1256-rank-transform-of-an-array](https://github.com/robinrb7/DSA-cpp/tree/master/1256-rank-transform-of-an-array) |
 | [1675-magnetic-force-between-two-balls](https://github.com/robinrb7/DSA-cpp/tree/master/1675-magnetic-force-between-two-balls) |
 ## Matrix
@@ -310,6 +313,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0984-most-stones-removed-with-same-row-or-column](https://github.com/robinrb7/DSA-cpp/tree/master/0984-most-stones-removed-with-same-row-or-column) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/robinrb7/DSA-cpp/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1034-subarrays-with-k-different-integers](https://github.com/robinrb7/DSA-cpp/tree/master/1034-subarrays-with-k-different-integers) |
+| [1129-longest-string-chain](https://github.com/robinrb7/DSA-cpp/tree/master/1129-longest-string-chain) |
 | [1256-rank-transform-of-an-array](https://github.com/robinrb7/DSA-cpp/tree/master/1256-rank-transform-of-an-array) |
 | [1370-count-number-of-nice-subarrays](https://github.com/robinrb7/DSA-cpp/tree/master/1370-count-number-of-nice-subarrays) |
 | [1460-number-of-substrings-containing-all-three-characters](https://github.com/robinrb7/DSA-cpp/tree/master/1460-number-of-substrings-containing-all-three-characters) |
@@ -382,6 +386,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0803-cheapest-flights-within-k-stops](https://github.com/robinrb7/DSA-cpp/tree/master/0803-cheapest-flights-within-k-stops) |
 | [0943-sum-of-subarray-minimums](https://github.com/robinrb7/DSA-cpp/tree/master/0943-sum-of-subarray-minimums) |
 | [0967-minimum-falling-path-sum](https://github.com/robinrb7/DSA-cpp/tree/master/0967-minimum-falling-path-sum) |
+| [1129-longest-string-chain](https://github.com/robinrb7/DSA-cpp/tree/master/1129-longest-string-chain) |
 | [1170-shortest-common-supersequence](https://github.com/robinrb7/DSA-cpp/tree/master/1170-shortest-common-supersequence) |
 | [1250-longest-common-subsequence](https://github.com/robinrb7/DSA-cpp/tree/master/1250-longest-common-subsequence) |
 | [1437-minimum-insertion-steps-to-make-a-string-palindrome](https://github.com/robinrb7/DSA-cpp/tree/master/1437-minimum-insertion-steps-to-make-a-string-palindrome) |
@@ -466,6 +471,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0678-valid-parenthesis-string](https://github.com/robinrb7/DSA-cpp/tree/master/0678-valid-parenthesis-string) |
 | [0721-accounts-merge](https://github.com/robinrb7/DSA-cpp/tree/master/0721-accounts-merge) |
 | [1078-remove-outermost-parentheses](https://github.com/robinrb7/DSA-cpp/tree/master/1078-remove-outermost-parentheses) |
+| [1129-longest-string-chain](https://github.com/robinrb7/DSA-cpp/tree/master/1129-longest-string-chain) |
 | [1170-shortest-common-supersequence](https://github.com/robinrb7/DSA-cpp/tree/master/1170-shortest-common-supersequence) |
 | [1250-longest-common-subsequence](https://github.com/robinrb7/DSA-cpp/tree/master/1250-longest-common-subsequence) |
 | [1437-minimum-insertion-steps-to-make-a-string-palindrome](https://github.com/robinrb7/DSA-cpp/tree/master/1437-minimum-insertion-steps-to-make-a-string-palindrome) |
