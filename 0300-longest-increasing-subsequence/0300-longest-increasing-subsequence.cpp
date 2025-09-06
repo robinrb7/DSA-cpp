@@ -14,20 +14,21 @@ class Solution {
 
     int solveTab(vector<int>&nums){
         int n =nums.size();
-        vector<vector<int>> dp(n+1,vector<int>(n+1,0));
+        vector<int>front(n+1,0), curr(n+1,0);
 
         for(int index=n-1;index>=0;index--){
             for(int prevIndex=index-1;prevIndex>=-1;prevIndex--){
                 int take = 0;
                 if(prevIndex == -1 || nums[index]>nums[prevIndex])
-                    take = 1 + dp[index+1][index+1];
-                int notTake = dp[index+1][prevIndex+1];
+                    take = 1 + front[index+1];
+                int notTake = front[prevIndex+1];
 
-                dp[index][prevIndex+1] = max(take,notTake);
+                curr[prevIndex+1] = max(take,notTake);
             }
+            front=curr;
         }
 
-        return dp[0][0];        
+        return front[0];        
     }
 public:
     int lengthOfLIS(vector<int>& nums) {
