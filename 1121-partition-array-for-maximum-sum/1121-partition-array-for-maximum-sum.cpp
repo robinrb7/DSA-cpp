@@ -39,7 +39,6 @@ private:
 public:
     int maxSumAfterPartitioning(vector<int>& arr, int k){
         int n =arr.size();
-
         
         return solveTab(arr,k);
     }
