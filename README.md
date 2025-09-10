@@ -113,6 +113,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1171-shortest-path-in-binary-matrix](https://github.com/robinrb7/DSA-cpp/tree/master/1171-shortest-path-in-binary-matrix) |
 | [1256-rank-transform-of-an-array](https://github.com/robinrb7/DSA-cpp/tree/master/1256-rank-transform-of-an-array) |
 | [1370-count-number-of-nice-subarrays](https://github.com/robinrb7/DSA-cpp/tree/master/1370-count-number-of-nice-subarrays) |
+| [1402-count-square-submatrices-with-all-ones](https://github.com/robinrb7/DSA-cpp/tree/master/1402-count-square-submatrices-with-all-ones) |
 | [1408-find-the-smallest-divisor-given-a-threshold](https://github.com/robinrb7/DSA-cpp/tree/master/1408-find-the-smallest-divisor-given-a-threshold) |
 | [1538-maximum-points-you-can-obtain-from-cards](https://github.com/robinrb7/DSA-cpp/tree/master/1538-maximum-points-you-can-obtain-from-cards) |
 | [1559-cherry-pickup-ii](https://github.com/robinrb7/DSA-cpp/tree/master/1559-cherry-pickup-ii) |
@@ -201,6 +202,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1036-rotting-oranges](https://github.com/robinrb7/DSA-cpp/tree/master/1036-rotting-oranges) |
 | [1073-number-of-enclaves](https://github.com/robinrb7/DSA-cpp/tree/master/1073-number-of-enclaves) |
 | [1171-shortest-path-in-binary-matrix](https://github.com/robinrb7/DSA-cpp/tree/master/1171-shortest-path-in-binary-matrix) |
+| [1402-count-square-submatrices-with-all-ones](https://github.com/robinrb7/DSA-cpp/tree/master/1402-count-square-submatrices-with-all-ones) |
 | [1559-cherry-pickup-ii](https://github.com/robinrb7/DSA-cpp/tree/master/1559-cherry-pickup-ii) |
 | [2047-find-a-peak-element-ii](https://github.com/robinrb7/DSA-cpp/tree/master/2047-find-a-peak-element-ii) |
 ## Simulation
@@ -402,6 +404,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1129-longest-string-chain](https://github.com/robinrb7/DSA-cpp/tree/master/1129-longest-string-chain) |
 | [1170-shortest-common-supersequence](https://github.com/robinrb7/DSA-cpp/tree/master/1170-shortest-common-supersequence) |
 | [1250-longest-common-subsequence](https://github.com/robinrb7/DSA-cpp/tree/master/1250-longest-common-subsequence) |
+| [1402-count-square-submatrices-with-all-ones](https://github.com/robinrb7/DSA-cpp/tree/master/1402-count-square-submatrices-with-all-ones) |
 | [1437-minimum-insertion-steps-to-make-a-string-palindrome](https://github.com/robinrb7/DSA-cpp/tree/master/1437-minimum-insertion-steps-to-make-a-string-palindrome) |
 | [1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/robinrb7/DSA-cpp/tree/master/1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
 | [1559-cherry-pickup-ii](https://github.com/robinrb7/DSA-cpp/tree/master/1559-cherry-pickup-ii) |
