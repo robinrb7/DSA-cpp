@@ -125,6 +125,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1786-count-the-number-of-consistent-strings](https://github.com/robinrb7/DSA-cpp/tree/master/1786-count-the-number-of-consistent-strings) |
 | [2047-find-a-peak-element-ii](https://github.com/robinrb7/DSA-cpp/tree/master/2047-find-a-peak-element-ii) |
 | [2227-sum-of-subarray-ranges](https://github.com/robinrb7/DSA-cpp/tree/master/2227-sum-of-subarray-ranges) |
+| [2271-rearrange-array-elements-by-sign](https://github.com/robinrb7/DSA-cpp/tree/master/2271-rearrange-array-elements-by-sign) |
 ## Two Pointers
 |  |
 | ------- |
@@ -153,6 +154,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0908-middle-of-the-linked-list](https://github.com/robinrb7/DSA-cpp/tree/master/0908-middle-of-the-linked-list) |
 | [1129-longest-string-chain](https://github.com/robinrb7/DSA-cpp/tree/master/1129-longest-string-chain) |
 | [2216-delete-the-middle-node-of-a-linked-list](https://github.com/robinrb7/DSA-cpp/tree/master/2216-delete-the-middle-node-of-a-linked-list) |
+| [2271-rearrange-array-elements-by-sign](https://github.com/robinrb7/DSA-cpp/tree/master/2271-rearrange-array-elements-by-sign) |
 ## Sorting
 |  |
 | ------- |
@@ -211,6 +213,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0054-spiral-matrix](https://github.com/robinrb7/DSA-cpp/tree/master/0054-spiral-matrix) |
 | [0735-asteroid-collision](https://github.com/robinrb7/DSA-cpp/tree/master/0735-asteroid-collision) |
+| [2271-rearrange-array-elements-by-sign](https://github.com/robinrb7/DSA-cpp/tree/master/2271-rearrange-array-elements-by-sign) |
 ## Math
 |  |
 | ------- |
