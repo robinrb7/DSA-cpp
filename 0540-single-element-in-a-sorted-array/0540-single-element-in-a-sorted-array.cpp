@@ -13,7 +13,7 @@ public:
 
             if(nums[mid] != nums[mid-1] && nums[mid] != nums[mid+1]) return nums[mid];
 
-            if( (mid%2==0 && nums[mid+1]==nums[mid]) || mid&2!=0 && nums[mid-1] == nums[mid]){
+            if((mid%2==0 && nums[mid+1]==nums[mid]) || mid&2!=0 && nums[mid-1] == nums[mid]){
                 low = mid+1;
             }
             
