@@ -18,13 +18,13 @@ public:
     int splitArray(vector<int>& nums, int k) {
         int n= nums.size();
         if(k>n) return -1;
-        int mini= INT_MAX, sum=0;
+        int maxi= INT_MIN, sum=0;
         for(int i =0;i<n;i++){
-            if(nums[i]<mini) mini=nums[i];
+            if(nums[i]>maxi) maxi=nums[i];
             sum += nums[i];
         }
 
-        int low = mini, high = sum;
+        int low = maxi, high = sum;
         while(low<=high){
             int mid = low + (high-low)/2;
 
