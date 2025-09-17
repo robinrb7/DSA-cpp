@@ -231,6 +231,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0282-expression-add-operators](https://github.com/robinrb7/DSA-cpp/tree/master/0282-expression-add-operators) |
 | [0368-largest-divisible-subset](https://github.com/robinrb7/DSA-cpp/tree/master/0368-largest-divisible-subset) |
 | [1370-count-number-of-nice-subarrays](https://github.com/robinrb7/DSA-cpp/tree/master/1370-count-number-of-nice-subarrays) |
+| [2032-largest-odd-number-in-string](https://github.com/robinrb7/DSA-cpp/tree/master/2032-largest-odd-number-in-string) |
 | [2050-count-good-numbers](https://github.com/robinrb7/DSA-cpp/tree/master/2050-count-good-numbers) |
 | [3243-count-the-number-of-powerful-integers](https://github.com/robinrb7/DSA-cpp/tree/master/3243-count-the-number-of-powerful-integers) |
 ## Binary Search
@@ -506,6 +507,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1737-maximum-nesting-depth-of-the-parentheses](https://github.com/robinrb7/DSA-cpp/tree/master/1737-maximum-nesting-depth-of-the-parentheses) |
 | [1786-count-the-number-of-consistent-strings](https://github.com/robinrb7/DSA-cpp/tree/master/1786-count-the-number-of-consistent-strings) |
 | [1890-sum-of-beauty-of-all-substrings](https://github.com/robinrb7/DSA-cpp/tree/master/1890-sum-of-beauty-of-all-substrings) |
+| [2032-largest-odd-number-in-string](https://github.com/robinrb7/DSA-cpp/tree/master/2032-largest-odd-number-in-string) |
 | [3243-count-the-number-of-powerful-integers](https://github.com/robinrb7/DSA-cpp/tree/master/3243-count-the-number-of-powerful-integers) |
 ## Sliding Window
 |  |
@@ -619,6 +621,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0678-valid-parenthesis-string](https://github.com/robinrb7/DSA-cpp/tree/master/0678-valid-parenthesis-string) |
 | [0876-hand-of-straights](https://github.com/robinrb7/DSA-cpp/tree/master/0876-hand-of-straights) |
 | [0890-lemonade-change](https://github.com/robinrb7/DSA-cpp/tree/master/0890-lemonade-change) |
+| [2032-largest-odd-number-in-string](https://github.com/robinrb7/DSA-cpp/tree/master/2032-largest-odd-number-in-string) |
 ## Trie
 |  |
 | ------- |
