@@ -1,17 +1,14 @@
 class Solution {
   public:
     int binaryToDecimal(string &b) {
-        int len = b.length();
-        int power2=1;
-        int result = 0;
-        
-        for(int i=len-1;i>=0;i--){
+        int  n = b.length();
+        int ans=0;
+        for(int i=0;i<n;i++){
             if(b[i]=='1'){
-                result += power2; 
+                ans += 1 << (n-1-i);
             }
-            power2 = power2 * 2;
         }
         
-        return result;
+        return ans;
     }
 };
