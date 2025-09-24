@@ -2,7 +2,6 @@ class Solution {
 public:
     int divide(int dividend, int divisor) {
         if(dividend==divisor) return 1;
-        if(dividend==INT_MIN && divisor==-1) return INT_MAX;
 
         bool sign = 0;
         if(dividend<0 && divisor>=0) sign =1;
@@ -23,7 +22,7 @@ public:
 
        
         if(quotient == (1<<31) && !sign) return INT_MAX;
-        if(quotient== (1<<31) && sign) return INT_MIN;
+        if(quotient == (1<<31) && sign) return INT_MIN;
 
          if(sign) quotient=-quotient;
         return quotient;
