@@ -1,21 +1,22 @@
 class Solution {
-public:
-    int countPrimes(int n) {
-        vector<int> primes(n,1);
-
-        for(int i =2;i*i<n;i++){
-            if(primes[i]==1){
-                for(int j=i*i;j<n;j=j+i){
-                    primes[j]=0;
-                }
+private:
+    int seive(int n){
+        int cntPrime=0;
+        vector<int> prime(n+1,1);
+        for(int i=2;i*i<=n;i++){
+            if(prime[i]==1){
+                for(int j=i*i;j<=n;j=j+i) prime[j]=0;
             }
         }
 
-        int cnt=0;
-        for(int i =2;i<n;i++){
-            if(primes[i]==1) cnt++;
+        for(int i=2;i<n;i++){
+            if(prime[i]) cntPrime++;
         }
 
-        return cnt;
+        return cntPrime;
+    }
+public:
+    int countPrimes(int n) {
+        return seive(n);
     }
 };
