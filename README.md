@@ -95,6 +95,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0733-flood-fill](https://github.com/robinrb7/DSA-cpp/tree/master/0733-flood-fill) |
 | [0735-asteroid-collision](https://github.com/robinrb7/DSA-cpp/tree/master/0735-asteroid-collision) |
 | [0794-swim-in-rising-water](https://github.com/robinrb7/DSA-cpp/tree/master/0794-swim-in-rising-water) |
+| [0830-largest-triangle-area](https://github.com/robinrb7/DSA-cpp/tree/master/0830-largest-triangle-area) |
 | [0854-making-a-large-island](https://github.com/robinrb7/DSA-cpp/tree/master/0854-making-a-large-island) |
 | [0876-hand-of-straights](https://github.com/robinrb7/DSA-cpp/tree/master/0876-hand-of-straights) |
 | [0890-lemonade-change](https://github.com/robinrb7/DSA-cpp/tree/master/0890-lemonade-change) |
@@ -230,6 +231,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0204-count-primes](https://github.com/robinrb7/DSA-cpp/tree/master/0204-count-primes) |
 | [0282-expression-add-operators](https://github.com/robinrb7/DSA-cpp/tree/master/0282-expression-add-operators) |
 | [0368-largest-divisible-subset](https://github.com/robinrb7/DSA-cpp/tree/master/0368-largest-divisible-subset) |
+| [0830-largest-triangle-area](https://github.com/robinrb7/DSA-cpp/tree/master/0830-largest-triangle-area) |
 | [1370-count-number-of-nice-subarrays](https://github.com/robinrb7/DSA-cpp/tree/master/1370-count-number-of-nice-subarrays) |
 | [2032-largest-odd-number-in-string](https://github.com/robinrb7/DSA-cpp/tree/master/2032-largest-odd-number-in-string) |
 | [2050-count-good-numbers](https://github.com/robinrb7/DSA-cpp/tree/master/2050-count-good-numbers) |
@@ -886,4 +888,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0070-climbing-stairs](https://github.com/robinrb7/DSA-cpp/tree/master/0070-climbing-stairs) |
+## Geometry
+|  |
+| ------- |
+| [0830-largest-triangle-area](https://github.com/robinrb7/DSA-cpp/tree/master/0830-largest-triangle-area) |
 <!---LeetCode Topics End-->
