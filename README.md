@@ -104,6 +104,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0943-sum-of-subarray-minimums](https://github.com/robinrb7/DSA-cpp/tree/master/0943-sum-of-subarray-minimums) |
 | [0966-binary-subarrays-with-sum](https://github.com/robinrb7/DSA-cpp/tree/master/0966-binary-subarrays-with-sum) |
 | [0967-minimum-falling-path-sum](https://github.com/robinrb7/DSA-cpp/tree/master/0967-minimum-falling-path-sum) |
+| [1018-largest-perimeter-triangle](https://github.com/robinrb7/DSA-cpp/tree/master/1018-largest-perimeter-triangle) |
 | [1034-subarrays-with-k-different-integers](https://github.com/robinrb7/DSA-cpp/tree/master/1034-subarrays-with-k-different-integers) |
 | [1036-rotting-oranges](https://github.com/robinrb7/DSA-cpp/tree/master/1036-rotting-oranges) |
 | [1046-max-consecutive-ones-iii](https://github.com/robinrb7/DSA-cpp/tree/master/1046-max-consecutive-ones-iii) |
@@ -177,6 +178,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0621-task-scheduler](https://github.com/robinrb7/DSA-cpp/tree/master/0621-task-scheduler) |
 | [0721-accounts-merge](https://github.com/robinrb7/DSA-cpp/tree/master/0721-accounts-merge) |
 | [0876-hand-of-straights](https://github.com/robinrb7/DSA-cpp/tree/master/0876-hand-of-straights) |
+| [1018-largest-perimeter-triangle](https://github.com/robinrb7/DSA-cpp/tree/master/1018-largest-perimeter-triangle) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/robinrb7/DSA-cpp/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1129-longest-string-chain](https://github.com/robinrb7/DSA-cpp/tree/master/1129-longest-string-chain) |
 | [1256-rank-transform-of-an-array](https://github.com/robinrb7/DSA-cpp/tree/master/1256-rank-transform-of-an-array) |
@@ -232,6 +234,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0282-expression-add-operators](https://github.com/robinrb7/DSA-cpp/tree/master/0282-expression-add-operators) |
 | [0368-largest-divisible-subset](https://github.com/robinrb7/DSA-cpp/tree/master/0368-largest-divisible-subset) |
 | [0830-largest-triangle-area](https://github.com/robinrb7/DSA-cpp/tree/master/0830-largest-triangle-area) |
+| [1018-largest-perimeter-triangle](https://github.com/robinrb7/DSA-cpp/tree/master/1018-largest-perimeter-triangle) |
 | [1370-count-number-of-nice-subarrays](https://github.com/robinrb7/DSA-cpp/tree/master/1370-count-number-of-nice-subarrays) |
 | [2032-largest-odd-number-in-string](https://github.com/robinrb7/DSA-cpp/tree/master/2032-largest-odd-number-in-string) |
 | [2050-count-good-numbers](https://github.com/robinrb7/DSA-cpp/tree/master/2050-count-good-numbers) |
@@ -623,6 +626,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0678-valid-parenthesis-string](https://github.com/robinrb7/DSA-cpp/tree/master/0678-valid-parenthesis-string) |
 | [0876-hand-of-straights](https://github.com/robinrb7/DSA-cpp/tree/master/0876-hand-of-straights) |
 | [0890-lemonade-change](https://github.com/robinrb7/DSA-cpp/tree/master/0890-lemonade-change) |
+| [1018-largest-perimeter-triangle](https://github.com/robinrb7/DSA-cpp/tree/master/1018-largest-perimeter-triangle) |
 | [2032-largest-odd-number-in-string](https://github.com/robinrb7/DSA-cpp/tree/master/2032-largest-odd-number-in-string) |
 ## Trie
 |  |
