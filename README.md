@@ -129,6 +129,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2047-find-a-peak-element-ii](https://github.com/robinrb7/DSA-cpp/tree/master/2047-find-a-peak-element-ii) |
 | [2227-sum-of-subarray-ranges](https://github.com/robinrb7/DSA-cpp/tree/master/2227-sum-of-subarray-ranges) |
 | [2271-rearrange-array-elements-by-sign](https://github.com/robinrb7/DSA-cpp/tree/master/2271-rearrange-array-elements-by-sign) |
+| [2324-find-triangular-sum-of-an-array](https://github.com/robinrb7/DSA-cpp/tree/master/2324-find-triangular-sum-of-an-array) |
 ## Two Pointers
 |  |
 | ------- |
@@ -218,6 +219,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0054-spiral-matrix](https://github.com/robinrb7/DSA-cpp/tree/master/0054-spiral-matrix) |
 | [0735-asteroid-collision](https://github.com/robinrb7/DSA-cpp/tree/master/0735-asteroid-collision) |
 | [2271-rearrange-array-elements-by-sign](https://github.com/robinrb7/DSA-cpp/tree/master/2271-rearrange-array-elements-by-sign) |
+| [2324-find-triangular-sum-of-an-array](https://github.com/robinrb7/DSA-cpp/tree/master/2324-find-triangular-sum-of-an-array) |
 ## Math
 |  |
 | ------- |
@@ -239,6 +241,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1370-count-number-of-nice-subarrays](https://github.com/robinrb7/DSA-cpp/tree/master/1370-count-number-of-nice-subarrays) |
 | [2032-largest-odd-number-in-string](https://github.com/robinrb7/DSA-cpp/tree/master/2032-largest-odd-number-in-string) |
 | [2050-count-good-numbers](https://github.com/robinrb7/DSA-cpp/tree/master/2050-count-good-numbers) |
+| [2324-find-triangular-sum-of-an-array](https://github.com/robinrb7/DSA-cpp/tree/master/2324-find-triangular-sum-of-an-array) |
 | [3243-count-the-number-of-powerful-integers](https://github.com/robinrb7/DSA-cpp/tree/master/3243-count-the-number-of-powerful-integers) |
 ## Binary Search
 |  |
@@ -429,6 +432,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0062-unique-paths](https://github.com/robinrb7/DSA-cpp/tree/master/0062-unique-paths) |
+| [2324-find-triangular-sum-of-an-array](https://github.com/robinrb7/DSA-cpp/tree/master/2324-find-triangular-sum-of-an-array) |
 ## Binary Indexed Tree
 |  |
 | ------- |
