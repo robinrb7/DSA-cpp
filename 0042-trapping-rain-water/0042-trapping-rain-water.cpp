@@ -1,25 +1,22 @@
 class Solution {
-private:
-    void findSuffixMax(vector<int> &height,vector<int> &suffixMax,int n){
-        int maxi = INT_MIN;
-        for(int i=n-1;i>=0;i--){
-            maxi = max(maxi,height[i]);
-            suffixMax[i] = maxi;
-        }
-    }
 public:
     int trap(vector<int>& height) {
         int  n = height.size();
-        vector<int> suffixMax(n);
-        findSuffixMax(height,suffixMax,n);
-        
-        int prefixMax = INT_MIN;
+        int left=0,right=n-1;
+        int leftMax = INT_MIN, rightMax = INT_MIN;
         int totalWater = 0;
-        for(int i=0;i<n;i++){
-            prefixMax = max(prefixMax,height[i]);
-            int waterToAdd = min(prefixMax,suffixMax[i]);
-            waterToAdd = waterToAdd - height[i];
-            totalWater += waterToAdd;
+
+        while(left<right){
+            if(height[left] < height[right]){
+                leftMax = max(leftMax,height[left]);
+                totalWater += leftMax - height[left];
+                left++;
+            }
+            else{
+                rightMax = max(rightMax,height[right]);
+                totalWater += rightMax - height[right];
+                right--;
+            }
         }
 
         return totalWater;
