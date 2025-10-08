@@ -134,6 +134,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2227-sum-of-subarray-ranges](https://github.com/robinrb7/DSA-cpp/tree/master/2227-sum-of-subarray-ranges) |
 | [2271-rearrange-array-elements-by-sign](https://github.com/robinrb7/DSA-cpp/tree/master/2271-rearrange-array-elements-by-sign) |
 | [2324-find-triangular-sum-of-an-array](https://github.com/robinrb7/DSA-cpp/tree/master/2324-find-triangular-sum-of-an-array) |
+| [2392-successful-pairs-of-spells-and-potions](https://github.com/robinrb7/DSA-cpp/tree/master/2392-successful-pairs-of-spells-and-potions) |
 ## Two Pointers
 |  |
 | ------- |
@@ -164,6 +165,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1129-longest-string-chain](https://github.com/robinrb7/DSA-cpp/tree/master/1129-longest-string-chain) |
 | [2216-delete-the-middle-node-of-a-linked-list](https://github.com/robinrb7/DSA-cpp/tree/master/2216-delete-the-middle-node-of-a-linked-list) |
 | [2271-rearrange-array-elements-by-sign](https://github.com/robinrb7/DSA-cpp/tree/master/2271-rearrange-array-elements-by-sign) |
+| [2392-successful-pairs-of-spells-and-potions](https://github.com/robinrb7/DSA-cpp/tree/master/2392-successful-pairs-of-spells-and-potions) |
 ## Sorting
 |  |
 | ------- |
@@ -191,6 +193,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1256-rank-transform-of-an-array](https://github.com/robinrb7/DSA-cpp/tree/master/1256-rank-transform-of-an-array) |
 | [1669-minimum-cost-to-cut-a-stick](https://github.com/robinrb7/DSA-cpp/tree/master/1669-minimum-cost-to-cut-a-stick) |
 | [1675-magnetic-force-between-two-balls](https://github.com/robinrb7/DSA-cpp/tree/master/1675-magnetic-force-between-two-balls) |
+| [2392-successful-pairs-of-spells-and-potions](https://github.com/robinrb7/DSA-cpp/tree/master/2392-successful-pairs-of-spells-and-potions) |
 ## Matrix
 |  |
 | ------- |
@@ -283,6 +286,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1646-kth-missing-positive-number](https://github.com/robinrb7/DSA-cpp/tree/master/1646-kth-missing-positive-number) |
 | [1675-magnetic-force-between-two-balls](https://github.com/robinrb7/DSA-cpp/tree/master/1675-magnetic-force-between-two-balls) |
 | [2047-find-a-peak-element-ii](https://github.com/robinrb7/DSA-cpp/tree/master/2047-find-a-peak-element-ii) |
+| [2392-successful-pairs-of-spells-and-potions](https://github.com/robinrb7/DSA-cpp/tree/master/2392-successful-pairs-of-spells-and-potions) |
 ## Bit Manipulation
 |  |
 | ------- |
