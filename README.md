@@ -135,6 +135,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2271-rearrange-array-elements-by-sign](https://github.com/robinrb7/DSA-cpp/tree/master/2271-rearrange-array-elements-by-sign) |
 | [2324-find-triangular-sum-of-an-array](https://github.com/robinrb7/DSA-cpp/tree/master/2324-find-triangular-sum-of-an-array) |
 | [2392-successful-pairs-of-spells-and-potions](https://github.com/robinrb7/DSA-cpp/tree/master/2392-successful-pairs-of-spells-and-potions) |
+| [3950-maximum-k-to-sort-a-permutation](https://github.com/robinrb7/DSA-cpp/tree/master/3950-maximum-k-to-sort-a-permutation) |
 ## Two Pointers
 |  |
 | ------- |
@@ -302,6 +303,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0461-hamming-distance](https://github.com/robinrb7/DSA-cpp/tree/master/0461-hamming-distance) |
 | [1786-count-the-number-of-consistent-strings](https://github.com/robinrb7/DSA-cpp/tree/master/1786-count-the-number-of-consistent-strings) |
 | [2323-minimum-bit-flips-to-convert-number](https://github.com/robinrb7/DSA-cpp/tree/master/2323-minimum-bit-flips-to-convert-number) |
+| [3950-maximum-k-to-sort-a-permutation](https://github.com/robinrb7/DSA-cpp/tree/master/3950-maximum-k-to-sort-a-permutation) |
 ## Recursion
 |  |
 | ------- |
