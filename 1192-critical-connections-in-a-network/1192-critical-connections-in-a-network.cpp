@@ -1,7 +1,7 @@
 class Solution {
 private:
-    void dfs(vector<vector<int>> &adjList, int node, int parent, vector<int> &timeOfInsert, vector<int> lowestTimeOfInsert,
-            vector<int> & visited, int timer,vector<vector<int>> &bridges)
+    void dfs(vector<vector<int>> &adjList, int node, int parent, vector<int> &timeOfInsert, vector<int> &lowestTimeOfInsert,
+            vector<int> &visited, int timer,vector<vector<int>> &bridges)
         {
             timeOfInsert[node]=timer;
             lowestTimeOfInsert[node]=timer;
