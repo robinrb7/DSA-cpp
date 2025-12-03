@@ -1,42 +1,64 @@
-class Solution {
-    private:
-    void dfs(int node, vector<int> &visited,vector<vector<int>>& isConnected){
-        visited[node]=1;
-        for(int i =0;i<isConnected.size();i++){
-            if(isConnected[node][i]==1 && visited[i]==0){
-                dfs(i,visited,isConnected);
-            }
-        }
+class DisjointSet{
+    vector<int> parent,size;
+
+    public:
+    DisjointSet(int n){
+        parent.resize(n+1);
+        size.resize(n+1,1);
+
+        for(int i=0;i<=n;i++) parent[i]=i;
     }
 
-    void bfs(int node,vector<int>& visited,vector<vector<int>>& isConnected){
-        visited[node]=1;
-        queue<int> q;
-        q.push(node);
-        while(!q.empty()){
-            int top = q.front();
-            q.pop();
-            for(int i = 0;i<isConnected.size();i++){
-                if(isConnected[top][i]==1 && visited[i]==0){
-                    q.push(i);
-                    visited[i]=1;
+    int findParent(int u){
+        if(parent[u]==u) return u;
+
+        return parent[u] = findParent(parent[u]);
+    }
+
+    void findUnion(int u, int v){
+        int ult_u = findParent(u);
+        int ult_v = findParent(v);
+
+        if(ult_u == ult_v) return;
+
+        if(size[ult_u] > size[ult_v]){
+            parent[ult_v] = ult_u;
+            size[ult_u] += size[ult_v];
+        }
+        else{
+            parent[ult_u] = ult_v;
+            size[ult_v] += size[ult_u];
+        }
+
+    }
+
+    int CountProvinces(){
+        int cntProvinces = 0;
+        for(int i=1;i<parent.size();i++){
+            if(parent[i]==i) cntProvinces++;
+        }
+
+        return cntProvinces;
+    }
+};
+
+class Solution {
+public:
+    int findCircleNum(vector<vector<int>>& isConnected) {
+        int n =  isConnected.size();
+        DisjointSet ds(n);
+
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if(i==j) continue;
+
+                if(isConnected[i][j]==1){
+                    ds.findUnion(i+1,j+1);
                 }
             }
         }
-    }
-public:
-    int findCircleNum(vector<vector<int>>& isConnected) {
-        int n = isConnected.size();
-        vector<int> visited(n,0);
 
-        int provinceCount=0;
-        for(int i=0;i<visited.size();i++){
-            if(visited[i]==0){
-                provinceCount++;
-                bfs(i,visited,isConnected);
-            }
-        }
-
-        return provinceCount;
+        int cntProvinces = ds.CountProvinces();
+        return cntProvinces;
     }
 };
