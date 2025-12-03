@@ -1,50 +1,51 @@
-class DisJointSet{
-private:
-    vector<int>parent,rank;
+class DisjointSet{
+    vector<int> parent,size;
 
-public:
-    DisJointSet(int n){
-        parent.resize(n+1);
-        rank.resize(n+1,0);
-        for(int i=0;i<n+1;i++) parent[i]=i;
+    public:
+    DisjointSet(int n){
+        parent.resize(n);
+        size.resize(n,1);
+
+        for(int i=0;i<n;i++) parent[i]=i;
     }
 
-    int findParent(int node){
-        if(parent[node]==node) return node;
-        return parent[node] = findParent(parent[node]);
+    int findParent(int u){
+        if(parent[u]==u) return u;
+
+        return parent[u] = findParent(parent[u]);
     }
 
-    void unionByRank(int u, int v){
-        int ult_pu = findParent(u);
-        int ult_pv = findParent(v);
-        if(ult_pu == ult_pv) return;
+    void UnionBySize(int u, int v){
+        int ult_u = findParent(u);
+        int ult_v = findParent(v);
 
-        if(rank[ult_pu] < rank[ult_pv]){
-            parent[ult_pu] = ult_pv;
-        }
-        else if(rank[ult_pv] < rank[ult_pu]){
-            parent[ult_pv] = ult_pu;
+        if(ult_u == ult_v) return;
+
+        if(size[ult_u] > size[ult_v]){
+            parent[ult_v] = ult_u;
+            size[ult_u] += size[ult_v];
         }
         else{
-            parent[ult_pu] = ult_pv;
-            rank[ult_pv]++;
+            parent[ult_u] = ult_v;
+            size[ult_v] += size[ult_u];
         }
-
     }
+
 };
 
 class Solution {
 public:
     vector<vector<string>> accountsMerge(vector<vector<string>>& accounts) {
         int n = accounts.size();
+        DisjointSet ds(n);
         unordered_map<string,int> uMap;
-        DisJointSet ds(n);
-
 
         for(int i=0;i<n;i++){
             for(int j=1;j<accounts[i].size();j++){
-                if(uMap.find(accounts[i][j]) != uMap.end()){
-                    ds.unionByRank(uMap[accounts[i][j]],i);
+                
+                if(uMap.count(accounts[i][j])){
+                    int alreadyAddedNode = uMap[accounts[i][j]];
+                    ds.UnionBySize(alreadyAddedNode, i);
                 }
                 else{
                     uMap[accounts[i][j]] = i;
@@ -52,28 +53,30 @@ public:
             }
         }
 
-        vector<vector<string> >emailList(n);
+        vector<string> temp[n];
         for(auto it: uMap){
-            string mail = it.first;
+            string email = it.first;
             int node = it.second;
 
-            emailList[ds.findParent(node)].push_back(mail);
+            temp[ds.findParent(node)].push_back(email);
         }
 
-        vector<vector<string>> res;
-        for(int i=0;i<emailList.size();i++){
-            if(emailList[i].size()==0) continue;
-            sort(emailList[i].begin(),emailList[i].end());
+        vector<vector<string>> result;
+        for(int i=0;i<n;i++){
+            if(temp[i].size()==0) continue;
 
-            vector<string> temp;
-            temp.push_back(accounts[i][0]);
-            for(auto it:emailList[i]){
-                temp.push_back(it);
+            sort(temp[i].begin(),temp[i].end());
+            vector<string> tempMails;
+            tempMails.push_back(accounts[i][0]);
+            for(auto it: temp[i]){
+                tempMails.push_back(it);
             }
 
-            res.push_back(temp);
+            result.push_back(tempMails);
         }
 
-        return res;
+        return result;
+
+
     }
 };
