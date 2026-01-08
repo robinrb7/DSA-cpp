@@ -6,12 +6,15 @@ private:
 
         int include = (nums1[index1]*nums2[index2]);
 
-        if(index1>0 && index2>0) include += max(0,solve(nums1,nums2,index1-1,index2-1,dp));
+        if(index1>=0 && index2>=0) include += max(0,solve(nums1,nums2,index1-1,index2-1,dp));
         int exclude1 = 0 + solve(nums1,nums2,index1-1,index2,dp);
         int exclude2 = 0 + solve(nums1,nums2,index1,index2-1,dp);
 
         return dp[index1][index2] = max(include,max(exclude1,exclude2));
     }
+
+
+
 public:
     int maxDotProduct(vector<int>& nums1, vector<int>& nums2) {
         int n = nums1.size(), m=nums2.size();
