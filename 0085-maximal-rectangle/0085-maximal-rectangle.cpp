@@ -1,49 +1,62 @@
 class Solution {
-    int maxRowArea(vector<int>&heights){
-        int n = heights.size();
-        stack<int>st;
-        int maxArea = INT_MIN;
-        for(int i =0;i<n;i++){
+private:
+    int solve(vector<int> &arr){
+        int maxArea = 0;
+        stack<int> st;
+        int m = arr.size();
 
-            while(!st.empty() && heights[i] < heights[st.top()]){
-                int height = heights[st.top()];
+        for(int i=0;i<m;i++){
+
+            while(!st.empty() && arr[i]<arr[st.top()]){
+                int currElement = st.top();
                 st.pop();
-                int width = (st.empty())? i : i - st.top() -1;
-                maxArea = max(maxArea,height*width);
+
+                int nse = i;
+                int pse = (st.empty())? -1: st.top();
+                
+                int height = arr[currElement];
+                int width = nse - pse - 1;
+                int area = height * width;
+
+                maxArea = max(maxArea,area);
             }
             st.push(i);
         }
 
         while(!st.empty()){
-            int height = heights[st.top()];
-            st.pop();
-            int width = (st.empty())? n : n - st.top() -1;
-            maxArea = max(maxArea,height*width);
+            int nse = m;
+            int currElement = st.top();
+                st.pop();
+
+                int pse = (st.empty())? -1: st.top();
+                
+                int height = arr[currElement];
+                int width = nse - pse - 1;
+                int area = height * width;
+
+                maxArea = max(maxArea,area);
         }
 
         return maxArea;
     }
 public:
     int maximalRectangle(vector<vector<char>>& matrix) {
+        
         int n = matrix.size();
         int m = matrix[0].size();
 
-        vector<vector<int>>prefixSum(n,vector<int>(m,0));
-        for(int j=0;j<m;j++){
-            int sum =0;
-            for(int i=0;i<n;i++){
-                if(matrix[i][j]=='1') sum +=1;
-                else sum = 0;
-                prefixSum[i][j] = sum;
-            }
-        }
-
-        int maxMatrixArea = 0;
+        int maxi = 0;
+        vector<int> arr(m,0);
         for(int i=0;i<n;i++){
-            int area = maxRowArea(prefixSum[i]);
-            maxMatrixArea = max(maxMatrixArea,area);
+            for(int j=0;j<m;j++){
+                if(matrix[i][j]=='1') arr[j] += 1;
+                else arr[j] = 0;
+            }
+
+            maxi = max(maxi,solve(arr));
         }
 
-        return maxMatrixArea;
+        return maxi;
     }
+
 };
