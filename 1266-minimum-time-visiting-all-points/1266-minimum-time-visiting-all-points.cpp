@@ -11,20 +11,24 @@ public:
             int pointX = points[i][0], pointY = points[i][1];
 
             while(currX != pointX && currY != pointY){
+                int yDiff = abs(currY - pointY);
+                int xDiff = abs(currX - pointX);
+                int movement = min(xDiff,yDiff);
+
                 if(pointX>currX && pointY>currY){
-                    currX +=1, currY+=1;
+                    currX +=movement, currY+=movement;
                 }
                 else if(pointX<currX && pointY>currY){
-                    currX -=1, currY+=1;
+                    currX -=movement, currY+=movement;
                 }
                 else if(pointX<currX && pointY<currY){
-                    currX -=1, currY-=1;
+                    currX -=movement, currY-=movement;
                 }
                 else {
-                    currX +=1, currY-=1;
+                    currX +=movement, currY-=movement;
                 }
 
-                totalTime+=1;
+                totalTime+=movement;
             }
 
             if(currX==pointX){
