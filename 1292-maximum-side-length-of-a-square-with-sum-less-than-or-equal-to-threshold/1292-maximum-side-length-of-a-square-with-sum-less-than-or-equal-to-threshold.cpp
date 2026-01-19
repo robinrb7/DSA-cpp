@@ -1,30 +1,26 @@
 class Solution {
 private:
-    bool possible(vector<vector<int>>& rowPrefix,int threshold,int row,int col, int side){
-        int colNo = col+side-1;
-        int sum = 0;
-        for(int i=0;i<side;i++){
-            int firstVal = rowPrefix[row+i][colNo];
-            int secondVal = (colNo>=side)? rowPrefix[row+i][colNo-side]: 0;
-            int finalVal = firstVal - secondVal;
+    bool possible(vector<vector<int>>& prefix,int threshold,int row,int col, int side){
+        int rowNo=row+side-1 , colNo = col+side-1;
+        int sum = prefix[rowNo][colNo];
+        if(row>0) sum-= prefix[row-1][colNo];
+        if(col>0)   sum-= prefix[rowNo][col-1];
+        if(row>0 && col>0)   sum+= prefix[row-1][col-1];
 
-            sum+= finalVal;
-            if(sum>threshold) return false;
-        }
-
-        return true;
+        return sum<=threshold;
     }
 public:
     int maxSideLength(vector<vector<int>>& mat, int threshold) {
         int n=mat.size(), m= mat[0].size();
         int maxSide = min(n,m);
 
-        vector<vector<int>> rowPrefix(n,vector<int>(m));
+        vector<vector<int>> prefix(n,vector<int>(m));
         for(int i=0;i<n;i++){
-            int sum=0;
             for(int j=0;j<m;j++){
-                sum += mat[i][j];
-                rowPrefix[i][j]=sum;
+                prefix[i][j] = mat[i][j];
+                if(i>0) prefix[i][j] += prefix[i-1][j];
+                if(j>0) prefix[i][j] += prefix[i][j-1];
+                if(i>0 && j>0) prefix[i][j] -= prefix[i-1][j-1];
             }
         }
 
@@ -33,7 +29,7 @@ public:
             for(int i=0;i+side-1<n;i++){
                 for(int j=0;j+side-1<m;j++){
                     
-                    if(possible(rowPrefix,threshold,i,j,side)){
+                    if(possible(prefix,threshold,i,j,side)){
                         return side;
                     }
 
