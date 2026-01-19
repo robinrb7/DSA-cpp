@@ -1,7 +1,7 @@
 class Solution {
 private:
     bool possible(vector<vector<int>>& prefix,int threshold,int row,int col, int rowNo,int colNo){
-        
+
         int sum = prefix[rowNo][colNo];
         if(row>0) sum-= prefix[row-1][colNo];
         if(col>0)   sum-= prefix[rowNo][col-1];
@@ -12,7 +12,6 @@ private:
 public:
     int maxSideLength(vector<vector<int>>& mat, int threshold) {
         int n=mat.size(), m= mat[0].size();
-        int maxSide = min(n,m);
 
         vector<vector<int>> prefix(n,vector<int>(m));
         for(int i=0;i<n;i++){
@@ -31,7 +30,7 @@ public:
         for(int i=0;i<n;i++){
                 for(int j=0;j<m;j++){
                     
-                    int low=1,high=maxSide;
+                    int low=1,high=min(n-i,m-j);
                     while(low<=high){
                         int mid = low + (high-low)/2;
 
