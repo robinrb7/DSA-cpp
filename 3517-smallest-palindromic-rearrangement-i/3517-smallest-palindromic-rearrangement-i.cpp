@@ -5,7 +5,7 @@ public:
         int n=s.length();
         if(n==1) return s;
         
-        bool hasMiddle = (n&1)? true: false;
+        bool hasMiddle = n&1;
         int firstHalfLen = n/2;
 
         string firstHalf = s.substr(0,firstHalfLen);
