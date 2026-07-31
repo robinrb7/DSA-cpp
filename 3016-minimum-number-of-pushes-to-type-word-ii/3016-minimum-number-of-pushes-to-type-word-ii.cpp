@@ -7,24 +7,11 @@ public:
         vector<int> charFreq(26,0);
         for(int i=0;i<n;i++) charFreq[word[i]-'a']++;
 
-        priority_queue<int> maxHeap;
-        for(int i=0;i<26;i++){
-            if(charFreq[i]==0) continue;
-
-            maxHeap.push(charFreq[i]);
-        }
+        sort(charFreq.begin(),charFreq.end(), greater<int>());
 
         int minPushes=0;
-        int round=0;
-        while(!maxHeap.empty()){
-            round++;
-            for(int i=0;i<8;i++){
-                int val = maxHeap.top();
-                maxHeap.pop();
-
-                minPushes += (val*round);
-                if(maxHeap.empty()) break;
-            }
+        for(int i=0;i<26;i++){
+            minPushes += charFreq[i] * (i/8 +1);
         }
 
         return minPushes;
