@@ -36,7 +36,7 @@ class Solution {
 
         for(int start=n-1;start>=0;start--){
             for(int end=start;end<n;end++){
-                if(start==end+1) continue;
+                if(start==end) continue;
 
                 int takeStart = nums[start] - dp[start+1][end+1];
                 int takeEnd = nums[end] - dp[start][end];
