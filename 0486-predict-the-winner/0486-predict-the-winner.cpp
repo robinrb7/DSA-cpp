@@ -1,5 +1,7 @@
 class Solution {
     private:
+
+    //Tc -> O(2^n) SC -> O(n) recursion stack memory only
     int solve(vector<int>& nums, int start, int end){
         if(start==end){
             return nums[start]; // or nums[end] -> both same as index is same, but we are taking it
@@ -12,6 +14,7 @@ class Solution {
         return max(takeStart, takeEnd);
     }
 
+    //TC -> O(n^2)  SC -> O(n^2) dp array + o(n) recursion stack memory
     int solveMem(vector<int>& nums, int start, int end,vector<vector<int>> &dp){
         if(start==end) return nums[start];
         
@@ -23,14 +26,34 @@ class Solution {
         dp[start][end] = max(takeStart, takeEnd);
         return dp[start][end];
     }
+
+    //TC -> O()
+    int solveTab(vector<int>& nums){
+        int n = nums.size();
+        vector<vector<int>>dp(n+1,vector<int>(n+1,0));
+        
+        for(int i=0;i<n;i++) dp[i][i+1] = nums[i];
+
+        for(int start=n-1;start>=0;start--){
+            for(int end=start;end<n;end++){
+                if(start==end+1) continue;
+
+                int takeStart = nums[start] - dp[start+1][end+1];
+                int takeEnd = nums[end] - dp[start][end];
+                dp[start][end+1] = max(takeStart, takeEnd);
+            }
+        }
+        
+        return dp[0][n];
+    }
+
+
 public:
     bool predictTheWinner(vector<int>& nums) {
         int n = nums.size();
         if(n==1) return true;
 
-        vector<vector<int>>dp(n,vector<int>(n,-1));
-
-        int playerFirstMaxScore = solveMem(nums,0,n-1,dp);
+        int playerFirstMaxScore = solveTab(nums);
         return (playerFirstMaxScore>=0) ;
     }
 };
