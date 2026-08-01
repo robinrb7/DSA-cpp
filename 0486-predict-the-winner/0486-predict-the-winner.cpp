@@ -27,7 +27,7 @@ class Solution {
         return dp[start][end];
     }
 
-    //TC -> O()
+    //TC -> O(n^2)  SC -> O(n^2) dp array
     int solveTab(vector<int>& nums){
         int n = nums.size();
         vector<vector<int>>dp(n+1,vector<int>(n+1,0));
@@ -36,7 +36,7 @@ class Solution {
 
         for(int start=n-1;start>=0;start--){
             for(int end=start+1;end<n;end++){
-                
+
                 int takeStart = nums[start] - dp[start+1][end+1];
                 int takeEnd = nums[end] - dp[start][end];
                 dp[start][end+1] = max(takeStart, takeEnd);
@@ -46,13 +46,32 @@ class Solution {
         return dp[0][n];
     }
 
+    int solveOptm(vector<int>& nums){
+        int n = nums.size();
+        vector<int> curr(n+1,0);
+        vector<int> next(n+1,0);
+
+        for(int start=n-1;start>=0;start--){
+            curr[start+1] = nums[start];
+            for(int end=start+1;end<n;end++){
+
+                int takeStart = nums[start] - next[end+1];
+                int takeEnd = nums[end] - curr[end];
+                curr[end+1] = max(takeStart, takeEnd);
+            }
+            next = curr;
+        }
+        
+        return curr[n];
+    }
+
 
 public:
     bool predictTheWinner(vector<int>& nums) {
         int n = nums.size();
         if(n==1) return true;
 
-        int playerFirstMaxScore = solveTab(nums);
+        int playerFirstMaxScore = solveOptm(nums);
         return (playerFirstMaxScore>=0) ;
     }
 };
