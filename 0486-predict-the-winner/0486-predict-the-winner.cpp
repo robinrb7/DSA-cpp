@@ -35,7 +35,7 @@ class Solution {
         for(int i=0;i<n;i++) dp[i][i+1] = nums[i];
 
         for(int start=n-1;start>=0;start--){
-            for(int end=start;end<n;end++){
+            for(int end=start+1;end<n;end++){
                 if(start==end) continue;
 
                 int takeStart = nums[start] - dp[start+1][end+1];
