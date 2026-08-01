@@ -17,8 +17,8 @@ class Solution {
         
         if(dp[start][end]!=-1) return dp[start][end];
 
-        int takeStart = nums[start] - solve(nums,start+1,end);
-        int takeEnd = nums[end] - solve(nums,start,end-1);
+        int takeStart = nums[start] - solveMem(nums,start+1,end,dp);
+        int takeEnd = nums[end] - solveMem(nums,start,end-1,dp);
 
         dp[start][end] = max(takeStart, takeEnd);
         return dp[start][end];
