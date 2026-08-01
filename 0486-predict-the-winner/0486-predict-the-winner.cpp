@@ -49,17 +49,15 @@ class Solution {
     int solveOptm(vector<int>& nums){
         int n = nums.size();
         vector<int> curr(n+1,0);
-        vector<int> next(n+1,0);
 
         for(int start=n-1;start>=0;start--){
             curr[start+1] = nums[start];
             for(int end=start+1;end<n;end++){
 
-                int takeStart = nums[start] - next[end+1];
+                int takeStart = nums[start] - curr[end+1];
                 int takeEnd = nums[end] - curr[end];
                 curr[end+1] = max(takeStart, takeEnd);
             }
-            next = curr;
         }
         
         return curr[n];
