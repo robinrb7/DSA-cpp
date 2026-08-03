@@ -1,5 +1,7 @@
 class Solution {
     private:
+
+    //TC -> O(3^n)
     int solve(vector<int>& stoneValue, int index, int n){
         if(index>=n) return 0;
 
@@ -12,6 +14,7 @@ class Solution {
         return max(takeOne,max(takeTwo,takeThree));
     }
 
+    //TC -> O(n)  SC-> O(n) dp array + O(n) recusrion stack memory
     int solveMem(vector<int>& stoneValue, int index, int n, vector<int> &dp){
         if(index>=n) return 0;
         if(dp[index]!= INT_MIN) return dp[index];
@@ -25,12 +28,29 @@ class Solution {
         return dp[index] = max(takeOne,max(takeTwo,takeThree));
     }
 
+    int solveTab(vector<int>& stoneValue){
+        int n =stoneValue.size();
+        vector<int> dp(n+1,0);
+
+        for(int index=n-1;index>=0;index--){
+            int takeOne=INT_MIN, takeTwo=INT_MIN,takeThree=INT_MIN;
+
+            takeOne = stoneValue[index] - dp[index+1];
+            if(index+1<n) takeTwo = stoneValue[index] + stoneValue[index+1]  - dp[index+2];
+            if(index+2<n) takeThree = stoneValue[index] + stoneValue[index+1] + stoneValue[index+2] - dp[index+3];
+
+            dp[index] = max(takeOne,max(takeTwo,takeThree));
+        }
+
+        return dp[0];
+    }
+
 public:
     string stoneGameIII(vector<int>& stoneValue) {
         int n = stoneValue.size();
 
-        vector<int> dp(n,INT_MIN);
-        int aliceMaxScore = solveMem(stoneValue,0,n,dp);
+        //vector<int> dp(n,INT_MIN);
+        int aliceMaxScore = solveTab(stoneValue);
 
         if(aliceMaxScore==0) return "Tie";
         else if(aliceMaxScore>0) return "Alice";
