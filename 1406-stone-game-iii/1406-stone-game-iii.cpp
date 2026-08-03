@@ -28,6 +28,8 @@ class Solution {
         return dp[index] = max(takeOne,max(takeTwo,takeThree));
     }
 
+
+    //TC -> O(n)  SC-> O(n) dp array (only)
     int solveTab(vector<int>& stoneValue){
         int n =stoneValue.size();
         vector<int> dp(n+1,0);
@@ -45,12 +47,31 @@ class Solution {
         return dp[0];
     }
 
+    int solveOptm(vector<int>& stoneValue){
+        int n =stoneValue.size();
+        int dp1=0,dp2=0,dp3=0;
+
+        for(int index=n-1;index>=0;index--){
+            int takeOne=INT_MIN, takeTwo=INT_MIN,takeThree=INT_MIN;
+
+            takeOne = stoneValue[index] - dp1;
+            if(index+1<n) takeTwo = stoneValue[index] + stoneValue[index+1]  - dp2;
+            if(index+2<n) takeThree = stoneValue[index] + stoneValue[index+1] + stoneValue[index+2] - dp3;
+
+            dp3=dp2;
+            dp2=dp1;
+            dp1 = max(takeOne,max(takeTwo,takeThree));
+        }
+
+        return dp1;
+    }
+
 public:
     string stoneGameIII(vector<int>& stoneValue) {
         int n = stoneValue.size();
 
         //vector<int> dp(n,INT_MIN);
-        int aliceMaxScore = solveTab(stoneValue);
+        int aliceMaxScore = solveOptm(stoneValue);
 
         if(aliceMaxScore==0) return "Tie";
         else if(aliceMaxScore>0) return "Alice";
