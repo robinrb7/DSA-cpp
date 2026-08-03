@@ -1,33 +1,33 @@
 class Solution {
     private:
-    void solve(string s, int index, int n, long long &ans,bool negSign){
-        if(index==n || (s[index]<'0' || s[index] > '9')) return;
+    void solve(string &s,int index, int n, long long &num, bool neg){
+        if(index==n) return;
+        if(s[index]<'0' || s[index]>'9') return;
 
-        if(!negSign && ans >= INT_MAX) return;
-        if(negSign && -ans <= INT_MIN) return;
+        if(!neg && num>=INT_MAX) return;
+        if(neg && -num<=INT_MIN) return;
 
-        ans = ans*10 + (s[index]-'0');
-        solve(s, index+1,n,ans,negSign);
+        num = num*10 + (s[index]-'0');
+        solve(s,index+1,n,num,neg);
     }
 public:
     int myAtoi(string s) {
-        int n=s.length();
+        int n = s.length();
+        
+        bool neg=0;
         int i=0;
-        while(i<n && s[i]==' ')i++;
-        bool negSign = 0;
-        if(s[i]=='+'||s[i]=='-'){
-            negSign = s[i]=='-';
+        while(i<n && s[i]==' ') i++;
+        if(i<n && (s[i]=='+' || s[i]=='-')){
+            neg = (s[i]=='-')? 1:0;
             i++;
         }
 
-        while(i<n && s[i]=='0')i++;
-        long long ans = 0;
-        solve(s,i,n,ans,negSign);
+        long long num=0;
+        solve(s,i,n,num,neg);
 
-        if(!negSign && ans >= INT_MAX) return INT_MAX;
-        if(negSign && -ans <= INT_MIN) return INT_MIN;
+        if(!neg && num>=INT_MAX) return INT_MAX;
+        if(neg && -num<=INT_MIN) return INT_MIN;
 
-        if(negSign) ans = -ans;
-        return ans;
+        return (neg)? -num: num;
     }
 };
