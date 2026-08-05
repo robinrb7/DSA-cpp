@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<int> remainingMethods(int n, int k, vector<vector<int>>& invocations) {
-        vector<int> adjList[n];     //(o(e))
+        vector<vector<int>> adjList(n);     //(o(e))
         for(int i=0;i<invocations.size();i++){
             int u = invocations[i][0];
             int v = invocations[i][1];
