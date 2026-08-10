@@ -14,12 +14,29 @@ class Solution {
 
         return dp[n] = 0;
     }
+
+    bool solveTab(int n){
+        vector<int> dp(n+1,0);
+
+        for(int index=1;index<=n;index++){
+            for(int i=1;i*i<=index;i++){
+
+                if(!dp[index-(i*i)]){
+                    dp[index] = 1;
+                    break;  
+                }
+            }
+        }
+
+        return dp[n];
+    }
+
+
 public:
     bool winnerSquareGame(int n) {
         if(n==1) return true;
 
-        vector<int> dp(n+1,-1);
-        dp[0]=0;
-        return solve(n,dp);
+        
+        return solveTab(n);
     }
 };
