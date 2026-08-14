@@ -1,82 +1,104 @@
-class Solution {
+class Node{
 public:
-    struct Node {
-        int pre = 0; 
-        int suf = 0;
-        int maxLen = 0;
-        char leftChar = 0;
-        char rightChar = 0;
-    };
+    int maxLen;
+    char leftMostChar;
+    char rightMostChar;
+    int prefixLen;
+    int suffixLen;
 
-    int n;
-    vector<Node> segTree; //segmen tree size 4*n
+    Node(){}
+    Node(int maxLen, char left, char right, int prefixLen, int suffixLen){
+        this->maxLen = maxLen;
+        this->leftMostChar = left;
+        this->rightMostChar= right;
+        this->prefixLen = prefixLen;
+        this->suffixLen = suffixLen;
+    }
+};
 
-    Node merge(const Node& L, const Node& R, int leftLen, int rightLen) {
-        Node res;
+class Solution {
 
-        res.leftChar  = L.leftChar;
-        res.rightChar = R.rightChar;
+private:
 
-        res.pre = L.pre;
-        if (L.pre == leftLen && L.rightChar == R.leftChar) {
-            res.pre = L.pre + R.pre;
-        }
+Node* merge(Node* leftChild, Node* rightChild, int leftLen, int rightLen){
 
-        res.suf = R.suf;
-        if (R.suf == rightLen && L.rightChar == R.leftChar) {
-            res.suf = R.suf + L.suf;
-        }
+    Node* node = new Node();
+    node->maxLen = max(leftChild->maxLen,rightChild->maxLen);
+    if(leftChild->rightMostChar == rightChild->leftMostChar){
+        node->maxLen = max(node->maxLen,leftChild->suffixLen + rightChild->prefixLen);
+    }
+    node->leftMostChar = leftChild->leftMostChar;
+    node->rightMostChar = rightChild->rightMostChar;
 
-        res.maxLen = max(L.maxLen, R.maxLen);
-        if (L.rightChar == R.leftChar) {
-            res.maxLen = max(res.maxLen, L.suf + R.pre);
-        }
+    node->prefixLen = leftChild->prefixLen;
+    if(leftChild->rightMostChar == rightChild->leftMostChar 
+                        && leftChild->prefixLen == leftLen){
+        node->prefixLen += rightChild->prefixLen; 
+    } 
 
-        return res;
+    node->suffixLen = rightChild->suffixLen;
+    if(leftChild->rightMostChar == rightChild->leftMostChar 
+                        && rightChild->suffixLen == rightLen){
+        node->suffixLen += leftChild->suffixLen;
     }
 
-    void buildSegmentTree(int i, int l, int r, string& s) {
-        if (l == r) {
-            segTree[i] = { 1, 1, 1, s[l], s[l] };
-            return;
-        }
-        int mid = l + (r - l) / 2;
-        buildSegmentTree(2 * i + 1, l, mid, s);
-        buildSegmentTree(2 * i + 2, mid + 1, r, s);
-        segTree[i] = merge(segTree[2 * i + 1], segTree[2 * i + 2], mid - l + 1, r - mid);
+    return node;
+}
+
+
+
+void buildSegmentTree(string &s,vector<Node*> &segmentArr, int index, int low, int high){
+    
+    if(low==high){
+        Node* node = new Node(1,s[low],s[low],1,1);
+        segmentArr[index] = node;
+        return;
     }
 
-    void update(int i, int l, int r, int pos, char ch) {
-        if (l == r) { //l == r == pos
-            segTree[i] = { 1, 1, 1, ch, ch };
-            return;
-        }
-        int mid = l + (r - l) / 2;
-        if (pos <= mid) {
-            update(2 * i + 1, l, mid, pos, ch);
-        } else {
-            update(2 * i + 2, mid + 1, r, pos, ch);
-        }
-        segTree[i] = merge(segTree[2 * i + 1], segTree[2 * i + 2], mid - l + 1, r - mid);
+    int mid = low + (high-low)/2;
+    int leftChild = 2*index+1, rightChild=2*index+2;
+
+    buildSegmentTree(s,segmentArr,leftChild,low,mid);
+    buildSegmentTree(s,segmentArr,rightChild,mid+1,high);
+
+    segmentArr[index] = merge(segmentArr[leftChild],segmentArr[rightChild],mid-low+1,high-mid);
+}
+
+void pointUpdate(vector<Node*> &segmentArr, int targetIndex, char ch, int index, int low, int high){
+    if(low==high){
+        segmentArr[index]->leftMostChar = ch;
+        segmentArr[index]->rightMostChar = ch;
+        return;
     }
 
+
+    int mid = low + (high-low)/2;
+    int leftChild = 2*index+1, rightChild=2*index+2;
+
+    if(targetIndex<=mid) pointUpdate(segmentArr, targetIndex, ch, leftChild, low, mid);
+    else pointUpdate(segmentArr, targetIndex, ch, rightChild, mid+1, high);
+
+
+    segmentArr[index] = merge(segmentArr[leftChild],segmentArr[rightChild],mid-low+1,high-mid);
+}
+
+public:
     vector<int> longestRepeating(string s, string queryCharacters, vector<int>& queryIndices) {
-        n = s.size();
-        segTree.assign(4 * n, Node()); //segmen tree size 4*n
+        int n = s.length();
+        int q = queryIndices.size();
 
-        buildSegmentTree(0, 0, n - 1, s);
+        vector<Node*> segmentArr(4*n);
+        buildSegmentTree(s,segmentArr,0,0,n-1);
 
-        int k = queryIndices.size();
+        vector<int> ans;
+        for(int i=0;i<q;i++){
+           char ch = queryCharacters[i];
+           int targetIndex = queryIndices[i];
 
-        vector<int> result(k);
-        for (int i = 0; i < k; i++) {
-            int pos = queryIndices[i];
-            char ch = queryCharacters[i];
-            update(0, 0, n - 1, pos, ch);
-            
-            result[i] = segTree[0].maxLen; //root node covers entire string
+           pointUpdate(segmentArr,targetIndex,ch,0,0,n-1);
+           ans.push_back(segmentArr[0]->maxLen); 
         }
 
-        return result;
+        return ans;
     }
 };
