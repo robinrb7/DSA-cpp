@@ -5,22 +5,20 @@ public:
 
         int minOperations=INT_MAX;
         for(int i=0;i<n;i++){
+            int currRotationRound = i;
 
             int operations = 0;
             for(int j=0;j<n/2;j++){
-                int forwardDiff = (s[j]-s[n-j-1]+26)%26;
-                int backwardDiff = (s[n-j-1]-s[j]+26)%26;
+                int val1 = s[(currRotationRound + j) % n] -'a';
+                int val2 = s[(currRotationRound + n-j-1) % n] -'a';
 
-                int diff = min(forwardDiff,backwardDiff);
+                int diff = abs(val1-val2);
+                diff = min(diff,26-diff);
+
                 operations += diff;
             }
 
             minOperations = min(minOperations,operations+i);
-
-            char ch = s[0];
-            s = s.substr(1,n-1);
-            s.push_back(ch);
-
         }
 
 
