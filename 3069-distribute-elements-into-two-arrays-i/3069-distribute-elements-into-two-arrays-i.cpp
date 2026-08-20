@@ -11,21 +11,14 @@ public:
             else arr2.push_back(nums[i]);
         }
 
-        vector<int> result;
-        int n1=arr1.size();
-        int i=0;
-        while(i<n1){
-            result.push_back(arr1[i]);
-            i++;
-        }
 
-        i=0;
+        int i=0;
         int n2= arr2.size();
         while(i<n2){
-            result.push_back(arr2[i]);
+            arr1.push_back(arr2[i]);
             i++;
         }
 
-        return result;
+        return arr1;
     }
 };
